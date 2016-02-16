@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>sendMail 发邮件 | My First</title>
+  <title>capturePicture 截图 | My First</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用SKPSMTPMessage无需弹框发送邮件1//&amp;#20351;&amp;#29992;SKPSMTPMessage&amp;#26080;&amp;#38656;&amp;#24377;&amp;#26694;&amp;#21457;&amp;#36865;&amp;#37038;&amp;#20214;&amp;#10;&amp;#10;&amp;#25105;&amp;#20351;&amp;#29992;&amp;#30340;&amp;#26159;&amp;#10;1.&amp;#23548;&amp;#20837;&amp;#2283">
+  <meta name="description" content="一、获取当前屏幕显示的图片1&amp;#10;UIGraphicsBeginImageContextWithOptions(_scrollView.contentSize, YES, 1);&amp;#10;[_scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];&amp;#10;UIImage *uiImage = UIGraphicsGetI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sendMail 发邮件">
-<meta property="og:url" content="http://irena.gitcafe.io/2016/02/16/sendMail/index.html">
+<meta property="og:title" content="capturePicture 截图">
+<meta property="og:url" content="http://irena.gitcafe.io/2016/02/16/capturePicture/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="使用SKPSMTPMessage无需弹框发送邮件1//&amp;#20351;&amp;#29992;SKPSMTPMessage&amp;#26080;&amp;#38656;&amp;#24377;&amp;#26694;&amp;#21457;&amp;#36865;&amp;#37038;&amp;#20214;&amp;#10;&amp;#10;&amp;#25105;&amp;#20351;&amp;#29992;&amp;#30340;&amp;#26159;&amp;#10;1.&amp;#23548;&amp;#20837;&amp;#2283">
-<meta property="og:updated_time" content="2016-02-16T06:19:17.000Z">
+<meta property="og:description" content="一、获取当前屏幕显示的图片1&amp;#10;UIGraphicsBeginImageContextWithOptions(_scrollView.contentSize, YES, 1);&amp;#10;[_scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];&amp;#10;UIImage *uiImage = UIGraphicsGetI">
+<meta property="og:updated_time" content="2016-02-16T06:23:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sendMail 发邮件">
-<meta name="twitter:description" content="使用SKPSMTPMessage无需弹框发送邮件1//&amp;#20351;&amp;#29992;SKPSMTPMessage&amp;#26080;&amp;#38656;&amp;#24377;&amp;#26694;&amp;#21457;&amp;#36865;&amp;#37038;&amp;#20214;&amp;#10;&amp;#10;&amp;#25105;&amp;#20351;&amp;#29992;&amp;#30340;&amp;#26159;&amp;#10;1.&amp;#23548;&amp;#20837;&amp;#2283">
+<meta name="twitter:title" content="capturePicture 截图">
+<meta name="twitter:description" content="一、获取当前屏幕显示的图片1&amp;#10;UIGraphicsBeginImageContextWithOptions(_scrollView.contentSize, YES, 1);&amp;#10;[_scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];&amp;#10;UIImage *uiImage = UIGraphicsGetI">
   
     <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
   
@@ -167,11 +167,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-sendMail" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-capturePicture" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/02/16/sendMail/" class="article-date">
-  	<time datetime="2016-02-16T06:17:03.000Z" itemprop="datePublished">2016-02-16</time>
+      <a href="/2016/02/16/capturePicture/" class="article-date">
+  	<time datetime="2016-02-16T06:22:45.000Z" itemprop="datePublished">2016-02-16</time>
 </a>
     </div>
   
@@ -184,7 +184,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      sendMail 发邮件
+      capturePicture 截图
     </h1>
   
 
@@ -200,10 +200,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="使用SKPSMTPMessage无需弹框发送邮件"><a href="#使用SKPSMTPMessage无需弹框发送邮件" class="headerlink" title="使用SKPSMTPMessage无需弹框发送邮件"></a>使用SKPSMTPMessage无需弹框发送邮件</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#20351;&#29992;SKPSMTPMessage&#26080;&#38656;&#24377;&#26694;&#21457;&#36865;&#37038;&#20214;&#10;&#10;&#25105;&#20351;&#29992;&#30340;&#26159;&#10;1.&#23548;&#20837;&#22836;&#25991;&#20214;&#10;#import &#34;NSData+Base64Additions.h&#34;&#10;#import &#34;SKPSMTPMessage.h&#34;&#10;&#10;&#10;  SKPSMTPMessage *mail = [[SKPSMTPMessage alloc] init];&#10;  [mail setSubject:@&#34;&#26631;&#39064;&#34;];                 // &#35774;&#32622;&#37038;&#20214;&#20027;&#39064;&#10;  [mail setToEmail:@&#34;.com&#34;];                 // &#30446;&#26631;&#37038;&#31665;&#10;  [mail setFromEmail:@&#34;.com&#34;];               // &#21457;&#36865;&#32773;&#37038;&#31665;&#10;  [mail setRelayHost:@&#34;smtp.qq.com&#34;];        // &#21457;&#36865;&#37038;&#20214;&#20195;&#29702;&#26381;&#21153;&#22120;&#10;  [mail setRequiresAuth:YES];&#10;  [mail setLogin:@&#34;.com&#34;];                   // &#21457;&#36865;&#32773;&#37038;&#31665;&#36134;&#21495;&#10;  [mail setPass:@&#34;&#34;];                        // &#21457;&#36865;&#32773;&#37038;&#31665;&#23494;&#30721;&#10;  [mail setWantsSecure:YES];                 // &#38656;&#35201;&#21152;&#23494;&#10;  [mail setDelegate:self];&#10;&#10;&#10;  //&#35774;&#32622;&#37038;&#20214;&#27491;&#25991;&#20869;&#23481;&#65306;&#10;  &#10;  NSString *content =&#10;      [NSString stringWithCString:&#34;&#37038;&#20214;&#20869;&#23481;&#34; encoding:NSUTF8StringEncoding];&#10;  NSDictionary *plainPart = @&#123;&#10;    kSKPSMTPPartContentTypeKey : @&#34;text/plain&#34;,&#10;    kSKPSMTPPartMessageKey : content,&#10;    kSKPSMTPPartContentTransferEncodingKey : @&#34;8bit&#34;&#10;  &#125;;&#10;&#10;  // &#28155;&#21152;&#38468;&#20214;&#10;  NSString *vcfPath =&#10;      [[NSBundle mainBundle] pathForResource:@&#34;test&#34; ofType:@&#34;png&#34;];&#10;  NSData *vcfData = [NSData dataWithContentsOfFile:vcfPath];&#10;&#10;// _image &#25130;&#21462;&#30340;&#22270;&#29255; &#10;  vcfData = UIImagePNGRepresentation(_image);&#10;&#10;  NSDictionary *vcfPart = [NSDictionary&#10;      dictionaryWithObjectsAndKeys:&#10;          @&#34;text/directory;\r\n\tx-unix-mode=0644;\r\n\tname=\&#34;test.png\&#34;&#34;,&#10;          kSKPSMTPPartContentTypeKey, @&#34;attachment;\r\n\tfilename=\&#34;test.png\&#34;&#34;,&#10;          kSKPSMTPPartContentDispositionKey, [vcfData encodeBase64ForData],&#10;          kSKPSMTPPartMessageKey, @&#34;base64&#34;,&#10;          kSKPSMTPPartContentTransferEncodingKey, nil];&#10;&#10;  //    &#25191;&#34892;&#21457;&#36865;&#37038;&#20214;&#20195;&#30721;&#65306;&#10;  [mail&#10;      setParts:@[ plainPart, vcfPart ]]; // &#37038;&#20214;&#39318;&#37096;&#23383;&#27573;&#12289;&#37038;&#20214;&#20869;&#23481;&#26684;&#24335;&#21644;&#20256;&#36755;&#32534;&#30721;&#10;&#10;  [mail send];&#10;&#10;&#10;#pragma SKPSMTPMessage &#20195;&#29702;&#26041;&#27861;&#10;&#10;- (void)messageSent:(SKPSMTPMessage *)message &#123;&#10;  NSLog(@&#34;%@&#34;, message);&#10;&#125;&#10;- (void)messageFailed:(SKPSMTPMessage *)message error:(NSError *)error &#123;&#10;  NSLog(@&#34;message - %@\nerror - %@&#34;, message, error);&#10;&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="skpsmtpmessage邮件标题中文乱码问题"><a href="#skpsmtpmessage邮件标题中文乱码问题" class="headerlink" title="skpsmtpmessage邮件标题中文乱码问题"></a>skpsmtpmessage邮件标题中文乱码问题</h2><p>解决主题使用中文乱码问题</p>
-<p>SKPSMTPMessage.m的sendParts里:<br>修改:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSData *messageData = [message dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];&#10;&#10;&#20026;&#10;&#10;NSData *messageData = [message dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];</span><br></pre></td></tr></table></figure>
+        <h2 id="一、获取当前屏幕显示的图片"><a href="#一、获取当前屏幕显示的图片" class="headerlink" title="一、获取当前屏幕显示的图片"></a>一、获取当前屏幕显示的图片</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;UIGraphicsBeginImageContextWithOptions(_scrollView.contentSize, YES, 1);&#10;[_scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];&#10;UIImage *uiImage = UIGraphicsGetImageFromCurrentImageContext();&#10;UIGraphicsEndImageContext();</span><br></pre></td></tr></table></figure>
+<h2 id="二、获取scrollView的contentSize包含的图片"><a href="#二、获取scrollView的contentSize包含的图片" class="headerlink" title="二、获取scrollView的contentSize包含的图片"></a>二、获取scrollView的contentSize包含的图片</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (UIImage *)captureScrollView:(UIScrollView *)scrollView &#123;&#10;  UIImage *image = nil;&#10;  UIGraphicsBeginImageContext(scrollView.contentSize);&#10;  &#123;&#10;    CGPoint savedContentOffset = scrollView.contentOffset;&#10;    CGRect savedFrame = scrollView.frame;&#10;    scrollView.contentOffset = CGPointZero;&#10;    scrollView.frame = CGRectMake(0, 0, scrollView.contentSize.width,&#10;    scrollView.contentSize.height);&#10;&#10;    [scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];&#10;    image = UIGraphicsGetImageFromCurrentImageContext();&#10;&#10;    scrollView.contentOffset = savedContentOffset;&#10;    scrollView.frame = savedFrame;&#10;  &#125;&#10;  UIGraphicsEndImageContext();&#10;&#10;  if (image != nil) &#123;&#10;    return image;&#10;  &#125;&#10;  return nil;&#10;&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -213,18 +211,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/02/16/capturePicture/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          capturePicture 截图
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/02/16/dunsApply/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">D-U-N-S(邓白氏编码)申请</div>
+    <a href="/2016/02/16/sendMail/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sendMail 发邮件</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -259,7 +248,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="sendMail" data-title="sendMail 发邮件" data-url="http://irena.gitcafe.io/2016/02/16/sendMail/"></div>
+	<div class="ds-thread" data-thread-key="capturePicture" data-title="capturePicture 截图" data-url="http://irena.gitcafe.io/2016/02/16/capturePicture/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

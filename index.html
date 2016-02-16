@@ -195,6 +195,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、获取当前屏幕显示的图片"><a href="#一、获取当前屏幕显示的图片" class="headerlink" title="一、获取当前屏幕显示的图片"></a>一、获取当前屏幕显示的图片</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;UIGraphicsBeginImageContextWithOptions(_scrollView.contentSize, YES, 1);&#10;[_scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];&#10;UIImage *uiImage = UIGraphicsGetImageFromCurrentImageContext();&#10;UIGraphicsEndImageContext();</span><br></pre></td></tr></table></figure>
+<h2 id="二、获取scrollView的contentSize包含的图片"><a href="#二、获取scrollView的contentSize包含的图片" class="headerlink" title="二、获取scrollView的contentSize包含的图片"></a>二、获取scrollView的contentSize包含的图片</h2>
       
     </div>
     

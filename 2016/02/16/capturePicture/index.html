@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://irena.gitcafe.io/2016/02/16/capturePicture/index.html">
 <meta property="og:site_name" content="My First">
 <meta property="og:description" content="一、获取当前屏幕显示的图片1&amp;#10;UIGraphicsBeginImageContextWithOptions(_scrollView.contentSize, YES, 1);&amp;#10;[_scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];&amp;#10;UIImage *uiImage = UIGraphicsGetI">
-<meta property="og:updated_time" content="2016-02-16T06:23:31.000Z">
+<meta property="og:updated_time" content="2016-02-16T06:48:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="capturePicture 截图">
 <meta name="twitter:description" content="一、获取当前屏幕显示的图片1&amp;#10;UIGraphicsBeginImageContextWithOptions(_scrollView.contentSize, YES, 1);&amp;#10;[_scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];&amp;#10;UIImage *uiImage = UIGraphicsGetI">
@@ -201,6 +201,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、获取当前屏幕显示的图片"><a href="#一、获取当前屏幕显示的图片" class="headerlink" title="一、获取当前屏幕显示的图片"></a>一、获取当前屏幕显示的图片</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;UIGraphicsBeginImageContextWithOptions(_scrollView.contentSize, YES, 1);&#10;[_scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];&#10;UIImage *uiImage = UIGraphicsGetImageFromCurrentImageContext();&#10;UIGraphicsEndImageContext();</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="二、获取scrollView的contentSize包含的图片"><a href="#二、获取scrollView的contentSize包含的图片" class="headerlink" title="二、获取scrollView的contentSize包含的图片"></a>二、获取scrollView的contentSize包含的图片</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (UIImage *)captureScrollView:(UIScrollView *)scrollView &#123;&#10;  UIImage *image = nil;&#10;  UIGraphicsBeginImageContext(scrollView.contentSize);&#10;  &#123;&#10;    CGPoint savedContentOffset = scrollView.contentOffset;&#10;    CGRect savedFrame = scrollView.frame;&#10;    scrollView.contentOffset = CGPointZero;&#10;    scrollView.frame = CGRectMake(0, 0, scrollView.contentSize.width,&#10;    scrollView.contentSize.height);&#10;&#10;    [scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];&#10;    image = UIGraphicsGetImageFromCurrentImageContext();&#10;&#10;    scrollView.contentOffset = savedContentOffset;&#10;    scrollView.frame = savedFrame;&#10;  &#125;&#10;  UIGraphicsEndImageContext();&#10;&#10;  if (image != nil) &#123;&#10;    return image;&#10;  &#125;&#10;  return nil;&#10;&#125;</span><br></pre></td></tr></table></figure>
 
       

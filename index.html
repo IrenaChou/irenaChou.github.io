@@ -168,6 +168,61 @@
 
       <div class="body-wrap">
   
+    <article id="post-hexStringConvertUIColor" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/24/hexStringConvertUIColor/" class="article-date">
+  	<time datetime="2016-02-24T05:41:53.000Z" itemprop="datePublished">2016-02-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/24/hexStringConvertUIColor/">hexStringConvertUIColor</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://wonderzl.iteye.com/blog/1569123" target="_blank" rel="external">原文出自</a></p>
+<h2 id="interface"><a href="#interface" class="headerlink" title="interface"></a>interface</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@interface UIColor (hex)&#10;  + (UIColor *)colorWithHexString:(NSString *)stringToConvert;&#10;@end</span><br></pre></td></tr></table></figure>
+<h2 id="implementation"><a href="#implementation" class="headerlink" title="implementation"></a>implementation</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#import &#60;QuartzCore/QuartzCore.h&#62;&#10;#define DEFAULT_VOID_COLOR [UIColor whiteColor]&#10;@implementation UIColor (hex)&#10;+ (UIColor *)colorWithHexString:(NSString *)stringToConvert &#123;&#10;  NSString *cString = [[stringToConvert&#10;      stringByTrimmingCharactersInSet:[NSCharacterSet&#10;                                          whitespaceAndNewlineCharacterSet]]&#10;      uppercaseString];&#10;  if ([cString length] &#60; 6)&#10;    return DEFAULT_VOID_COLOR;&#10;  if ([cString hasPrefix:@&#34;#&#34;])&#10;    cString = [cString substringFromIndex:1];&#10;  if ([cString length] != 6)&#10;    return DEFAULT_VOID_COLOR;&#10;  NSRange range;&#10;  range.location = 0;&#10;  range.length = 2;&#10;  NSString *rString = [cString substringWithRange:range];&#10;  range.location = 2;&#10;  NSString *gString = [cString substringWithRange:range];&#10;  range.location = 4;&#10;  NSString *bString = [cString substringWithRange:range];&#10;  unsigned int r, g, b;&#10;  [[NSScanner scannerWithString:rString] scanHexInt:&#38;r];&#10;  [[NSScanner scannerWithString:gString] scanHexInt:&#38;g];&#10;  [[NSScanner scannerWithString:bString] scanHexInt:&#38;b];&#10;  return [UIColor colorWithRed:((float)r / 255.0f)&#10;                         green:((float)g / 255.0f)&#10;                          blue:((float)b / 255.0f)&#10;                         alpha:1.0f];&#10;&#125;&#10;@end</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[UIColor colorWithHexString:@&#34;4fc2e9&#34;]</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

@@ -168,6 +168,92 @@
 
       <div class="body-wrap">
   
+    <article id="post-macInstallWithUdisk" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/29/macInstallWithUdisk/" class="article-date">
+  	<time datetime="2016-02-29T08:05:24.000Z" itemprop="datePublished">2016-02-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/29/macInstallWithUdisk/">使用U盘装MAC OS X</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我装的是OS X EI Capitan<br>有两种方法：<br>一，网络恢复<br>    必须在能用国外的网的基础上才可以（我是开的vpn），我选择的是第二种方法<br>二，将U盘设置成启动盘，直接安装<br>  安装的先决条件</p>
+<ol>
+<li>准备一个不小到8G的盘</li>
+<li>将盘插入电脑的usb口中，打开<code>磁盘工具</code></li>
+<li>将盘抹掉，如下图</li>
+<li><img src="quiver-image-url/3BDA91B774C7B39AB2B18E49977617E1.png" alt="2016-02-29 at 下午3.53.png"></li>
+</ol>
+<p>继续上面的步骤：</p>
+<ul>
+<li>从App Store下载完整的 OS X 安装器（就是重新下一下）<img src="quiver-image-url/1F972BD474FBEA1CEE33CCA607B48828.png" alt="2016-02-29 at 下午3.41.png"></li>
+<li>一定要将如下文件放到finder-application(应用程序中)<img src="quiver-image-url/6E078329E2B418981B7BA3C99A16C853.png" alt="2016-02-29 at 下午3.44.png"></li>
+<li>这个文件一般由双击.dmg包打开后就可以看见</li>
+<li>然后在终端执行如下代码，下面代码中的123为盘的名称    </li>
+<li><code>终端:sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/123 --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app</code></li>
+<li>将上面的代码粘贴到终端后<em>回车</em>，会让选择y或n，输入y</li>
+<li>需要等待一会我大概是30分钟左右吧</li>
+<li>完成后推出磁盘</li>
+</ul>
+<p>使用u盘安装</p>
+<ul>
+<li>将u盘插到电脑上</li>
+<li>重启电脑，一直按option(alt)键</li>
+<li>选择你的安装盘</li>
+<li>继续…</li>
+<li>你可能会出现如下问题</li>
+<li>不能验证这个“安装 os x ei capitan”应用程序副本,它在下载过程中可能已遭破坏</li>
+<li>这个问题的解决方法就是，系统时间改成OS X EI Capitan安装包右面的时间，重启安装即可</li>
+<li>修改时间的终端命令：date 100114102015.30<br>  10是月，01是日，14是时，10是分，2015是年，30是秒<br>   注意:只要年月日一样就行<br><img src="quiver-image-url/ED8927998966701F95222F3A12BEB71D.png" alt="2016-02-29 at 下午4.03.png"></li>
+</ul>
+<p>遇到问题的解决：</p>
+<ol>
+<li>给苹果打电话求助     <code>*电话：400-666-8800*</code></li>
+<li>使用搜索引擎 <code>（就是不管他问题说的多明显，一定要先百度，因为有可能和你想的并不相同）</code></li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-appleDeveloperAccount" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

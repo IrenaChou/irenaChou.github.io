@@ -168,6 +168,61 @@
 
       <div class="body-wrap">
   
+    <article id="post-bug1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/01/bug1/" class="article-date">
+  	<time datetime="2016-03-01T06:09:39.000Z" itemprop="datePublished">2016-03-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/01/bug1/">问题记录</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如下错误是没有rootViewController，我平时并不这么写<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application</span><br><span class="line">    didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line">  <span class="comment">// Override point for customization after application launch.</span></span><br><span class="line">  <span class="keyword">self</span><span class="variable">.window</span> = [[<span class="built_in">UIWindow</span> alloc] initWithFrame:[<span class="built_in">UIScreen</span> mainScreen]<span class="variable">.bounds</span>];</span><br><span class="line">  [<span class="keyword">self</span><span class="variable">.window</span> addSubview:controller<span class="variable">.view</span>];</span><br><span class="line">  [<span class="keyword">self</span><span class="variable">.window</span> makeKeyAndVisible];</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>错误：<br><figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*** Assertion failure <span class="keyword">in</span> -[UIApplication _runWithMainScene:transitionContext:completion:], /BuildRoot/Library/Caches/com.apple.xbs/Sources/UIKit/UIKit-<span class="number">3512.30</span><span class="string">.14</span>/UIApplication.m:<span class="number">3315</span></span><br><span class="line">*** Terminating app due to uncaught exception <span class="string">'NSInternalInconsistencyException'</span>, reason: <span class="string">'Application windows are expected to have a root view controller at the end of application launch'</span></span><br><span class="line">*** First throw <span class="keyword">call</span> stack:</span><br><span class="line">(<span class="number">0x1821c5900</span> <span class="number">0x181833f80</span> <span class="number">0x1821c57d0</span> <span class="number">0x182b3899c</span> <span class="number">0x187160ac0</span> <span class="number">0x18715d5c0</span> <span class="number">0x18377b790</span> <span class="number">0x18377bb10</span> <span class="number">0x18217cefc</span> <span class="number">0x18217c990</span> <span class="number">0x18217a690</span> <span class="number">0x1820a9680</span> <span class="number">0x186f26580</span> <span class="number">0x186f20d90</span> <span class="number">0x1000de108</span> <span class="number">0x181c4a8b8</span>)</span><br><span class="line">libc++abi.dylib: terminating with uncaught exception of type NSException</span><br></pre></td></tr></table></figure></p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法：  "></a>解决方法：  </h2><p>设置rootViewController<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">[self.window setRootViewController:<span class="collection">[UIViewController new]</span>]</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-gradientColor" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -665,66 +720,6 @@
       
         <p class="article-more-link">
           <a  href="/2016/02/16/sendMail/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-dunsApply" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/16/dunsApply/" class="article-date">
-  	<time datetime="2016-02-16T06:13:42.000Z" itemprop="datePublished">2016-02-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/16/dunsApply/">D-U-N-S(邓白氏编码)申请</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>公司版和企业版的 Apple开发者帐户申请需要您提交邓白氏号码。申请的表格需要您用 <strong>英文或拼音填写</strong>。<br>请至 Apple 以下网站以查看贵公司是否已拥有邓白氏编号，如果您有查到任何记录，请确认记录中的公司是否就是贵公司；如果没有查到任何资料或系统调出的记录均不是贵公司的信息，请点击  <strong><code>“Submit Your Information”</code></strong> 提交申请，成功提交至邓白氏公司，他们将会继续协助您获取该编号，申请时间一般需要七个工作日：   </p>
-<p>申请地址请点击：<a href="https://developer.apple.com/program/enroll/dunsLookupForm.action" title="apple">申请地址</a></p>
-<p> <em>此电话有中文客服</em><br><strong>4006701855</strong> : 苹果电话<br><strong>02126107504</strong> : duns方负责专门负责被拒的电话   </p>
-<p><em>邓白氏公司全球支持部门</em><br><strong>appdeveloper@dnb.com</strong></p>
-<p><a href="https://developer.apple.com/contact/phone.php">各地区 Apple 开发者计划支援电话号码查询</a><br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/02/16/dunsApply/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

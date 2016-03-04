@@ -168,6 +168,62 @@
 
       <div class="body-wrap">
   
+    <article id="post-sendMail" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/16/sendMail/" class="article-date">
+  	<time datetime="2016-02-16T06:17:03.000Z" itemprop="datePublished">2016-02-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/16/sendMail/">sendMail 发邮件</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用SKPSMTPMessage无需弹框发送邮件"><a href="#使用SKPSMTPMessage无需弹框发送邮件" class="headerlink" title="使用SKPSMTPMessage无需弹框发送邮件"></a>使用SKPSMTPMessage无需弹框发送邮件</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用SKPSMTPMessage无需弹框发送邮件</span></span><br><span class="line">我使用的是</span><br><span class="line"><span class="number">1.</span>导入头文件</span><br><span class="line"><span class="preprocessor">#import <span class="title">"NSData+Base64Additions.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"SKPSMTPMessage.h"</span></span></span><br><span class="line">  SKPSMTPMessage *mail = [[SKPSMTPMessage alloc] init];</span><br><span class="line">  [mail setSubject:<span class="string">@"标题"</span>];                 <span class="comment">// 设置邮件主题</span></span><br><span class="line">  [mail setToEmail:<span class="string">@".com"</span>];                 <span class="comment">// 目标邮箱</span></span><br><span class="line">  [mail setFromEmail:<span class="string">@".com"</span>];               <span class="comment">// 发送者邮箱</span></span><br><span class="line">  [mail setRelayHost:<span class="string">@"smtp.qq.com"</span>];        <span class="comment">// 发送邮件代理服务器</span></span><br><span class="line">  [mail setRequiresAuth:<span class="literal">YES</span>];</span><br><span class="line">  [mail setLogin:<span class="string">@".com"</span>];                   <span class="comment">// 发送者邮箱账号</span></span><br><span class="line">  [mail setPass:<span class="string">@""</span>];                        <span class="comment">// 发送者邮箱密码</span></span><br><span class="line">  [mail setWantsSecure:<span class="literal">YES</span>];                 <span class="comment">// 需要加密</span></span><br><span class="line">  [mail setDelegate:<span class="keyword">self</span>];</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/02/16/sendMail/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-dunsApply" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

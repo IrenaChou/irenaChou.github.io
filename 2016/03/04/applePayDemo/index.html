@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>applePayDemo | My First</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="参考原文
+定义1234#import &quot;ViewController.h&quot;#import &amp;lt;PassKit/PassKit.h&amp;gt;@interface ViewController ()&amp;lt;PKPaymentAuthorizationViewControllerDelegate&amp;gt;@end
+实现1234567891011121314151617181920212223242526">
+<meta property="og:type" content="article">
+<meta property="og:title" content="applePayDemo">
+<meta property="og:url" content="http://irena.gitcafe.io/2016/03/04/applePayDemo/index.html">
+<meta property="og:site_name" content="My First">
+<meta property="og:description" content="参考原文
+定义1234#import &quot;ViewController.h&quot;#import &amp;lt;PassKit/PassKit.h&amp;gt;@interface ViewController ()&amp;lt;PKPaymentAuthorizationViewControllerDelegate&amp;gt;@end
+实现1234567891011121314151617181920212223242526">
+<meta property="og:updated_time" content="2016-03-04T06:15:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="applePayDemo">
+<meta name="twitter:description" content="参考原文
+定义1234#import &quot;ViewController.h&quot;#import &amp;lt;PassKit/PassKit.h&amp;gt;@interface ViewController ()&amp;lt;PKPaymentAuthorizationViewControllerDelegate&amp;gt;@end
+实现1234567891011121314151617181920212223242526">
+  
+    <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Irena</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">「Stay hungry. Stay foolish.」</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>標籤</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Irena</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Irena</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">「Stay hungry. Stay foolish.」</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-applePayDemo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/04/applePayDemo/" class="article-date">
+  	<time datetime="2016-03-04T06:03:40.000Z" itemprop="datePublished">2016-03-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      applePayDemo
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://developer.apple.com/library/ios/ApplePay_Guide/" target="_blank" rel="external">参考原文</a></p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">"ViewController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">&lt;PassKit/PassKit.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()&lt;<span class="title">PKPaymentAuthorizationViewControllerDelegate</span>&gt;</span></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">  [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)applePayTest &#123;</span><br><span class="line">  <span class="comment">//设备可用</span></span><br><span class="line">  <span class="comment">// PKPaymentAuthorizationViewController用来显示ApplePay的Controller</span></span><br><span class="line">  <span class="keyword">if</span> (![PKPaymentAuthorizationViewController canMakePayments]) &#123;</span><br><span class="line">    <span class="comment">//设备不支持</span></span><br><span class="line">    <span class="comment">//不让ApplePay的支付按钮去显示</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//想当自己的应用支持的卡类型</span></span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   [PKPaymentAuthorizationViewController</span><br><span class="line">   canMakePaymentsUsingNetworks:@[PKPaymentNetworkVisa]]</span><br><span class="line">   */</span></span><br><span class="line">  <span class="comment">//判断支持的卡类型</span></span><br><span class="line">  <span class="keyword">if</span> (![PKPaymentAuthorizationViewController canMakePaymentsUsingNetworks:@[</span><br><span class="line">        PKPaymentNetworkVisa,</span><br><span class="line">        PKPaymentNetworkChinaUnionPay</span><br><span class="line">      ]]) &#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"不支持visa和银联"</span>);</span><br><span class="line">    <span class="comment">//进入设置银行卡的页面</span></span><br><span class="line">    [[[PKPassLibrary alloc] init] openPaymentSetup];</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//创建支付请求</span></span><br><span class="line">  PKPaymentRequest *request = [[PKPaymentRequest alloc] init];</span><br><span class="line">  <span class="comment">//显示支付页面</span></span><br><span class="line">  PKPaymentAuthorizationViewController *vc =</span><br><span class="line">      [[PKPaymentAuthorizationViewController alloc]</span><br><span class="line">          initWithPaymentRequest:request];</span><br><span class="line">  vc<span class="variable">.delegate</span> = <span class="keyword">self</span>;</span><br><span class="line">  <span class="comment">//*设置商户的ID(网站配制的id)</span></span><br><span class="line">  request<span class="variable">.merchantIdentifier</span> = <span class="string">@"merchant.com.irena.AppleiPayDemo"</span>;</span><br><span class="line">  <span class="comment">//*设置国家代码</span></span><br><span class="line">  request<span class="variable">.countryCode</span> = <span class="string">@"CN"</span>;</span><br><span class="line">  <span class="comment">//*设置支付的卡类型</span></span><br><span class="line">  request<span class="variable">.supportedNetworks</span> = @[ PKPaymentNetworkVisa ];</span><br><span class="line">  <span class="comment">//*设置商户的支付标准(必须支持3DS)</span></span><br><span class="line">  request<span class="variable">.merchantCapabilities</span> = PKMerchantCapability3DS;</span><br><span class="line">  <span class="comment">//*设置货币单位(中文CNY)</span></span><br><span class="line">  request<span class="variable">.currencyCode</span> = <span class="string">@"CNY"</span>;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+  <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//*设置商品</span></span><br><span class="line">  <span class="comment">// label商品名称</span></span><br><span class="line">  <span class="comment">// amount价格</span></span><br><span class="line">  NSDecimalNumber *num1 = [NSDecimalNumber <span class="string">decimalNumberWithString:</span>@<span class="string">"4"</span>];</span><br><span class="line">  <span class="comment">// 当只有一个1个商品时,显示的是付给当前商品</span></span><br><span class="line">  PKPaymentSummaryItem *item1 =</span><br><span class="line">      [PKPaymentSummaryItem <span class="string">summaryItemWithLabel:</span>@<span class="string">"水杯"</span> <span class="string">amount:</span>num1];</span><br><span class="line">  PKPaymentSummaryItem *item2 =</span><br><span class="line">      [PKPaymentSummaryItem <span class="string">summaryItemWithLabel:</span>@<span class="string">"红牛"</span> <span class="string">amount:</span>num1];</span><br><span class="line">  <span class="comment">//当多个时商品,最后一个商品被当成一个总价去显示</span></span><br><span class="line">  NSDecimalNumber *sum = [NSDecimalNumber <span class="string">decimalNumberWithString:</span>@<span class="string">"8"</span>];</span><br><span class="line">  PKPaymentSummaryItem *itemSum =</span><br><span class="line">      [PKPaymentSummaryItem <span class="string">summaryItemWithLabel:</span>@<span class="string">"zdjr"</span> <span class="string">amount:</span>sum];</span><br><span class="line">  request.paymentSummaryItems = @[ item1, item2, itemSum ];</span><br><span class="line">  <span class="comment">//设置收据必填内容,第一次使用必填</span></span><br><span class="line">  request.requiredBillingAddressFields =</span><br><span class="line">      PKAddressFieldAll; <span class="comment">// billingContact 默认地址</span></span><br><span class="line">  <span class="comment">//设置送货必填的内容</span></span><br><span class="line">  request.requiredShippingAddressFields = PKAddressFieldAll;</span><br><span class="line">  <span class="comment">//设置送货方式</span></span><br><span class="line">  <span class="comment">// summaryItemWithLabel 送货方式</span></span><br><span class="line">  NSDecimalNumber *methodNum = [NSDecimalNumber <span class="string">decimalNumberWithString:</span>@<span class="string">"4"</span>];</span><br><span class="line">  PKShippingMethod *method1 =</span><br><span class="line">      [PKShippingMethod <span class="string">summaryItemWithLabel:</span>@<span class="string">"顺风"</span> <span class="string">amount:</span>methodNum];</span><br><span class="line">  <span class="comment">//*区分同一个送货方式,必须填</span></span><br><span class="line">  method1.identifier = @<span class="string">"shunfeng"</span>;</span><br><span class="line">  <span class="comment">//送货方式的详情描述</span></span><br><span class="line">  method1.detail = @<span class="string">"24小时之内送到"</span>;</span><br><span class="line">  request.shippingMethods = @[ method1 ];</span><br><span class="line">  <span class="comment">// modal出来,显示支付页面</span></span><br><span class="line">  [self <span class="string">presentViewController:</span>vc <span class="string">animated:</span>YES <span class="string">completion:</span>nil];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="PKPaymentAuthorizationViewControllerDelegate"><a href="#PKPaymentAuthorizationViewControllerDelegate" class="headerlink" title="PKPaymentAuthorizationViewControllerDelegate"></a>PKPaymentAuthorizationViewControllerDelegate</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">在点击"使用密码支付"的按钮时候调用,开始进行支付调用</span><br><span class="line"> payment:加密后的数据</span><br><span class="line"> */</span></span><br><span class="line">- (<span class="typename">void</span>)</span><br><span class="line"><span class="string">paymentAuthorizationViewController:</span></span><br><span class="line">    (PKPaymentAuthorizationViewController *)controller</span><br><span class="line"><span class="label">               didAuthorizePayment:</span>(PKPayment *)payment</span><br><span class="line"><span class="label">                        completion:</span></span><br><span class="line">                            (<span class="typename">void</span> (^)(PKPaymentAuthorizationStatus status))</span><br><span class="line">                                completion &#123;</span><br><span class="line">  <span class="comment">//把支付信息发送给服务器进行处理</span></span><br><span class="line">  <span class="comment">//第三方或发送给自己的服务器</span></span><br><span class="line">  <span class="comment">//银连https://merchant.unionpay.com/join/product/detail?id=80</span></span><br><span class="line">  <span class="comment">//    NSError *error;</span></span><br><span class="line">  <span class="comment">//    ABMultiValueRef addressMultiValue =</span></span><br><span class="line">  <span class="comment">//    ABRecordCopyValue(payment.billingAddress,kABPersonAddressProperty);</span></span><br><span class="line">  <span class="comment">//    NSDictionary *addressDictionary = (__bridge_transfer NSDictionary *)</span></span><br><span class="line">  <span class="comment">//    ABMultiValueCopyValueAtIndex(addressMultiValue, 0);</span></span><br><span class="line">  <span class="comment">//    NSData *json = [NSJSONSerialization dataWithJSONObject:addressDictionary</span></span><br><span class="line">  <span class="comment">//    options:NSJSONWritingPrettyPrinted error: &amp;error];</span></span><br><span class="line">  <span class="comment">//根据服务器返回的支付状态进行不同的显示,给用户进行不同的显示</span></span><br><span class="line">  <span class="comment">//(调用BLOCK传不同的枚举)</span></span><br><span class="line">  completion(PKPaymentAuthorizationStatusSuccess);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span><br><span class="line"> 支付完成</span><br><span class="line"> 支付成功或失败后调用的方法</span><br><span class="line"> */</span></span><br><span class="line">- (<span class="typename">void</span>)<span class="string">paymentAuthorizationViewControllerDidFinish:</span></span><br><span class="line">    (PKPaymentAuthorizationViewController *)controller &#123;</span><br><span class="line">  <span class="comment">//把支付的界面关闭</span></span><br><span class="line">  [self <span class="string">dismissViewControllerAnimated:</span>YES <span class="string">completion:</span>nil];</span><br><span class="line">&#125;</span><br><span class="line"><span class="annotation">@end</span></span><br></pre></td></tr></table></figure>
+<p><em>暂时只提Demo，后序在完善</em></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/03/01/bug1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">问题记录</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="applePayDemo" data-title="applePayDemo" data-url="http://irena.gitcafe.io/2016/03/04/applePayDemo/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"irena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Irena
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

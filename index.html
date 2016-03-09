@@ -181,6 +181,78 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-updateLoginPassword" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/09/updateLoginPassword/" class="article-date">
+  	<time datetime="2016-03-09T09:36:00.000Z" itemprop="datePublished">2016-03-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/09/updateLoginPassword/">updateLoginPassword</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="重设Mac-OS-X开机密码"><a href="#重设Mac-OS-X开机密码" class="headerlink" title="重设Mac OS X开机密码 "></a>重设Mac OS X开机密码 </h2><ol>
+<li>关闭 Mac。如有需要，请按住电源按钮直到 Mac 强制关机。 </li>
+<li>按（但不用按住）电源按钮启动 Mac，然后立即按住键盘上的 Command-R。 </li>
+<li>看到 Apple 标志出现后，您可以松开在上一步中按住的按键。 </li>
+<li>恢复系统屏幕出现后，请选取“实用工具”&gt;“终端”。 </li>
+<li>在“终端”中，输入此命令并按下 Return 键以打开“重设密码”实用工具：<br>resetpassword </li>
+<li>“重设密码”实用工具窗口应会出现。 </li>
+</ol>
+<h2 id="重设密码"><a href="#重设密码" class="headerlink" title="重设密码 "></a>重设密码 </h2><p><strong>按照“重设密码”实用工具中的这些步骤来重设用户帐户的密码。 </strong>  </p>
+<ol>
+<li>在“重设密码”实用工具窗口中，选择密码需重设的用户帐户所在的宗卷。例如，如果客户使用的是默认启动磁盘，则选择“Macintosh HD”。   </li>
+<li>从“选择用户帐户：”弹出式菜单中选择该用户帐户。   </li>
+<li>在“请为此用户输入一个新密码”字段中输入新密码。   </li>
+<li>在“请再一次输入此用户的新密码”栏中输入完全相同的密码。   </li>
+<li>在“为此用户输入新的密码提示（可选）”栏中输入可选的密码提示。   </li>
+<li>点按“存储”。   </li>
+<li>在“重设登录密码”对话框中点按“好”。记下此对话框中的重要信息。   </li>
+<li>关闭“重设密码”窗口。   </li>
+<li>从 Apple 菜单中选择“重新启动”。<br>电脑启动后，请登录到您重设的用户帐户来确认您创建的新密码已经起作用。  </li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-applePayDemo" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -678,63 +750,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a  href="/2016/02/16/hello-world/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-capturePicture" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/16/capturePicture/" class="article-date">
-  	<time datetime="2016-02-16T06:22:45.000Z" itemprop="datePublished">2016-02-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/16/capturePicture/">capturePicture 截图</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、获取当前屏幕显示的图片"><a href="#一、获取当前屏幕显示的图片" class="headerlink" title="一、获取当前屏幕显示的图片"></a>一、获取当前屏幕显示的图片</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIGraphicsBeginImageContextWithOptions</span>(_scrollView<span class="variable">.contentSize</span>, <span class="literal">YES</span>, <span class="number">1</span>);</span><br><span class="line">[_scrollView<span class="variable">.layer</span> renderInContext:<span class="built_in">UIGraphicsGetCurrentContext</span>()];</span><br><span class="line"><span class="built_in">UIImage</span> *uiImage = <span class="built_in">UIGraphicsGetImageFromCurrentImageContext</span>();</span><br><span class="line"><span class="built_in">UIGraphicsEndImageContext</span>();</span><br></pre></td></tr></table></figure>
-<h2 id="二、获取scrollView的contentSize包含的图片"><a href="#二、获取scrollView的contentSize包含的图片" class="headerlink" title="二、获取scrollView的contentSize包含的图片"></a>二、获取scrollView的contentSize包含的图片</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/02/16/capturePicture/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

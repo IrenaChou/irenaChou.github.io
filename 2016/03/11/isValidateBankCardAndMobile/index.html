@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>空值判断 | My First</title>
+  <title>验证手机号和银行卡号 | My First</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12//空值判断BOOL isNotNULL(id object);
-123456789101112BOOL isNotNULL(id object) &amp;#123;  if ([object isKindOfClass:[NSNull class]]) &amp;#123;    return NO;  &amp;#125; else if ([object isKindOfClass:[NSString cla">
+  <meta name="description" content="12//判断一个号码是否为手机号码BOOL isValidateMobile(NSString *mobile);
+12//判断是否为一个合法的银行卡号BOOL isValidateBankCard(NSString *bankNo);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="空值判断">
-<meta property="og:url" content="http://irena.gitcafe.io/2016/03/11/isNotNULL/index.html">
+<meta property="og:title" content="验证手机号和银行卡号">
+<meta property="og:url" content="http://irena.gitcafe.io/2016/03/11/isValidateBankCardAndMobile/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="12//空值判断BOOL isNotNULL(id object);
-123456789101112BOOL isNotNULL(id object) &amp;#123;  if ([object isKindOfClass:[NSNull class]]) &amp;#123;    return NO;  &amp;#125; else if ([object isKindOfClass:[NSString cla">
-<meta property="og:updated_time" content="2016-03-11T06:03:06.000Z">
+<meta property="og:description" content="12//判断一个号码是否为手机号码BOOL isValidateMobile(NSString *mobile);
+12//判断是否为一个合法的银行卡号BOOL isValidateBankCard(NSString *bankNo);">
+<meta property="og:updated_time" content="2016-03-11T06:10:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="空值判断">
-<meta name="twitter:description" content="12//空值判断BOOL isNotNULL(id object);
-123456789101112BOOL isNotNULL(id object) &amp;#123;  if ([object isKindOfClass:[NSNull class]]) &amp;#123;    return NO;  &amp;#125; else if ([object isKindOfClass:[NSString cla">
+<meta name="twitter:title" content="验证手机号和银行卡号">
+<meta name="twitter:description" content="12//判断一个号码是否为手机号码BOOL isValidateMobile(NSString *mobile);
+12//判断是否为一个合法的银行卡号BOOL isValidateBankCard(NSString *bankNo);">
   
     <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
   
@@ -183,11 +183,11 @@ var _hmt = _hmt || [];
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-isNotNULL" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-isValidateBankCardAndMobile" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/11/isNotNULL/" class="article-date">
-  	<time datetime="2016-03-11T05:19:36.000Z" itemprop="datePublished">2016-03-11</time>
+      <a href="/2016/03/11/isValidateBankCardAndMobile/" class="article-date">
+  	<time datetime="2016-03-11T06:09:44.000Z" itemprop="datePublished">2016-03-11</time>
 </a>
     </div>
   
@@ -200,7 +200,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      空值判断
+      验证手机号和银行卡号
     </h1>
   
 
@@ -216,8 +216,11 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//空值判断</span></span><br><span class="line"><span class="function">BOOL <span class="title">isNotNULL</span>(<span class="params">id <span class="keyword">object</span></span>)</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BOOL</span> isNotNULL(id <span class="class"><span class="keyword">object</span>) &#123;</span></span><br><span class="line">  <span class="keyword">if</span> ([<span class="class"><span class="keyword">object</span> <span class="title">isKindOfClass</span>:</span>[<span class="type">NSNull</span> <span class="class"><span class="keyword">class</span>]]) &#123;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="type">NO</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> ([<span class="class"><span class="keyword">object</span> <span class="title">isKindOfClass</span>:</span>[<span class="type">NSString</span> <span class="class"><span class="keyword">class</span>]]) &#123;</span></span><br><span class="line">    <span class="keyword">if</span> ([<span class="class"><span class="keyword">object</span> <span class="title">isEqualToString</span>:</span>@<span class="string">"(null)"</span>]) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="type">NO</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!<span class="class"><span class="keyword">object</span>) &#123;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="type">NO</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="type">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断一个号码是否为手机号码</span></span><br><span class="line"><span class="built_in">BOOL</span> isValidateMobile(<span class="built_in">NSString</span> *mobile);</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断是否为一个合法的银行卡号</span></span><br><span class="line"><span class="built_in">BOOL</span> isValidateBankCard(<span class="built_in">NSString</span> *bankNo);</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*手机号码验证*/</span></span><br><span class="line"><span class="built_in">BOOL</span> isValidateMobile(<span class="built_in">NSString</span> *mobile) &#123;</span><br><span class="line">  <span class="comment">//手机号以13, 15,18开头,八个 \d 数字字符</span></span><br><span class="line">  <span class="built_in">NSString</span> *phoneRegex = <span class="string">@"^((13[0-9])|(15[^4,\\D])|(18[0,0-9]))\\d&#123;8&#125;$"</span>;</span><br><span class="line">  <span class="built_in">NSPredicate</span> *phoneTest =</span><br><span class="line">      [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"SELF MATCHES %@"</span>, phoneRegex];</span><br><span class="line">  <span class="keyword">return</span> [phoneTest evaluateWithObject:mobile];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断银行卡</span></span><br><span class="line"><span class="built_in">BOOL</span> isValidateBankCard(<span class="built_in">NSString</span> *bankCard) &#123;</span><br><span class="line">  <span class="built_in">NSString</span> *cardRegex =</span><br><span class="line">      <span class="string">@"/^\\d&#123;16,19&#125;$|^\\d&#123;6&#125;\\d&#123;10,13&#125;$|^\\d&#123;4&#125;\\d&#123;4&#125;\\d&#123;4&#125;\\d&#123;4,7&#125;$/"</span>;</span><br><span class="line">  <span class="built_in">NSPredicate</span> *bankTest =</span><br><span class="line">      [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"SELF MATCHES %@"</span>, cardRegex];</span><br><span class="line">  <span class="keyword">return</span> [bankTest evaluateWithObject:bankCard];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -226,18 +229,9 @@ var _hmt = _hmt || [];
     
 <nav id="article-nav">
   
-    <a href="/2016/03/11/isValidateBankCardAndMobile/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          验证手机号和银行卡号
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/03/09/updateLoginPassword/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">更改Mac OS X登陆密码</div>
+    <a href="/2016/03/11/isNotNULL/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">空值判断</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -272,7 +266,7 @@ var _hmt = _hmt || [];
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="isNotNULL" data-title="空值判断" data-url="http://irena.gitcafe.io/2016/03/11/isNotNULL/"></div>
+	<div class="ds-thread" data-thread-key="isValidateBankCardAndMobile" data-title="验证手机号和银行卡号" data-url="http://irena.gitcafe.io/2016/03/11/isValidateBankCardAndMobile/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

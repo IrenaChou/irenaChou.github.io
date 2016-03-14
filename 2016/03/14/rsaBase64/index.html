@@ -7,18 +7,24 @@
   <title>rsaBase64 | My First</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="使用openssl生成密匙对生成秘匙参考原文
-###shell 代码| 保密级别  | 对称密钥长度（bit）| RSA密钥长度（bit）  |ECC密钥长度（bit）|保密年限|| ————- |:————-:| —–:|| col 3 is      | right-aligned | $1600 || col 2 is      | centered      |   $12 || zebr">
+ OC Demo 下载 
+1234#!/usr/bin/env bashecho &quot;Generating RSA key pair ...&quot;echo &quot;2048 RSA key: private_key.pem&quot;openssl genrsa -out private_key.pem 2048
+12echo &quot;create certification r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="rsaBase64">
 <meta property="og:url" content="http://irena.gitcafe.io/2016/03/14/rsaBase64/index.html">
 <meta property="og:site_name" content="My First">
 <meta property="og:description" content="使用openssl生成密匙对生成秘匙参考原文
-###shell 代码| 保密级别  | 对称密钥长度（bit）| RSA密钥长度（bit）  |ECC密钥长度（bit）|保密年限|| ————- |:————-:| —–:|| col 3 is      | right-aligned | $1600 || col 2 is      | centered      |   $12 || zebr">
-<meta property="og:updated_time" content="2016-03-14T06:31:35.000Z">
+ OC Demo 下载 
+1234#!/usr/bin/env bashecho &quot;Generating RSA key pair ...&quot;echo &quot;2048 RSA key: private_key.pem&quot;openssl genrsa -out private_key.pem 2048
+12echo &quot;create certification r">
+<meta property="og:updated_time" content="2016-03-14T09:41:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="rsaBase64">
 <meta name="twitter:description" content="使用openssl生成密匙对生成秘匙参考原文
-###shell 代码| 保密级别  | 对称密钥长度（bit）| RSA密钥长度（bit）  |ECC密钥长度（bit）|保密年限|| ————- |:————-:| —–:|| col 3 is      | right-aligned | $1600 || col 2 is      | centered      |   $12 || zebr">
+ OC Demo 下载 
+1234#!/usr/bin/env bashecho &quot;Generating RSA key pair ...&quot;echo &quot;2048 RSA key: private_key.pem&quot;openssl genrsa -out private_key.pem 2048
+12echo &quot;create certification r">
   
     <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
   
@@ -217,7 +223,8 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="使用openssl生成密匙对"><a href="#使用openssl生成密匙对" class="headerlink" title="使用openssl生成密匙对"></a>使用openssl生成密匙对</h2><p><a href="http://witcheryne.iteye.com/blog/2171850" target="_blank" rel="external">生成秘匙参考原文</a></p>
-<p>###shell 代码<br>| 保密级别  | 对称密钥长度（bit）| RSA密钥长度（bit）  |ECC密钥长度（bit）|保密年限|<br>| ————- |:————-:| —–:|<br>| col 3 is      | right-aligned | $1600 |<br>| col 2 is      | centered      |   $12 |<br>| zebra stripes | are neat      |    $1 |<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/usr/bin/env bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Generating RSA key pair ..."</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"2048 RSA key: private_key.pem"</span></span><br><span class="line">openssl genrsa -out private_key.pem <span class="number">2048</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="http://pan.baidu.com/s/1gews7mV" target="_blank" rel="external"> OC Demo 下载 </a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/usr/bin/env bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Generating RSA key pair ..."</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"2048 RSA key: private_key.pem"</span></span><br><span class="line">openssl genrsa -out private_key.pem <span class="number">2048</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">"create certification require file: rsaCertReq.csr"</span></span><br><span class="line">openssl req -<span class="keyword">new</span> -key private<span class="number">_k</span>ey.pem -<span class="keyword">out</span> rsaCertReq.csr</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">"create certification using x509: rsaCert.crt"</span></span><br><span class="line">openssl x509 -req -days <span class="number">3650</span> -<span class="keyword">in</span> rsaCertReq<span class="class">.csr</span> -signkey private_key<span class="class">.pem</span> -out rsaCert.crt</span><br></pre></td></tr></table></figure>

@@ -181,6 +181,64 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-rsaBase64" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/14/rsaBase64/" class="article-date">
+  	<time datetime="2016-03-14T06:01:29.000Z" itemprop="datePublished">2016-03-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/14/rsaBase64/">rsaBase64</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用openssl生成密匙对"><a href="#使用openssl生成密匙对" class="headerlink" title="使用openssl生成密匙对"></a>使用openssl生成密匙对</h2><p><a href="http://witcheryne.iteye.com/blog/2171850">生成秘匙参考原文</a></p>
+<p>###shell 代码<br>| 保密级别  | 对称密钥长度（bit）| RSA密钥长度（bit）  |ECC密钥长度（bit）|保密年限|<br>| ————- |:————-:| —–:|<br>| col 3 is      | right-aligned | $1600 |<br>| col 2 is      | centered      |   $12 |<br>| zebra stripes | are neat      |    $1 |<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/usr/bin/env bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Generating RSA key pair ..."</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"2048 RSA key: private_key.pem"</span></span><br><span class="line">openssl genrsa -out private_key.pem <span class="number">2048</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">"create certification require file: rsaCertReq.csr"</span></span><br><span class="line">openssl req -<span class="keyword">new</span> -key private<span class="number">_k</span>ey.pem -<span class="keyword">out</span> rsaCertReq.csr</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/14/rsaBase64/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-sendMailPop" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -679,64 +737,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a  href="/2016/02/29/macInstallWithUdisk/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-appleDeveloperAccount" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/25/appleDeveloperAccount/" class="article-date">
-  	<time datetime="2016-02-25T02:44:16.000Z" itemprop="datePublished">2016-02-25</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/25/appleDeveloperAccount/">appleDeveloperAccount 苹果IOS开发者账号</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://www.cnblogs.com/KingStar/p/3642473.html">参考原文</a></p>
-<h2 id="个人账号（Individual）："><a href="#个人账号（Individual）：" class="headerlink" title="个人账号（Individual）："></a>个人账号（Individual）：</h2><p>费用99美金一年, 该账号在App Store销售者只能显示个人的ID，比如zhitian zhang，单人使用。个人账号只能有一个开发者。100个苹果的iOS设备UDID测试。</p>
-<h2 id="公司团队账号-（Company-Organization）："><a href="#公司团队账号-（Company-Organization）：" class="headerlink" title="公司团队账号 （Company/Organization）："></a>公司团队账号 （Company/Organization）：</h2><p>费用99美金一年, 该账号在App Store销售者可以显示类似Studios，或者自定义的团队名称<br>，比如Mamshare INC，公司账号可以允许多个开发者协作开发，比个人多一些帐号管理的设置，可以设置多个AppleID，分4种管理级别权限，详细见备注。100个苹果的iOS设备UDID测试。但是申请时需要填写公司的邓白氏编码（D-U-N-S）。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/02/25/appleDeveloperAccount/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

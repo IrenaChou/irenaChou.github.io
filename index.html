@@ -181,6 +181,63 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-tabbarShowOrHidden" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/30/tabbarShowOrHidden/" class="article-date">
+  	<time datetime="2016-03-30T01:09:07.000Z" itemprop="datePublished">2016-03-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/30/tabbarShowOrHidden/">显示隐藏tabbar</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.csdn.net/riveram/article/details/7345577">参考原文</a></p>
+<h2 id="隐藏TabBar："><a href="#隐藏TabBar：" class="headerlink" title="隐藏TabBar："></a>隐藏TabBar：</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)hideTabBar &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span><span class="variable">.tabBarController</span><span class="variable">.tabBar</span><span class="variable">.hidden</span> == <span class="literal">YES</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">UIView</span> *contentView;</span><br><span class="line">    <span class="keyword">if</span> ( [[<span class="keyword">self</span><span class="variable">.tabBarController</span><span class="variable">.view</span><span class="variable">.subviews</span> objectAtIndex:<span class="number">0</span>] isKindOfClass:[<span class="built_in">UITabBar</span> class]] )</span><br><span class="line">        contentView = [<span class="keyword">self</span><span class="variable">.tabBarController</span><span class="variable">.view</span><span class="variable">.subviews</span> objectAtIndex:<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        contentView = [<span class="keyword">self</span><span class="variable">.tabBarController</span><span class="variable">.view</span><span class="variable">.subviews</span> objectAtIndex:<span class="number">0</span>];</span><br><span class="line">    contentView<span class="variable">.frame</span> = <span class="built_in">CGRectMake</span>(contentView<span class="variable">.bounds</span><span class="variable">.origin</span><span class="variable">.x</span>,  contentView<span class="variable">.bounds</span><span class="variable">.origin</span><span class="variable">.y</span>,  contentView<span class="variable">.bounds</span><span class="variable">.size</span><span class="variable">.width</span>, contentView<span class="variable">.bounds</span><span class="variable">.size</span><span class="variable">.height</span> + <span class="keyword">self</span><span class="variable">.tabBarController</span><span class="variable">.tabBar</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.height</span>);        </span><br><span class="line">    <span class="keyword">self</span><span class="variable">.tabBarController</span><span class="variable">.tabBar</span><span class="variable">.hidden</span> = <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/30/tabbarShowOrHidden/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Flashlight" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -690,66 +747,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-gradientColor" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/01/gradientColor/" class="article-date">
-  	<time datetime="2016-03-01T02:23:25.000Z" itemprop="datePublished">2016-03-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/01/gradientColor/">iOS渐变颜色可设置渐变方向</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://blog.csdn.net/caryaliu/article/details/49283419">参考原文</a></p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">&lt;UIKit/UIKit.h&gt;</span></span></span><br><span class="line"><span class="comment">//渐变方向</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">NS_ENUM</span>(<span class="built_in">NSUInteger</span>, GradientType) &#123;</span><br><span class="line">  GradientTypeTopToBottom = <span class="number">0</span>,      <span class="comment">//从上到小</span></span><br><span class="line">  GradientTypeLeftToRight = <span class="number">1</span>,      <span class="comment">//从左到右</span></span><br><span class="line">  GradientTypeUpleftToLowright = <span class="number">2</span>, <span class="comment">//左上到右下</span></span><br><span class="line">  GradientTypeUprightToLowleft = <span class="number">3</span>, <span class="comment">//右上到左下</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">UIImage</span> (<span class="title">GradientColor</span>)</span></span><br><span class="line">+ (<span class="built_in">UIImage</span> *)gradientColorImageFromColors:(<span class="built_in">NSArray</span> *)colors</span><br><span class="line">                             gradientType:(GradientType)gradientType</span><br><span class="line">                                  imgSize:(<span class="built_in">CGSize</span>)imgSize;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/01/gradientColor/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>

@@ -181,6 +181,63 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-capturePicture" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/16/capturePicture/" class="article-date">
+  	<time datetime="2016-02-16T06:22:45.000Z" itemprop="datePublished">2016-02-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/16/capturePicture/">capturePicture 截图</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、获取当前屏幕显示的图片"><a href="#一、获取当前屏幕显示的图片" class="headerlink" title="一、获取当前屏幕显示的图片"></a>一、获取当前屏幕显示的图片</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIGraphicsBeginImageContextWithOptions</span>(_scrollView<span class="variable">.contentSize</span>, <span class="literal">YES</span>, <span class="number">1</span>);</span><br><span class="line">[_scrollView<span class="variable">.layer</span> renderInContext:<span class="built_in">UIGraphicsGetCurrentContext</span>()];</span><br><span class="line"><span class="built_in">UIImage</span> *uiImage = <span class="built_in">UIGraphicsGetImageFromCurrentImageContext</span>();</span><br><span class="line"><span class="built_in">UIGraphicsEndImageContext</span>();</span><br></pre></td></tr></table></figure>
+<h2 id="二、获取scrollView的contentSize包含的图片"><a href="#二、获取scrollView的contentSize包含的图片" class="headerlink" title="二、获取scrollView的contentSize包含的图片"></a>二、获取scrollView的contentSize包含的图片</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/02/16/capturePicture/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-sendMail" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

@@ -181,6 +181,64 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-applePayDemo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/04/applePayDemo/" class="article-date">
+  	<time datetime="2016-03-04T06:03:40.000Z" itemprop="datePublished">2016-03-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/04/applePayDemo/">applePayDemo</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://developer.apple.com/library/ios/ApplePay_Guide/">参考原文</a></p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">"ViewController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">&lt;PassKit/PassKit.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()&lt;<span class="title">PKPaymentAuthorizationViewControllerDelegate</span>&gt;</span></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">  [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)applePayTest &#123;</span><br><span class="line">  <span class="comment">//设备可用</span></span><br><span class="line">  <span class="comment">// PKPaymentAuthorizationViewController用来显示ApplePay的Controller</span></span><br><span class="line">  <span class="keyword">if</span> (![PKPaymentAuthorizationViewController canMakePayments]) &#123;</span><br><span class="line">    <span class="comment">//设备不支持</span></span><br><span class="line">    <span class="comment">//不让ApplePay的支付按钮去显示</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//想当自己的应用支持的卡类型</span></span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   [PKPaymentAuthorizationViewController</span><br><span class="line">   canMakePaymentsUsingNetworks:@[PKPaymentNetworkVisa]]</span><br><span class="line">   */</span></span><br><span class="line">  <span class="comment">//判断支持的卡类型</span></span><br><span class="line">  <span class="keyword">if</span> (![PKPaymentAuthorizationViewController canMakePaymentsUsingNetworks:@[</span><br><span class="line">        PKPaymentNetworkVisa,</span><br><span class="line">        PKPaymentNetworkChinaUnionPay</span><br><span class="line">      ]]) &#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"不支持visa和银联"</span>);</span><br><span class="line">    <span class="comment">//进入设置银行卡的页面</span></span><br><span class="line">    [[[PKPassLibrary alloc] init] openPaymentSetup];</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//创建支付请求</span></span><br><span class="line">  PKPaymentRequest *request = [[PKPaymentRequest alloc] init];</span><br><span class="line">  <span class="comment">//显示支付页面</span></span><br><span class="line">  PKPaymentAuthorizationViewController *vc =</span><br><span class="line">      [[PKPaymentAuthorizationViewController alloc]</span><br><span class="line">          initWithPaymentRequest:request];</span><br><span class="line">  vc<span class="variable">.delegate</span> = <span class="keyword">self</span>;</span><br><span class="line">  <span class="comment">//*设置商户的ID(网站配制的id)</span></span><br><span class="line">  request<span class="variable">.merchantIdentifier</span> = <span class="string">@"merchant.com.irena.AppleiPayDemo"</span>;</span><br><span class="line">  <span class="comment">//*设置国家代码</span></span><br><span class="line">  request<span class="variable">.countryCode</span> = <span class="string">@"CN"</span>;</span><br><span class="line">  <span class="comment">//*设置支付的卡类型</span></span><br><span class="line">  request<span class="variable">.supportedNetworks</span> = @[ PKPaymentNetworkVisa ];</span><br><span class="line">  <span class="comment">//*设置商户的支付标准(必须支持3DS)</span></span><br><span class="line">  request<span class="variable">.merchantCapabilities</span> = PKMerchantCapability3DS;</span><br><span class="line">  <span class="comment">//*设置货币单位(中文CNY)</span></span><br><span class="line">  request<span class="variable">.currencyCode</span> = <span class="string">@"CNY"</span>;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/04/applePayDemo/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-bug1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -677,62 +735,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a  href="/2016/02/16/capturePicture/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-sendMail" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/16/sendMail/" class="article-date">
-  	<time datetime="2016-02-16T06:17:03.000Z" itemprop="datePublished">2016-02-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/16/sendMail/">sendMail 发邮件</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="使用SKPSMTPMessage无需弹框发送邮件"><a href="#使用SKPSMTPMessage无需弹框发送邮件" class="headerlink" title="使用SKPSMTPMessage无需弹框发送邮件"></a>使用SKPSMTPMessage无需弹框发送邮件</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用SKPSMTPMessage无需弹框发送邮件</span></span><br><span class="line">我使用的是</span><br><span class="line"><span class="number">1.</span>导入头文件</span><br><span class="line"><span class="preprocessor">#import <span class="title">"NSData+Base64Additions.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"SKPSMTPMessage.h"</span></span></span><br><span class="line">  SKPSMTPMessage *mail = [[SKPSMTPMessage alloc] init];</span><br><span class="line">  [mail setSubject:<span class="string">@"标题"</span>];                 <span class="comment">// 设置邮件主题</span></span><br><span class="line">  [mail setToEmail:<span class="string">@".com"</span>];                 <span class="comment">// 目标邮箱</span></span><br><span class="line">  [mail setFromEmail:<span class="string">@".com"</span>];               <span class="comment">// 发送者邮箱</span></span><br><span class="line">  [mail setRelayHost:<span class="string">@"smtp.qq.com"</span>];        <span class="comment">// 发送邮件代理服务器</span></span><br><span class="line">  [mail setRequiresAuth:<span class="literal">YES</span>];</span><br><span class="line">  [mail setLogin:<span class="string">@".com"</span>];                   <span class="comment">// 发送者邮箱账号</span></span><br><span class="line">  [mail setPass:<span class="string">@""</span>];                        <span class="comment">// 发送者邮箱密码</span></span><br><span class="line">  [mail setWantsSecure:<span class="literal">YES</span>];                 <span class="comment">// 需要加密</span></span><br><span class="line">  [mail setDelegate:<span class="keyword">self</span>];</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/02/16/sendMail/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

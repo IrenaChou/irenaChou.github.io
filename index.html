@@ -181,6 +181,63 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-cgpoint" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/12/cgpoint/" class="article-date">
+  	<time datetime="2016-04-12T10:06:06.000Z" itemprop="datePublished">2016-04-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/12/cgpoint/">CGPoint</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CGPoint表示一个二维坐标系中的点<br>CGPoint通过x和y坐标定义，可使用CGPointMake(x，y)创建点。</p>
+<pre><code>可以将它们与字符串进行相互转换，可用如下函数：NSStringFromCGPoint()、CGPointFromString().
+主要说CGPointFromString方法
+</code></pre><p>下面是CGPoint的定义<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Points. */</span></span><br><span class="line"><span class="keyword">struct</span> <span class="built_in">CGPoint</span> &#123;</span><br><span class="line">    <span class="built_in">CGFloat</span> x;</span><br><span class="line">    <span class="built_in">CGFloat</span> y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="built_in">CGPoint</span> <span class="built_in">CGPoint</span>;</span><br></pre></td></tr></table></figure></p>
+<p>stringWithFormat从String转换为point的方法中，所需的string格式是<strong>{x,y}</strong>,下面是例子<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *str = <span class="string">@"0.111, 1.22"</span>;</span><br><span class="line">str = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"&#123;%@&#125;"</span>, str];</span><br><span class="line"><span class="built_in">CGPoint</span> initPath = <span class="built_in">CGPointFromString</span>(str);</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, <span class="built_in">NSStringFromCGPoint</span>(initPath));</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-3DTouch" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -691,59 +748,6 @@ var _hmt = _hmt || [];
         <p class="article-more-link">
           <a  href="/2016/03/11/isValidateBankCardAndMobile/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-isNotNULL" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/11/isNotNULL/" class="article-date">
-  	<time datetime="2016-03-11T05:19:36.000Z" itemprop="datePublished">2016-03-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/11/isNotNULL/">空值判断</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//空值判断</span></span><br><span class="line"><span class="function">BOOL <span class="title">isNotNULL</span>(<span class="params">id <span class="keyword">object</span></span>)</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BOOL</span> isNotNULL(id <span class="class"><span class="keyword">object</span>) &#123;</span></span><br><span class="line">  <span class="keyword">if</span> ([<span class="class"><span class="keyword">object</span> <span class="title">isKindOfClass</span>:</span>[<span class="type">NSNull</span> <span class="class"><span class="keyword">class</span>]]) &#123;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="type">NO</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> ([<span class="class"><span class="keyword">object</span> <span class="title">isKindOfClass</span>:</span>[<span class="type">NSString</span> <span class="class"><span class="keyword">class</span>]]) &#123;</span></span><br><span class="line">    <span class="keyword">if</span> ([<span class="class"><span class="keyword">object</span> <span class="title">isEqualToString</span>:</span>@<span class="string">"(null)"</span>]) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="type">NO</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!<span class="class"><span class="keyword">object</span>) &#123;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="type">NO</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="type">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
       
       <div class="clearfix"></div>
     </div>

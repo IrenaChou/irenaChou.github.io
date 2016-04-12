@@ -6,66 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>iOS 3D Touch | My First</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用3D Touch必须要有6s或6s plus
-home screen quick aactions
-
-静态菜单［不需要写代码，在info.plist中配制］
-动态菜单［代码实现］
-菜单跳转
-
-peek and pop
-
-轻度按压预览页面-peek
-大力按压跳转页面-pop
-peek过程中的自定义操作
-
-force propertiesp">
+  <meta name="description" content="3D Touch说明轻压和重压(Peek and Pop)主屏幕快捷操作(Home Screen Quick Actions)  
+3D Touch 给 iOS 9 用户提供了一个新的交互维度。在所支持3DTouch的设备上，人们可以通过按压应用的图标去快速选择应用定制的操作。在应用内，人们可以使用多种按压操作去获取一个项目的预览，可以在独立的视图里打开一个项获取相关操作。(了解更多在你的代码中如">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS 3D Touch">
 <meta property="og:url" content="http://irena.gitcafe.io/2016/04/11/3DTouch/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="使用3D Touch必须要有6s或6s plus
-home screen quick aactions
-
-静态菜单［不需要写代码，在info.plist中配制］
-动态菜单［代码实现］
-菜单跳转
-
-peek and pop
-
-轻度按压预览页面-peek
-大力按压跳转页面-pop
-peek过程中的自定义操作
-
-force propertiesp">
+<meta property="og:description" content="3D Touch说明轻压和重压(Peek and Pop)主屏幕快捷操作(Home Screen Quick Actions)  
+3D Touch 给 iOS 9 用户提供了一个新的交互维度。在所支持3DTouch的设备上，人们可以通过按压应用的图标去快速选择应用定制的操作。在应用内，人们可以使用多种按压操作去获取一个项目的预览，可以在独立的视图里打开一个项获取相关操作。(了解更多在你的代码中如">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/13.png">
 <meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch1.png">
 <meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch2.png">
 <meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch3.png">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch4.PNG">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch5.PNG">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch6.PNG">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch8.PNG">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch9.PNG">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch10.PNG">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch11.PNG">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch12.PNG">
-<meta property="og:updated_time" content="2016-04-12T04:13:15.000Z">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch4.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch5.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch6.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch8.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch9.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch10.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch11.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch12.png">
+<meta property="og:updated_time" content="2016-04-12T07:14:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 3D Touch">
-<meta name="twitter:description" content="使用3D Touch必须要有6s或6s plus
-home screen quick aactions
-
-静态菜单［不需要写代码，在info.plist中配制］
-动态菜单［代码实现］
-菜单跳转
-
-peek and pop
-
-轻度按压预览页面-peek
-大力按压跳转页面-pop
-peek过程中的自定义操作
-
-force propertiesp">
+<meta name="twitter:description" content="3D Touch说明轻压和重压(Peek and Pop)主屏幕快捷操作(Home Screen Quick Actions)  
+3D Touch 给 iOS 9 用户提供了一个新的交互维度。在所支持3DTouch的设备上，人们可以通过按压应用的图标去快速选择应用定制的操作。在应用内，人们可以使用多种按压操作去获取一个项目的预览，可以在独立的视图里打开一个项获取相关操作。(了解更多在你的代码中如">
   
     <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
   
@@ -263,8 +228,12 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>使用3D Touch必须要有6s或6s plus</strong></p>
-<p><strong>home screen quick aactions</strong></p>
+        <h2 id="3D-Touch说明"><a href="#3D-Touch说明" class="headerlink" title="3D Touch说明"></a>3D Touch说明</h2><p><strong>轻压和重压(Peek and Pop)<br>主屏幕快捷操作(Home Screen Quick Actions)</strong>  </p>
+<p>3D Touch 给 iOS 9 用户提供了一个新的交互维度。在所支持3DTouch的设备上，人们可以通过按压应用的图标去快速选择应用定制的操作。在应用内，人们可以使用多种按压操作去获取一个项目的预览，可以在独立的视图里打开一个项获取相关操作。(了解更多在你的代码中如何添加3D Touch支持，参阅 <a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/Adopting3DTouchOniPhone/index.html#//apple_ref/doc/uid/TP40016543" target="_blank" rel="external">Adopting 3D Touch on iPhone .</a>)  </p>
+<p>系统会自动安排图标在快速操作列表中的位置是在左侧或者在右侧，这依赖于你的应用的图标在用户主屏幕的位置。(摒除图标在列表中的位置，在自左向右的语言中文字总是左对齐。)这里有主屏快捷操作的多种展现方式的例子。  </p>
+<p><strong>使用主屏幕快捷操作去开启引人注目的、高价值的任务。</strong>例如，Maps可以让用户不需要打开Maps，通过在当前位置附近搜索就可以获得回家的方向。一个应用至少需要把一个有用的任务放在主屏幕快捷操作里；你可以提供最多四个快捷操作</p>
+<p><img src="http://7xrirn.com1.z0.glb.clouddn.com/13.png" alt="1"><br><strong>使用3D Touch必须要有6s或6s plus</strong></p>
+<h2 id="3D-Touch的三大模块"><a href="#3D-Touch的三大模块" class="headerlink" title=" 3D Touch的三大模块"></a> 3D Touch的三大模块</h2><p><strong>home screen quick aactions</strong></p>
 <ol>
 <li>静态菜单［不需要写代码，在info.plist中配制］</li>
 <li>动态菜单［代码实现］</li>
@@ -281,15 +250,22 @@ var _hmt = _hmt || [];
 <p><strong>home screen quick aactions</strong></p>
 <h2 id="1、静态菜单设置"><a href="#1、静态菜单设置" class="headerlink" title="1、静态菜单设置"></a>1、静态菜单设置</h2><p><a href="http://pan.baidu.com/s/1c1B13X2" target="_blank" rel="external">Demo如下</a><br>下图中带“＊”号的，key必须设置，值可以没有，如果没有设置，设置菜单的当前cell将不会被显示出来<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch1.png" alt="1"><br>UIApplicationShortcutItems:</p>
 <ol>
-<li>UIApplicationShortcutItemIconType 显示的图标<br>iconType可以参考如下链接和下图<strong>(如需swfit去下面链接中查看)</strong><br><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/index.html#//apple_ref/c/tdef/UIApplicationShortcutIconType" target="_blank" rel="external">iconType</a><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch2.png" alt="1"><br><strong>当UIApplicationShortcutItemIconType和UIApplicationShortcutItemIconFile两个都设置的时候<br>UIApplicationShortcutItemIconFile的优先级高于UIApplicationShortcutItemIconType</strong></li>
+<li><strong>副标题</strong>   保持标题的简洁不会被切断从而帮助用户快速理解操作是非常重要的。如果你提供的副标题一行显示不全，系统会截断；如果你没有副标题，系统会把一行展示不完全的长标题以两行展现。</li>
+<li><strong>图标</strong>  UIApplicationShortcutItemIconType 显示的<br>iconType可以参考如下链接和下图<strong>(如需swfit去下面链接中查看)</strong><br><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/index.html#//apple_ref/c/tdef/UIApplicationShortcutIconType" target="_blank" rel="external">iconType</a><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch2.png" alt="1"><br><strong>当UIApplicationShortcutItemIconType和UIApplicationShortcutItemIconFile两个都设置的时候<br>UIApplicationShortcutItemIconFile的优先级高于UIApplicationShortcutItemIconType</strong></li>
 </ol>
-<p> 在项目中的info.plist中的配制示例如下图<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch3.png" alt="1"><br>效果如下图<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch4.PNG" alt="1"> </p>
+<p> 在项目中的info.plist中的配制示例如下图<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch3.png" alt="1"><br>效果如下图<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch4.png" alt="1"> </p>
 <h2 id="2､动态菜单及跳转"><a href="#2､动态菜单及跳转" class="headerlink" title="2､动态菜单及跳转"></a>2､动态菜单及跳转</h2><p><a href="http://pan.baidu.com/s/1c1B13X2" target="_blank" rel="external">Demo如下</a><br>代码如下<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">AppDelegate</span></span></span><br><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application</span><br><span class="line">    didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line">  <span class="comment">/**</span><br><span class="line">   *  3D Touch 动态菜单</span><br><span class="line">   *  其中一个item就是一个菜单项</span><br><span class="line">   */</span></span><br><span class="line">  <span class="built_in">UIApplicationShortcutItem</span> *shortcutItem1 =</span><br><span class="line">      [[<span class="built_in">UIApplicationShortcutItem</span> alloc] initWithType:<span class="string">@"type1"</span></span><br><span class="line">                                       localizedTitle:<span class="string">@"列表"</span>];</span><br><span class="line">  <span class="comment">//使用系统图标</span></span><br><span class="line">  <span class="comment">//  UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon</span></span><br><span class="line">  <span class="comment">//      iconWithType:UIApplicationShortcutIconTypeHome];</span></span><br><span class="line">  <span class="comment">//使用自定义图标</span></span><br><span class="line">  <span class="comment">//  UIApplicationShortcutIcon *icon2 =</span></span><br><span class="line">  <span class="comment">//      [UIApplicationShortcutIcon iconWithTemplateImageName:@""];</span></span><br><span class="line">  <span class="comment">/**</span><br><span class="line">   不设置icon,Title默认靠右</span><br><span class="line">   */</span></span><br><span class="line">  <span class="built_in">UIApplicationShortcutItem</span> *shortcutItem2 = [[<span class="built_in">UIApplicationShortcutItem</span> alloc]</span><br><span class="line">           initWithType:<span class="string">@"type2"</span></span><br><span class="line">         localizedTitle:<span class="string">@"force touch"</span></span><br><span class="line">      localizedSubtitle:<span class="string">@"subtitle 2subtitle 2"</span></span><br><span class="line">                   icon:[<span class="built_in">UIApplicationShortcutIcon</span></span><br><span class="line">                            iconWithTemplateImageName:<span class="string">@""</span>]</span><br><span class="line">               userInfo:<span class="literal">nil</span>];</span><br><span class="line"> <span class="comment">//  /**</span></span><br><span class="line">  <span class="comment">//   让title默认靠左，但不显示icon</span></span><br><span class="line">  <span class="comment">//   只要在一个cell中设置其它的title都会靠左显示</span></span><br><span class="line">  <span class="comment">//   */</span></span><br><span class="line">  <span class="comment">//  UIApplicationShortcutItem *shortcutItem3 = [[UIApplicationShortcutItem</span></span><br><span class="line">  <span class="comment">//  alloc]</span></span><br><span class="line">  <span class="comment">//           initWithType:@""</span></span><br><span class="line">  <span class="comment">//         localizedTitle:@"force touch"</span></span><br><span class="line">  <span class="comment">//      localizedSubtitle:@"subtitle 2subtitle 2"</span></span><br><span class="line">  <span class="comment">//                   icon:[UIApplicationShortcutIcon</span></span><br><span class="line">  <span class="comment">//                            iconWithTemplateImageName:@""]</span></span><br><span class="line">  <span class="comment">//               userInfo:nil];</span></span><br><span class="line">  [<span class="built_in">UIApplication</span> sharedApplication]<span class="variable">.shortcutItems</span> =</span><br><span class="line">      @[ shortcutItem1, shortcutItem2 ];  <span class="comment">//, shortcutItem3</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>两种显示效果如下图<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch5.PNG" alt="1"><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch6.PNG" alt="1"></p>
-<h2 id="peek-and-pop"><a href="#peek-and-pop" class="headerlink" title="peek and pop"></a><strong>peek and pop</strong></h2><p><a href="http://pan.baidu.com/s/1hsnmYPm" target="_blank" rel="external">Demo如下</a><br>pop是在点出peek后在用力按压一下屏幕后出现的</p>
-<p>peek效果如下图<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch8.PNG" alt="1"><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch9.PNG" alt="1"><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch10.PNG" alt="1"></p>
-<p>pop后的效果如下图<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch11.PNG" alt="1"></p>
-<h2 id="force-propertiesp"><a href="#force-propertiesp" class="headerlink" title="force propertiesp"></a><strong>force propertiesp</strong></h2><p><a href="http://pan.baidu.com/s/1hsnmYPm" target="_blank" rel="external">Demo如下</a><br>按压力度，值范围［0-6.6666］<br>代码主要在demo中的IrenaForce.h/.m类<br>效果如下<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch12.PNG" alt="1"></p>
+<p>两种显示效果如下图<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch5.png" alt="1"><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch6.png" alt="1"></p>
+<h2 id="peek-and-pop"><a href="#peek-and-pop" class="headerlink" title="peek and pop"></a><strong>peek and pop</strong></h2><p><a href="http://pan.baidu.com/s/1hsnmYPm" target="_blank" rel="external">Demo如下</a><br><strong>peek代码</strong><br>注意点:</p>
+<ol>
+<li>ndexPathForRowAtPoint获取到的是以当前cell为0,0点的位置，而不是以tableview为0,0点</li>
+<li>此处的方法一定要看清楚，不是convertPoint:toView:是convertPoint:fromView:<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">首先要实现<span class="built_in">UIViewControllerPreviewingDelegate</span>协议</span><br><span class="line"><span class="comment">/**</span><br><span class="line"> *  peek</span><br><span class="line"> *</span><br><span class="line"> *  @param previewingContext 包含被选中对象的所有信息</span><br><span class="line"> *  @param location          被选中对象手指所在的location</span><br><span class="line"> */</span></span><br><span class="line">- (nullable <span class="built_in">UIViewController</span> *)</span><br><span class="line">        previewingContext:(<span class="keyword">id</span>&lt;<span class="built_in">UIViewControllerPreviewing</span>&gt;)previewingContext</span><br><span class="line">viewControllerForLocation:(<span class="built_in">CGPoint</span>)location &#123;</span><br><span class="line">  <span class="comment">// indexPathForRowAtPoint获取到的是以当前cell为0,0点的位置</span></span><br><span class="line">  <span class="comment">//我们需要的是从tableview顶部为0,0点的位置，才可以获取到当前被选中的cell</span></span><br><span class="line">  <span class="comment">//获取以cell为0,0点的坐标</span></span><br><span class="line">  <span class="comment">//  NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:location];</span></span><br><span class="line">  <span class="comment">//转化坐标</span></span><br><span class="line">  <span class="comment">//  此处的方法一定要看清楚，不是convertPoint:toView:是convertPoint:fromView:</span></span><br><span class="line">  <span class="comment">//  location = [self.tableView convertPoint:location</span></span><br><span class="line">  <span class="comment">//                                   toView:[previewingContext sourceView]];</span></span><br><span class="line">  location = [<span class="keyword">self</span><span class="variable">.tableView</span> convertPoint:location</span><br><span class="line">                                 fromView:[previewingContext sourceView]];</span><br><span class="line">  <span class="built_in">NSIndexPath</span> *indexPath = [<span class="keyword">self</span><span class="variable">.tableView</span> indexPathForRowAtPoint:location];</span><br><span class="line">  <span class="comment">//根据cell获取数组中的数据</span></span><br><span class="line">  <span class="keyword">id</span> abc = <span class="keyword">self</span><span class="variable">.items</span>[indexPath<span class="variable">.row</span>];</span><br><span class="line">  IrenaPre *pre = [[IrenaPre alloc] init];</span><br><span class="line">  pre<span class="variable">.item</span> = abc;</span><br><span class="line">  <span class="keyword">return</span> pre;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h2><p><strong>pop是在点出peek后在用力按压一下屏幕后出现的</strong><br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span>  pop</span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span>  <span class="comment">@param previewingContext      包含被选中对象的所有信息</span></span><br><span class="line"> <span class="keyword">*</span>  <span class="comment">@param viewControllerToCommit peek返回的controller</span></span><br><span class="line"> <span class="keyword">*</span>/</span><br><span class="line">- (void)previewingContext:(id<span class="variable">&lt;UIViewControllerPreviewing&gt;</span>)previewingContext</span><br><span class="line">     commitViewController:(UIViewController <span class="keyword">*</span>)viewControllerToCommit &#123;</span><br><span class="line">  //跳转到peek的controller</span><br><span class="line">  // animated在pop时无效</span><br><span class="line">  [self.navigationController pushViewController:viewControllerToCommit</span><br><span class="line">                                       animated:YES];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果如下图<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch8.png" alt="1"><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch9.png" alt="1"><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch10.png" alt="1"><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch11.png" alt="1"></p>
+<h2 id="force"><a href="#force" class="headerlink" title="force"></a><strong>force</strong></h2><p><a href="http://pan.baidu.com/s/1hsnmYPm" target="_blank" rel="external">Demo如下</a><br>按压力度，值范围［0-6.6666］<br>代码主要在demo中的IrenaForce.h/.m类<br><strong>代码如下</strong><br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">"IrenaForce.h"</span></span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">IrenaForce</span> ()</span></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">UIBezierPath</span> *path;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">IrenaForce</span></span></span><br><span class="line">- (<span class="keyword">void</span>)drawRect:(<span class="built_in">CGRect</span>)rect &#123;</span><br><span class="line">  [[<span class="built_in">UIColor</span> orangeColor] set];</span><br><span class="line">  [<span class="keyword">self</span><span class="variable">.path</span> fill];</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)touchesMoved:(<span class="built_in">NSSet</span>&lt;<span class="built_in">UITouch</span> *&gt; *)touches withEvent:(<span class="built_in">UIEvent</span> *)event &#123;</span><br><span class="line">  <span class="comment">//获取触摸对象</span></span><br><span class="line">  <span class="built_in">UITouch</span> *touch = [touches anyObject];</span><br><span class="line">  <span class="built_in">NSLog</span>(<span class="string">@"%lf"</span>, touch<span class="variable">.force</span>);</span><br><span class="line">  <span class="comment">//创建路径</span></span><br><span class="line">  <span class="comment">//根据压力*系数 手指的位置为圆心画圆</span></span><br><span class="line">  <span class="built_in">UIBezierPath</span> *path = [[<span class="built_in">UIBezierPath</span> alloc] init];</span><br><span class="line">  [path addArcWithCenter:[touch locationInView:<span class="keyword">self</span>]</span><br><span class="line">                  radius:touch<span class="variable">.force</span> * <span class="number">20</span></span><br><span class="line">              startAngle:<span class="number">0</span></span><br><span class="line">                endAngle:<span class="number">2</span> * M_PI</span><br><span class="line">               clockwise:<span class="literal">YES</span>];</span><br><span class="line">  <span class="keyword">self</span><span class="variable">.path</span> = path;</span><br><span class="line">  <span class="comment">//重绘</span></span><br><span class="line">  [<span class="keyword">self</span> setNeedsDisplay];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure></p>
+<p>效果如下<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3D Touch12.png" alt="1"></p>
 
       
     </div>

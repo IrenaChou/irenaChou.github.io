@@ -181,6 +181,64 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-hexStringConvertUIColor" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/24/hexStringConvertUIColor/" class="article-date">
+  	<time datetime="2016-02-24T05:41:53.000Z" itemprop="datePublished">2016-02-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/24/hexStringConvertUIColor/">十六进制颜色转换成UIColor</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://wonderzl.iteye.com/blog/1569123">原文出自</a></p>
+<h2 id="interface"><a href="#interface" class="headerlink" title="interface"></a>interface</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">UIColor</span> (<span class="title">hex</span>)</span></span><br><span class="line">  + (<span class="built_in">UIColor</span> *)colorWithHexString:(<span class="built_in">NSString</span> *)stringToConvert;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<h2 id="implementation"><a href="#implementation" class="headerlink" title="implementation"></a>implementation</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">&lt;QuartzCore/QuartzCore.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#define DEFAULT_VOID_COLOR [UIColor whiteColor]</span></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">UIColor</span> (<span class="title">hex</span>)</span></span><br><span class="line">+ (<span class="built_in">UIColor</span> *)colorWithHexString:(<span class="built_in">NSString</span> *)stringToConvert &#123;</span><br><span class="line">  <span class="built_in">NSString</span> *cString = [[stringToConvert</span><br><span class="line">      stringByTrimmingCharactersInSet:[<span class="built_in">NSCharacterSet</span></span><br><span class="line">                                          whitespaceAndNewlineCharacterSet]]</span><br><span class="line">      uppercaseString];</span><br><span class="line">  <span class="keyword">if</span> ([cString length] &lt; <span class="number">6</span>)</span><br><span class="line">    <span class="keyword">return</span> DEFAULT_VOID_COLOR;</span><br><span class="line">  <span class="keyword">if</span> ([cString hasPrefix:<span class="string">@"#"</span>])</span><br><span class="line">    cString = [cString substringFromIndex:<span class="number">1</span>];</span><br><span class="line">  <span class="keyword">if</span> ([cString length] != <span class="number">6</span>)</span><br><span class="line">    <span class="keyword">return</span> DEFAULT_VOID_COLOR;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/02/24/hexStringConvertUIColor/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

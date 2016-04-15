@@ -4,27 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>CGPoint | My First</title>
+  <title>iOS判断NSString是否为纯数字 | My First</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CGPoint表示一个二维坐标系中的点CGPoint通过x和y坐标定义，可使用CGPointMake(x，y)创建点。
-可以将它们与字符串进行相互转换，可用如下函数：NSStringFromCGPoint()、CGPointFromString().
-主要说CGPointFromString方法
-下面是CGPoint的定义123456/* Points. */struct CGPoint &amp;#12">
+  <meta name="description" content="123456789101112/** *  判断是否为整形 * *  @param string 要进行判断的原string * *  @return 是否是数字 */- (BOOL)stringIsPureNumber:(NSString*)string &amp;#123;  NSScanner* scan = [NSScanner scannerWithString:string];  int va">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CGPoint">
-<meta property="og:url" content="http://irena.gitcafe.io/2016/04/12/cgpoint/index.html">
+<meta property="og:title" content="iOS判断NSString是否为纯数字">
+<meta property="og:url" content="http://irena.gitcafe.io/2016/04/15/StringIsNumber/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="CGPoint表示一个二维坐标系中的点CGPoint通过x和y坐标定义，可使用CGPointMake(x，y)创建点。
-可以将它们与字符串进行相互转换，可用如下函数：NSStringFromCGPoint()、CGPointFromString().
-主要说CGPointFromString方法
-下面是CGPoint的定义123456/* Points. */struct CGPoint &amp;#12">
-<meta property="og:updated_time" content="2016-04-12T10:07:21.000Z">
+<meta property="og:description" content="123456789101112/** *  判断是否为整形 * *  @param string 要进行判断的原string * *  @return 是否是数字 */- (BOOL)stringIsPureNumber:(NSString*)string &amp;#123;  NSScanner* scan = [NSScanner scannerWithString:string];  int va">
+<meta property="og:updated_time" content="2016-04-15T03:47:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CGPoint">
-<meta name="twitter:description" content="CGPoint表示一个二维坐标系中的点CGPoint通过x和y坐标定义，可使用CGPointMake(x，y)创建点。
-可以将它们与字符串进行相互转换，可用如下函数：NSStringFromCGPoint()、CGPointFromString().
-主要说CGPointFromString方法
-下面是CGPoint的定义123456/* Points. */struct CGPoint &amp;#12">
+<meta name="twitter:title" content="iOS判断NSString是否为纯数字">
+<meta name="twitter:description" content="123456789101112/** *  判断是否为整形 * *  @param string 要进行判断的原string * *  @return 是否是数字 */- (BOOL)stringIsPureNumber:(NSString*)string &amp;#123;  NSScanner* scan = [NSScanner scannerWithString:string];  int va">
   
     <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
   
@@ -189,11 +180,11 @@ var _hmt = _hmt || [];
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-cgpoint" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-StringIsNumber" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/12/cgpoint/" class="article-date">
-  	<time datetime="2016-04-12T10:06:06.000Z" itemprop="datePublished">2016-04-12</time>
+      <a href="/2016/04/15/StringIsNumber/" class="article-date">
+  	<time datetime="2016-04-15T03:44:40.000Z" itemprop="datePublished">2016-04-15</time>
 </a>
     </div>
   
@@ -206,7 +197,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      CGPoint
+      iOS判断NSString是否为纯数字
     </h1>
   
 
@@ -222,11 +213,9 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>CGPoint表示一个二维坐标系中的点<br>CGPoint通过x和y坐标定义，可使用CGPointMake(x，y)创建点。</p>
-<pre><code>可以将它们与字符串进行相互转换，可用如下函数：NSStringFromCGPoint()、CGPointFromString().
-主要说CGPointFromString方法
-</code></pre><p>下面是CGPoint的定义<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Points. */</span></span><br><span class="line"><span class="keyword">struct</span> <span class="built_in">CGPoint</span> &#123;</span><br><span class="line">    <span class="built_in">CGFloat</span> x;</span><br><span class="line">    <span class="built_in">CGFloat</span> y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="built_in">CGPoint</span> <span class="built_in">CGPoint</span>;</span><br></pre></td></tr></table></figure></p>
-<p>stringWithFormat从String转换为point的方法中，所需的string格式是<strong>{x,y}</strong>,下面是例子<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *str = <span class="string">@"0.111, 1.22"</span>;</span><br><span class="line">str = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"&#123;%@&#125;"</span>, str];</span><br><span class="line"><span class="built_in">CGPoint</span> initPath = <span class="built_in">CGPointFromString</span>(str);</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, <span class="built_in">NSStringFromCGPoint</span>(initPath));</span><br></pre></td></tr></table></figure></p>
+        <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span>  判断是否为整形</span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span>  <span class="comment">@param string 要进行判断的原string</span></span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span>  <span class="comment">@return 是否是数字</span></span><br><span class="line"> <span class="keyword">*</span>/</span><br><span class="line">- (BOOL)stringIsPureNumber:(NSString<span class="keyword">*</span>)string &#123;</span><br><span class="line">  NSScanner<span class="keyword">*</span> scan = [NSScanner scannerWithString:string];</span><br><span class="line">  int val;</span><br><span class="line">  return [scan scanInt:&amp;val] &amp;&amp; [scan isAtEnd];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span>  判断是否为浮点型</span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span>  <span class="comment">@param string 要进行判断的原string</span></span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span>  <span class="comment">@return 是否是浮点</span></span><br><span class="line"> <span class="keyword">*</span>/</span><br><span class="line">- (BOOL)floatIsPureFloat:(NSString<span class="keyword">*</span>)string &#123;</span><br><span class="line">  NSScanner<span class="keyword">*</span> scan = [NSScanner scannerWithString:string];</span><br><span class="line">  float val;</span><br><span class="line">  return [scan scanFloat:&amp;val] &amp;&amp; [scan isAtEnd];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -236,18 +225,9 @@ var _hmt = _hmt || [];
     
 <nav id="article-nav">
   
-    <a href="/2016/04/15/StringIsNumber/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          iOS判断NSString是否为纯数字
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/04/11/3DTouch/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">iOS 3D Touch</div>
+    <a href="/2016/04/12/cgpoint/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CGPoint</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -282,7 +262,7 @@ var _hmt = _hmt || [];
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="cgpoint" data-title="CGPoint" data-url="http://irena.gitcafe.io/2016/04/12/cgpoint/"></div>
+	<div class="ds-thread" data-thread-key="StringIsNumber" data-title="iOS判断NSString是否为纯数字" data-url="http://irena.gitcafe.io/2016/04/15/StringIsNumber/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

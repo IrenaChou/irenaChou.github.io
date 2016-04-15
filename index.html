@@ -181,6 +181,62 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-StringIsNumber" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/15/StringIsNumber/" class="article-date">
+  	<time datetime="2016-04-15T03:44:40.000Z" itemprop="datePublished">2016-04-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/15/StringIsNumber/">iOS判断NSString是否为纯数字</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span>  判断是否为整形</span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span>  <span class="comment">@param string 要进行判断的原string</span></span><br><span class="line"> <span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span>  <span class="comment">@return 是否是数字</span></span><br><span class="line"> <span class="keyword">*</span>/</span><br><span class="line">- (BOOL)stringIsPureNumber:(NSString<span class="keyword">*</span>)string &#123;</span><br><span class="line">  NSScanner<span class="keyword">*</span> scan = [NSScanner scannerWithString:string];</span><br><span class="line">  int val;</span><br><span class="line">  return [scan scanInt:&amp;val] &amp;&amp; [scan isAtEnd];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/15/StringIsNumber/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-cgpoint" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -690,63 +746,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a  href="/2016/03/11/sendMailPop/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-isValidateBankCardAndMobile" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/11/isValidateBankCardAndMobile/" class="article-date">
-  	<time datetime="2016-03-11T06:09:44.000Z" itemprop="datePublished">2016-03-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/11/isValidateBankCardAndMobile/">验证手机号和银行卡号</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断一个号码是否为手机号码</span></span><br><span class="line"><span class="built_in">BOOL</span> isValidateMobile(<span class="built_in">NSString</span> *mobile);</span><br></pre></td></tr></table></figure>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断是否为一个合法的银行卡号</span></span><br><span class="line"><span class="built_in">BOOL</span> isValidateBankCard(<span class="built_in">NSString</span> *bankNo);</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/11/isValidateBankCardAndMobile/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

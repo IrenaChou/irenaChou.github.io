@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>iOS判断NSString是否为纯数字 | My First</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12345678910/* *  判断是否为整形 *  @param string 要进行判断的原string *  @return 是否是数字 */- (BOOL)stringIsPureNumber:(NSString*)string &amp;#123;  NSScanner* scan = [NSScanner scannerWithString:string];  int val;  retur">
+  <meta name="description" content="123456//判断是否为整形- (BOOL)stringIsPureNumber:(NSString*)string &amp;#123;  NSScanner* scan = [NSScanner scannerWithString:string];  int val;  return [scan scanInt:&amp;amp;val] &amp;amp;&amp;amp; [scan isAtEnd];&amp;#125;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS判断NSString是否为纯数字">
 <meta property="og:url" content="http://irena.gitcafe.io/2016/04/15/StringIsNumber/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="12345678910/* *  判断是否为整形 *  @param string 要进行判断的原string *  @return 是否是数字 */- (BOOL)stringIsPureNumber:(NSString*)string &amp;#123;  NSScanner* scan = [NSScanner scannerWithString:string];  int val;  retur">
-<meta property="og:updated_time" content="2016-04-15T03:49:50.000Z">
+<meta property="og:description" content="123456//判断是否为整形- (BOOL)stringIsPureNumber:(NSString*)string &amp;#123;  NSScanner* scan = [NSScanner scannerWithString:string];  int val;  return [scan scanInt:&amp;amp;val] &amp;amp;&amp;amp; [scan isAtEnd];&amp;#125;">
+<meta property="og:updated_time" content="2016-04-15T03:50:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS判断NSString是否为纯数字">
-<meta name="twitter:description" content="12345678910/* *  判断是否为整形 *  @param string 要进行判断的原string *  @return 是否是数字 */- (BOOL)stringIsPureNumber:(NSString*)string &amp;#123;  NSScanner* scan = [NSScanner scannerWithString:string];  int val;  retur">
+<meta name="twitter:description" content="123456//判断是否为整形- (BOOL)stringIsPureNumber:(NSString*)string &amp;#123;  NSScanner* scan = [NSScanner scannerWithString:string];  int val;  return [scan scanInt:&amp;amp;val] &amp;amp;&amp;amp; [scan isAtEnd];&amp;#125;">
   
     <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
   
@@ -213,7 +213,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span>  判断是否为整形</span><br><span class="line"> <span class="keyword">*</span>  <span class="comment">@param string 要进行判断的原string</span></span><br><span class="line"> <span class="keyword">*</span>  <span class="comment">@return 是否是数字</span></span><br><span class="line"> <span class="keyword">*</span>/</span><br><span class="line">- (BOOL)stringIsPureNumber:(NSString<span class="keyword">*</span>)string &#123;</span><br><span class="line">  NSScanner<span class="keyword">*</span> scan = [NSScanner scannerWithString:string];</span><br><span class="line">  int val;</span><br><span class="line">  return [scan scanInt:&amp;val] &amp;&amp; [scan isAtEnd];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断是否为整形</span></span><br><span class="line">- (<span class="built_in">BOOL</span>)stringIsPureNumber:(<span class="built_in">NSString</span>*)string &#123;</span><br><span class="line">  <span class="built_in">NSScanner</span>* scan = [<span class="built_in">NSScanner</span> scannerWithString:string];</span><br><span class="line">  <span class="keyword">int</span> val;</span><br><span class="line">  <span class="keyword">return</span> [scan scanInt:&amp;val] &amp;&amp; [scan isAtEnd];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//判断是否为浮点型</span></span><br><span class="line">- (<span class="built_in">BOOL</span>)floatIsPureFloat:(<span class="built_in">NSString</span>*)string &#123;</span><br><span class="line">  <span class="built_in">NSScanner</span>* scan = [<span class="built_in">NSScanner</span> scannerWithString:string];</span><br><span class="line">  <span class="keyword">float</span> val;</span><br><span class="line">  <span class="keyword">return</span> [scan scanFloat:&amp;val] &amp;&amp; [scan isAtEnd];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 

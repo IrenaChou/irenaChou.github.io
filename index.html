@@ -230,16 +230,6 @@ UIApplication,UIViewController,UIView都继承自UIResponder,因此它们都是�
 <p>  提示：touches中存放的都是UITouch对象。<br>  <strong>下面提供一个简单的Demo，view跟着手指移动</strong></p>
 </li>
 </ul>
-<h2 id="UITouch类中包含如下成员函数："><a href="#UITouch类中包含如下成员函数：" class="headerlink" title="UITouch类中包含如下成员函数："></a>UITouch类中包含如下成员函数：</h2><ul>
-<li><p>(CGPoint)locationInView:(UIView *)view：函数返回一个CGPoint类型的值，表示触摸在view这个视图上的位置，这里返回的位置是针对view的坐标系的。调用时传入的view参数为空的话，返回的是触摸点在整个窗口的位置。</p>
-</li>
-<li><p>(CGPoint)previousLocationInView:(UIView *)view：该方法记录了前一个坐标值，函数返回也是一个CGPoint类型的值， 表示触摸在view这个视图上的位置，这里返回的位置是针对view的坐标系的。调用时传入的view参数为空的话，返回的是触摸点在整个窗口的位置。</p>
-</li>
-</ul>
-<p><strong>可使用UITouch的如上两个方法判断方向</strong></p>
-<pre><code>可使用这个方法，判断point的否在[self.ball frame]范围内
-if (CGRectContainsPoint([self.ball frame], point)){}
-</code></pre>
       
     </div>
     

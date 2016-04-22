@@ -21,7 +21,7 @@ UIApplication,UIViewController,UIView都继承自UIResponder,因此它们都是�
 UIResponderUIResponder内部提供了方法来处理事件;
 &amp;gt; 触摸事">
 <meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/ball.gif">
-<meta property="og:updated_time" content="2016-04-22T05:23:05.000Z">
+<meta property="og:updated_time" content="2016-04-22T05:30:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UITouch-跟着手指走－判断point的范围">
 <meta name="twitter:description" content="响应者对象  在iOS中不是任何对象都能处理事件,只有继承了UIResponder的对象才能接收并处理事件.我们称之为&amp;quot;响应者对象&amp;quot;.
@@ -249,7 +249,16 @@ UIApplication,UIViewController,UIView都继承自UIResponder,因此它们都是�
 <p>  提示：touches中存放的都是UITouch对象。<br>  <strong>下面提供一个简单的Demo，view跟着手指移动</strong></p>
 </li>
 </ul>
-<h2 id="UITouch类中包含如下成员函数："><a href="#UITouch类中包含如下成员函数：" class="headerlink" title="UITouch类中包含如下成员函数："></a>UITouch类中包含如下成员函数：</h2><ul>
+<a id="more"></a>
+<h2 id="UITouch类中包含如下成员函数："><a href="#UITouch类中包含如下成员函数：" class="headerlink" title="UITouch类中包含如下成员函数："></a>UITouch类中包含如下成员函数：</h2><p>当用户用一根手指触摸屏幕时，会创建一个与手指相关联的UITouch对象；一根手指对应一个UITouch对象；</p>
+<h2 id="UITouch的作用"><a href="#UITouch的作用" class="headerlink" title="UITouch的作用:"></a>UITouch的作用:</h2><pre><code>保存跟手指相关的信息，比如触摸的位置、时间、阶段；
+
+当手指移动时，系统会更新同一个UITouch对象，使之能够一直保存该手指的触摸位置；
+
+当手指离开屏幕时，系统会销毁相应的UITouch对象。
+
+提示：iPhone开发中，要避免使用双击事件。
+</code></pre><ul>
 <li><p>(CGPoint)locationInView:(UIView *)view：函数返回一个CGPoint类型的值，表示触摸在view这个视图上的位置，这里返回的位置是针对view的坐标系的。调用时传入的view参数为空的话，返回的是触摸点在整个窗口的位置。</p>
 </li>
 <li><p>(CGPoint)previousLocationInView:(UIView *)view：该方法记录了前一个坐标值，函数返回也是一个CGPoint类型的值， 表示触摸在view这个视图上的位置，这里返回的位置是针对view的坐标系的。调用时传入的view参数为空的话，返回的是触摸点在整个窗口的位置。</p>
@@ -258,7 +267,24 @@ UIApplication,UIViewController,UIView都继承自UIResponder,因此它们都是�
 <p><strong>可使用UITouch的如上两个方法判断方向</strong></p>
 <pre><code>可使用这个方法，判断point的否在[self.ball frame]范围内
 if (CGRectContainsPoint([self.ball frame], point)){}
-</code></pre><a id="more"></a>
+</code></pre><h2 id="触摸事件的产生："><a href="#触摸事件的产生：" class="headerlink" title="触摸事件的产生："></a>触摸事件的产生：</h2><pre><code>1&gt; 发生触摸事件后，系统会将该事件加入到一个由UIApplication管理的事件队列中；
+
+2&gt; UIApplication会从事件队列中取出最前面的事件，并将事件分发下去以便处理，通常，先发送事件给应用程序的主窗口（keyWindow）；
+
+3&gt; 主窗口会在视图层次结构中找到一个最合适的视图控件来处理触摸事件，这也是整个事件处理过程的第一步；
+
+4&gt; 找到合适的视图控件后，就会调用视图控件的touches方法来做具体的事件处理。
+</code></pre><h2 id="触摸事件的传递："><a href="#触摸事件的传递：" class="headerlink" title="触摸事件的传递："></a>触摸事件的传递：</h2><pre><code>触摸事件的传递是从父控件传递到子控件；
+
+如果父控件不能接收触摸事件，那么子控件就不可能接收到触摸事件。
+</code></pre><h2 id="UIView不接收触摸事件的三种情况："><a href="#UIView不接收触摸事件的三种情况：" class="headerlink" title="UIView不接收触摸事件的三种情况："></a>UIView不接收触摸事件的三种情况：</h2><pre><code>1&gt; 不接受用户交互 ：userInteractionEnable = NO;
+
+2&gt; 隐藏 ：hidden = YES;
+
+3&gt; 透明：alpha = 0.0 ~ 0.01
+</code></pre><h2 id="UIEvent"><a href="#UIEvent" class="headerlink" title="UIEvent"></a>UIEvent</h2><pre><code>每产生一个事件，就会产生一个UIEvent对象；
+UIEvent:称为事件对象，记录事件产生的时刻和类型。
+</code></pre><!-- more -->
 <p><img src="http://7xrirn.com1.z0.glb.clouddn.com/ball.gif" alt="1"><br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">"ViewController.h"</span></span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UIView</span> *ball;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">  [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">  <span class="keyword">self</span><span class="variable">.ball</span><span class="variable">.userInteractionEnabled</span> = <span class="literal">NO</span>;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)touchesBegan:(<span class="built_in">NSSet</span>&lt;<span class="built_in">UITouch</span> *&gt; *)touches withEvent:(<span class="built_in">UIEvent</span> *)event &#123;</span><br><span class="line">  <span class="built_in">UITouch</span> *touch = [touches anyObject];</span><br><span class="line">  <span class="built_in">CGPoint</span> point = [touch locationInView:touch<span class="variable">.view</span>];</span><br><span class="line">  _ball<span class="variable">.center</span> = point;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)touchesMoved:(<span class="built_in">NSSet</span>&lt;<span class="built_in">UITouch</span> *&gt; *)touches withEvent:(<span class="built_in">UIEvent</span> *)event &#123;</span><br><span class="line">  <span class="built_in">UITouch</span> *touch = [touches anyObject];</span><br><span class="line">  <span class="built_in">CGPoint</span> point = [touch locationInView:touch<span class="variable">.view</span>];</span><br><span class="line">  _ball<span class="variable">.center</span> = point;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure></p>
 
       

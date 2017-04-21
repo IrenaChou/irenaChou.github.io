@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>自定义Label行高和首行缩进 | My First</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="首行缩进和控制行距放到了UILabel+LineSpacing_textIndex Category里 缩进和自定义行间距的效果如下图">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自定义Label行高和首行缩进">
+<meta property="og:url" content="http://irenachou.github.io/irena/2016/05/05/16-05-05-labelLineHeightAndtextIndex/index.html">
+<meta property="og:site_name" content="My First">
+<meta property="og:description" content="首行缩进和控制行距放到了UILabel+LineSpacing_textIndex Category里 缩进和自定义行间距的效果如下图">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/Label2.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/Label1.png">
+<meta property="og:updated_time" content="2017-04-21T07:09:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自定义Label行高和首行缩进">
+<meta name="twitter:description" content="首行缩进和控制行距放到了UILabel+LineSpacing_textIndex Category里 缩进和自定义行间距的效果如下图">
+<meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com/Label2.png">
+  
+    <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ae638a74013a8514501ff77ee4200154";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Irena</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Irena</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Irena</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-16-05-05-labelLineHeightAndtextIndex" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/05/16-05-05-labelLineHeightAndtextIndex/" class="article-date">
+  	<time datetime="2016-05-05T06:29:39.000Z" itemprop="datePublished">2016-05-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      自定义Label行高和首行缩进
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首行缩进和控制行距放到了<strong>UILabel+LineSpacing_textIndex Category</strong>里</p>
+<p>缩进和自定义行间距的效果如下图</p>
+<ul>
+<li><img src="http://7xrirn.com1.z0.glb.clouddn.com/Label2.png" alt="首行缩进"></li>
+<li><img src="http://7xrirn.com1.z0.glb.clouddn.com/Label1.png" alt="自定义行间距"></li>
+</ul>
+<a id="more"></a>
+<h2 id="下面的两段代码是方法调用，Category的具体代码，在文章的最后面，或是点击下载Category链接下载"><a href="#下面的两段代码是方法调用，Category的具体代码，在文章的最后面，或是点击下载Category链接下载" class="headerlink" title="下面的两段代码是方法调用，Category的具体代码，在文章的最后面，或是点击下载Category链接下载"></a><strong>下面的两段代码是方法调用，Category的具体代码，在文章的最后面，或是点击下载Category链接下载</strong></h2><h2 id="首行缩进使用，具体代码可以下载Category"><a href="#首行缩进使用，具体代码可以下载Category" class="headerlink" title="首行缩进使用，具体代码可以下载Category"></a>首行缩进使用，具体代码可以<a href="http://pan.baidu.com/s/1ge4APvP" target="_blank" rel="external">下载Category</a></h2><p>首行缩进是根据文字个数进行缩进，传的TypeNum为要缩进的文字数<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">"UILabel+LineSpacing_textIndex.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"ViewController.h"</span></span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *contentLabel;</div><div class="line"><span class="keyword">@end</span></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">  [<span class="keyword">super</span> viewDidLoad];</div><div class="line">  <span class="keyword">self</span>.contentLabel.text = <span class="string">@"简单点说话的方式简单点"</span></div><div class="line">                           <span class="string">@"递进的情绪请省略"</span></div><div class="line">                           <span class="string">@"你又不是个演员"</span></div><div class="line">                           <span class="string">@"别设计那些情节"</span></div><div class="line">                           <span class="string">@"没意见我只想看看你怎么圆"</span></div><div class="line">                           <span class="string">@"你难过的太表面 像没天赋的演员"</span></div><div class="line">                           <span class="string">@"观众一眼能看见"</span></div><div class="line">                           <span class="string">@"该配合你演出的我演视而不见"</span></div><div class="line">                           <span class="string">@"在逼一个最爱你的人即兴表演"</span></div><div class="line">                           <span class="string">@"什么时候我们开始收起了底线"</span></div><div class="line">                           <span class="string">@"顺应时代的改变看那些拙劣的表演"</span></div><div class="line">                           <span class="string">@"可你曾经那么爱我干嘛演出细节"</span>;</div><div class="line">  <span class="comment">//首行缩进</span></div><div class="line">  [<span class="keyword">self</span>.contentLabel textIndexWithTypeNum:<span class="number">2</span>];</div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="修改行间距的方法调用，具体代码可以下载Category"><a href="#修改行间距的方法调用，具体代码可以下载Category" class="headerlink" title="修改行间距的方法调用，具体代码可以下载Category"></a>修改行间距的方法调用，具体代码可以<a href="http://pan.baidu.com/s/1ge4APvP" target="_blank" rel="external">下载Category</a></h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">"UILabel+LineSpacing_textIndex.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"ViewController.h"</span></span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *contentLabel;</div><div class="line"><span class="keyword">@end</span></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">  [<span class="keyword">super</span> viewDidLoad];</div><div class="line">  <span class="keyword">self</span>.contentLabel.text = <span class="string">@"简单点说话的方式简单点"</span></div><div class="line">                           <span class="string">@"递进的情绪请省略"</span></div><div class="line">                           <span class="string">@"你又不是个演员"</span></div><div class="line">                           <span class="string">@"别设计那些情节"</span></div><div class="line">                           <span class="string">@"没意见我只想看看你怎么圆"</span></div><div class="line">                           <span class="string">@"你难过的太表面 像没天赋的演员"</span></div><div class="line">                           <span class="string">@"观众一眼能看见"</span></div><div class="line">                           <span class="string">@"该配合你演出的我演视而不见"</span></div><div class="line">                           <span class="string">@"在逼一个最爱你的人即兴表演"</span></div><div class="line">                           <span class="string">@"什么时候我们开始收起了底线"</span></div><div class="line">                           <span class="string">@"顺应时代的改变看那些拙劣的表演"</span></div><div class="line">                           <span class="string">@"可你曾经那么爱我干嘛演出细节"</span>;</div><div class="line">  <span class="comment">//修改行距</span></div><div class="line">  [<span class="keyword">self</span>.contentLabel lineSpaceingWithLineSpacingNum:<span class="number">12</span>];</div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+<h2 id="下面是Category中的代码"><a href="#下面是Category中的代码" class="headerlink" title="下面是Category中的代码"></a>下面是Category中的代码</h2><h2 id="首行缩进的方法调用"><a href="#首行缩进的方法调用" class="headerlink" title="首行缩进的方法调用"></a>首行缩进的方法调用</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> *  根据传入的字数确认首行缩进的字数</div><div class="line"> *</div><div class="line"> *  @param typeNum 首行缩进的字数</div><div class="line"> */</div><div class="line">- (<span class="keyword">void</span>)textIndexWithTypeNum:(<span class="built_in">NSUInteger</span>)typeNum &#123;</div><div class="line">  <span class="built_in">NSMutableAttributedString</span> *attributedString =</div><div class="line">      [[<span class="built_in">NSMutableAttributedString</span> alloc] initWithString:<span class="keyword">self</span>.text];</div><div class="line">  <span class="built_in">NSMutableParagraphStyle</span> *paragraphStyle =</div><div class="line">      [[<span class="built_in">NSMutableParagraphStyle</span> alloc] init];</div><div class="line">  paragraphStyle.alignment = <span class="built_in">NSTextAlignmentLeft</span>;</div><div class="line">  <span class="built_in">CGFloat</span> labelFont = [[<span class="keyword">self</span> font] pointSize];</div><div class="line">  <span class="built_in">CGSize</span> whSize = [<span class="keyword">self</span>.text sizeWithAttributes:@&#123;</div><div class="line">    <span class="built_in">NSFontAttributeName</span> : [<span class="built_in">UIFont</span> systemFontOfSize:labelFont]</div><div class="line">  &#125;];</div><div class="line">  [paragraphStyle</div><div class="line">      setFirstLineHeadIndent:whSize.height * typeNum -</div><div class="line">                             typeNum *</div><div class="line">                                 <span class="number">2.5</span>];  <span class="comment">//首行缩进 根据用户昵称宽度在加5个像素</span></div><div class="line">  [attributedString addAttribute:<span class="built_in">NSParagraphStyleAttributeName</span></div><div class="line">                           value:paragraphStyle</div><div class="line">                           range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, [<span class="keyword">self</span>.text length])];</div><div class="line">  <span class="keyword">self</span>.attributedText = attributedString;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="设置行间距"><a href="#设置行间距" class="headerlink" title="设置行间距"></a>设置行间距</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> *  设置行间距</div><div class="line"> *</div><div class="line"> *  @param lineSpacingNum 行间距值</div><div class="line"> */</div><div class="line">- (<span class="keyword">void</span>)lineSpaceingWithLineSpacingNum:(<span class="built_in">NSUInteger</span>)lineSpacingNum &#123;</div><div class="line">  <span class="built_in">NSMutableAttributedString</span> *attributedString =</div><div class="line">      [[<span class="built_in">NSMutableAttributedString</span> alloc] initWithString:<span class="keyword">self</span>.text];</div><div class="line">  <span class="built_in">NSMutableParagraphStyle</span> *paragraphStyle =</div><div class="line">      [[<span class="built_in">NSMutableParagraphStyle</span> alloc] init];</div><div class="line">  paragraphStyle.maximumLineHeight = lineSpacingNum;  <span class="comment">//最大的行高</span></div><div class="line">  [attributedString addAttribute:<span class="built_in">NSParagraphStyleAttributeName</span></div><div class="line">                           value:paragraphStyle</div><div class="line">                           range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, [<span class="keyword">self</span>.text length])];</div><div class="line">  <span class="keyword">self</span>.attributedText = attributedString;</div><div class="line">  [<span class="keyword">self</span> sizeToFit];</div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/03/16-05-03-bug/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Bug记录-deflate_referenced_from
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/09/16-05-09-NSStringConvertNSData/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">十六进制字符串NSString转换为NSData</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="16-05-05-labelLineHeightAndtextIndex" data-title="自定义Label行高和首行缩进" data-url="http://irenachou.github.io/irena/2016/05/05/16-05-05-labelLineHeightAndtextIndex/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"irena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Irena
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

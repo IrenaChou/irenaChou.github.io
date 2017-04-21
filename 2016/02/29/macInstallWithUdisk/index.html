@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>使用U盘装MAC OS X | My First</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="我装的是OS X EI Capitan有两种方法：一，网络恢复    必须在能用国外的网的基础上才可以（我是开的vpn），我选择的是第二种方法二，将U盘设置成启动盘，直接安装  安装的先决条件  准备一个不小到8G的盘   将盘插入电脑的usb口中，打开磁盘工具   将盘抹掉，如下图">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用U盘装MAC OS X">
+<meta property="og:url" content="http://irenachou.github.io/irena/2016/02/29/macInstallWithUdisk/index.html">
+<meta property="og:site_name" content="My First">
+<meta property="og:description" content="我装的是OS X EI Capitan有两种方法：一，网络恢复    必须在能用国外的网的基础上才可以（我是开的vpn），我选择的是第二种方法二，将U盘设置成启动盘，直接安装  安装的先决条件  准备一个不小到8G的盘   将盘插入电脑的usb口中，打开磁盘工具   将盘抹掉，如下图">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/irena1.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/irena2.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/irena3.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/irena4.png">
+<meta property="og:updated_time" content="2017-04-21T07:09:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用U盘装MAC OS X">
+<meta name="twitter:description" content="我装的是OS X EI Capitan有两种方法：一，网络恢复    必须在能用国外的网的基础上才可以（我是开的vpn），我选择的是第二种方法二，将U盘设置成启动盘，直接安装  安装的先决条件  准备一个不小到8G的盘   将盘插入电脑的usb口中，打开磁盘工具   将盘抹掉，如下图">
+<meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com/irena1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ae638a74013a8514501ff77ee4200154";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Irena</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Irena</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Irena</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-macInstallWithUdisk" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/29/macInstallWithUdisk/" class="article-date">
+  	<time datetime="2016-02-29T08:05:24.000Z" itemprop="datePublished">2016-02-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用U盘装MAC OS X
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我装的是OS X EI Capitan<br>有两种方法：<br>一，网络恢复<br>    必须在能用国外的网的基础上才可以（我是开的vpn），我选择的是第二种方法<br>二，将U盘设置成启动盘，直接安装<br>  安装的先决条件</p>
+<ol>
+<li>准备一个不小到8G的盘  </li>
+<li>将盘插入电脑的usb口中，打开<code>磁盘工具</code>  </li>
+<li>将盘抹掉，如下图  </li>
+<li><img src="http://7xrirn.com1.z0.glb.clouddn.com/irena1.png" alt="1"></li>
+</ol>
+<a id="more"></a>
+<p>继续上面的步骤：</p>
+<ul>
+<li>从App Store下载完整的 OS X 安装器（就是重新下一下）<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/irena2.png" alt="2"></li>
+<li>一定要将如下文件放到finder-application(应用程序中)<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/irena3.png" alt="3"></li>
+<li>这个文件一般由双击.dmg包打开后就可以看见</li>
+<li>然后在终端执行如下代码，下面代码中的123为盘的名称    </li>
+<li><code>终端:sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/123 --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app</code></li>
+<li>将上面的代码粘贴到终端后<em>回车</em>，会让选择y或n，输入y</li>
+<li>需要等待一会我大概是30分钟左右吧</li>
+<li>完成后推出磁盘</li>
+</ul>
+<p>使用u盘安装</p>
+<ul>
+<li>将u盘插到电脑上</li>
+<li>重启电脑，一直按option(alt)键</li>
+<li>选择你的安装盘</li>
+<li>继续…</li>
+<li>你可能会出现如下问题</li>
+<li>不能验证这个“安装 os x ei capitan”应用程序副本,它在下载过程中可能已遭破坏</li>
+<li>这个问题的解决方法就是，系统时间改成OS X EI Capitan安装包右面的时间，重启安装即可</li>
+<li>修改时间的终端命令：date 100114102015.30<br>  10是月，01是日，14是时，10是分，2015是年，30是秒<br>   注意:只要年月日一样就行<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/irena4.png" alt="4"></li>
+</ul>
+<p>遇到问题的解决：</p>
+<ol>
+<li>给苹果打电话求助     <code>*电话：400-666-8800*</code></li>
+<li>使用搜索引擎 <code>（就是不管他问题说的多明显，一定要先百度，因为有可能和你想的并不相同）</code></li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/25/appleDeveloperAccount/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          appleDeveloperAccount 苹果IOS开发者账号
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/01/brightNess/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS在程序中控制系统的屏幕亮度</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="macInstallWithUdisk" data-title="使用U盘装MAC OS X" data-url="http://irenachou.github.io/irena/2016/02/29/macInstallWithUdisk/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"irena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Irena
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

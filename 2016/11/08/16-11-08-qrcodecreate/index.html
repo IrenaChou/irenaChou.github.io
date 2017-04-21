@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>生成二维码图片 | My First</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="条码样式显示">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="生成二维码图片">
+<meta property="og:url" content="http://irenachou.github.io/irena/2016/11/08/16-11-08-qrcodecreate/index.html">
+<meta property="og:site_name" content="My First">
+<meta property="og:description" content="条码样式显示">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCICode128BarcodeGenerator.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCIPDF417BarcodeGenerator.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCIAztecCodeGenerator.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCIQRCodeGenerator.png">
+<meta property="og:updated_time" content="2017-04-21T07:09:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="生成二维码图片">
+<meta name="twitter:description" content="条码样式显示">
+<meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCICode128BarcodeGenerator.png">
+  
+    <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ae638a74013a8514501ff77ee4200154";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Irena</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Irena</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Irena</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-16-11-08-qrcodecreate" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/08/16-11-08-qrcodecreate/" class="article-date">
+  	<time datetime="2016-11-08T09:18:45.000Z" itemprop="datePublished">2016-11-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      生成二维码图片
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="条码样式显示"><a href="#条码样式显示" class="headerlink" title="条码样式显示"></a>条码样式显示</h2><p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCICode128BarcodeGenerator.png" alt="条形码"></p>
+<p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCIPDF417BarcodeGenerator.png" alt="PDF417二维码"></p>
+<p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCIAztecCodeGenerator.png" alt="Aztec码"></p>
+<p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCIQRCodeGenerator.png" alt="二维码"></p>
+<a id="more"></a>
+<h2 id="使用【返回一个image】"><a href="#使用【返回一个image】" class="headerlink" title="使用【返回一个image】"></a>使用【返回一个image】</h2><figure class="highlight scheme"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="name">self</span> createQRCodeImageWithQRCode:@<span class="string">"http://irenachou.github.io/"</span>]<span class="comment">;</span></div></pre></td></tr></table></figure>
+<h2 id="创建【通过二维码字符串生成一个二维码图片】"><a href="#创建【通过二维码字符串生成一个二维码图片】" class="headerlink" title="创建【通过二维码字符串生成一个二维码图片】"></a>创建【通过二维码字符串生成一个二维码图片】</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">+ (<span class="built_in">UIImage</span> *)createQRCodeImageWithQRCode:(<span class="built_in">NSString</span> *)qrcode &#123;</div><div class="line">  <span class="comment">// 1.创建滤镜</span></div><div class="line">  <span class="comment">//filterWithName后name的值，选择不同的值创建不同类型的条码</span></div><div class="line">  <span class="comment">// CIAztecCodeGenerator</span></div><div class="line">        <span class="comment">//Aztec码是一种类型的二维条码所发明安德鲁朗埃克，小罗伯特·赫西于1995年[1]的代码被发布的AIM，公司在1997年虽然阿兹特克代码的专利，[1]该专利被正式公开领域。[2]阿兹特克代码也发布为ISO / IEC 24778：2008标准。中央取景器图案的相似性的得名阿兹特克金字塔，阿兹特克码具有使用较少的空间比其它的矩阵条形码，因为它不要求一个周边空白“静区”的潜力。</span></div><div class="line">  <span class="comment">// CIPDF417BarcodeGenerator：</span></div><div class="line">        <span class="comment">//PDF417条码是二维码的一种。PDF417条码是一种高密度、高信息含量的便携式数据文件，是实现证件及卡片等大容量、高可靠性信息自动存储、携带并可用机器自动识读的理想手段</span></div><div class="line">  <span class="comment">// CICode128BarcodeGenerator：条形码</span></div><div class="line">  <span class="comment">// CIQRCodeGenerator：二维码</span></div><div class="line"></div><div class="line">  <span class="comment">//普通二维码</span></div><div class="line">  <span class="built_in">CIFilter</span> *filter = [<span class="built_in">CIFilter</span> filterWithName:<span class="string">@"CIQRCodeGenerator"</span>];</div><div class="line">  <span class="comment">// 2.还原滤镜默认属性</span></div><div class="line">  [filter setDefaults];</div><div class="line">  <span class="comment">// 3.设置需要生成二维码的数据到滤镜中(OC中要求设置的是一个二进制数据)</span></div><div class="line">  <span class="built_in">NSData</span> *data = [qrcode</div><div class="line">      dataUsingEncoding:</div><div class="line">          <span class="built_in">NSUTF8StringEncoding</span>];  <span class="comment">//(这里的字符串就是用来生成二维码的,可直接复制代码只需修改这里如果没有其他需求)</span></div><div class="line">  [filter setValue:data forKeyPath:<span class="string">@"InputMessage"</span>];</div><div class="line">  <span class="comment">// 4.从滤镜从取出生成好的二维码图片</span></div><div class="line">  <span class="built_in">CIImage</span> *ciImage = [filter outputImage];</div><div class="line">  <span class="keyword">return</span> [<span class="keyword">self</span> createhdUIImageFormCIImage:ciImage size:<span class="number">300</span>];</div><div class="line">&#125;</div><div class="line">+ (<span class="built_in">UIImage</span> *)createhdUIImageFormCIImage:(<span class="built_in">CIImage</span> *)ciImage size:(<span class="built_in">CGFloat</span>)size &#123;</div><div class="line">  <span class="built_in">CGRect</span> wsRect = <span class="built_in">CGRectIntegral</span>(ciImage.extent);</div><div class="line">  <span class="built_in">CGFloat</span> scale =</div><div class="line">      MIN(size / <span class="built_in">CGRectGetWidth</span>(wsRect), size / <span class="built_in">CGRectGetHeight</span>(wsRect));</div><div class="line">  <span class="comment">//  1.二维码基本设置</span></div><div class="line">  <span class="comment">// 1.创建bitmap;</span></div><div class="line">  size_t width = <span class="built_in">CGRectGetWidth</span>(wsRect) * scale;</div><div class="line">  size_t height = <span class="built_in">CGRectGetHeight</span>(wsRect) * scale;</div><div class="line">  <span class="built_in">CGColorSpaceRef</span> cs = <span class="built_in">CGColorSpaceCreateDeviceGray</span>();</div><div class="line">  <span class="built_in">CGContextRef</span> wsRef = <span class="built_in">CGBitmapContextCreate</span>(<span class="literal">nil</span>, width, height, <span class="number">8</span>, <span class="number">0</span>, cs,</div><div class="line">                                             (<span class="built_in">CGBitmapInfo</span>)kCGImageAlphaNone);</div><div class="line">  <span class="built_in">CIContext</span> *context = [<span class="built_in">CIContext</span> contextWithOptions:<span class="literal">nil</span>];</div><div class="line">  <span class="built_in">CGImageRef</span> wsImageRef = [context createCGImage:ciImage fromRect:wsRect];</div><div class="line">  <span class="built_in">CGContextSetInterpolationQuality</span>(wsRef, kCGInterpolationNone);</div><div class="line">  <span class="built_in">CGContextScaleCTM</span>(wsRef, scale, scale);</div><div class="line">  <span class="built_in">CGContextDrawImage</span>(wsRef, wsRect, wsImageRef);</div><div class="line">  <span class="comment">// 保存bitmap到图片</span></div><div class="line">  <span class="built_in">CGImageRef</span> scaledImage = <span class="built_in">CGBitmapContextCreateImage</span>(wsRef);</div><div class="line">  <span class="built_in">CGContextRelease</span>(wsRef);</div><div class="line">  <span class="built_in">CGImageRelease</span>(wsImageRef);</div><div class="line">  <span class="keyword">return</span> [<span class="built_in">UIImage</span> imageWithCGImage:scaledImage];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>通过二维码字符串生成二维码图片的关键代码放在如下链接的category里，需要请下载使用</strong></p>
+<h2 id="关键代码下载"><a href="#关键代码下载" class="headerlink" title="关键代码下载"></a><a href="http://7xrirn.com1.z0.glb.clouddn.com/blogCode生成二维码图片.zip" target="_blank" rel="external">关键代码下载</a></h2>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/27/16-10-27-angularjs/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          AngularJS标签
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/09/16-11-09-appJumpAppStore/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">App应用内跳转AppStore与iTunesStore</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="16-11-08-qrcodecreate" data-title="生成二维码图片" data-url="http://irenachou.github.io/irena/2016/11/08/16-11-08-qrcodecreate/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"irena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Irena
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

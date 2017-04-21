@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Swift-extension【扩展】 | My First</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Swift-extension【扩展】扩展能够向已有的类、结构体，枚举或协议类型添加新的功能。这包括在没有权限获取原始代码的情况下扩展类型的能力【即逆向建模】。扩展类似于Objective-C中的分类【categories】，与Objective-C分类不同的是，Swift的extension没有名称，Objective-C中的Category只能扩展类(类别) extension中的privat">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift-extension【扩展】">
+<meta property="og:url" content="http://irenachou.github.io/irena/2017/01/05/17-01-05-swift-extension/index.html">
+<meta property="og:site_name" content="My First">
+<meta property="og:description" content="Swift-extension【扩展】扩展能够向已有的类、结构体，枚举或协议类型添加新的功能。这包括在没有权限获取原始代码的情况下扩展类型的能力【即逆向建模】。扩展类似于Objective-C中的分类【categories】，与Objective-C分类不同的是，Swift的extension没有名称，Objective-C中的Category只能扩展类(类别) extension中的privat">
+<meta property="og:updated_time" content="2017-04-21T07:09:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift-extension【扩展】">
+<meta name="twitter:description" content="Swift-extension【扩展】扩展能够向已有的类、结构体，枚举或协议类型添加新的功能。这包括在没有权限获取原始代码的情况下扩展类型的能力【即逆向建模】。扩展类似于Objective-C中的分类【categories】，与Objective-C分类不同的是，Swift的extension没有名称，Objective-C中的Category只能扩展类(类别) extension中的privat">
+  
+    <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ae638a74013a8514501ff77ee4200154";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Irena</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Irena</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Irena</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-17-01-05-swift-extension" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/01/05/17-01-05-swift-extension/" class="article-date">
+  	<time datetime="2017-01-05T07:43:53.000Z" itemprop="datePublished">2017-01-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Swift-extension【扩展】
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Swift/">Swift</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Swift-extension【扩展】"><a href="#Swift-extension【扩展】" class="headerlink" title="Swift-extension【扩展】"></a>Swift-extension【扩展】</h2><p><strong>扩展能够向已有的类、结构体，枚举或协议类型添加新的功能。这包括在没有权限获取原始代码的情况下扩展类型的能力【即逆向建模】。扩展类似于Objective-C中的分类【categories】，与Objective-C分类不同的是，Swift的extension没有名称，Objective-C中的Category只能扩展类(类别)</strong></p>
+<p><em>extension中的private方法不能被已有实现类调用</em></p>
+<p>Swift中的extension可以实现如下的所示的功能：</p>
+<ul>
+<li>添加计算型属性和计算静态属性</li>
+<li>定义实例方法和类型方法</li>
+<li>提供新的构造器器</li>
+<li>定义下标</li>
+<li>定义和使用新的嵌套类型</li>
+<li>使一个已有类型符合某个协议</li>
+</ul>
+<a id="more"></a>
+<h2 id="计算型属性"><a href="#计算型属性" class="headerlink" title="计算型属性"></a>计算型属性</h2><p><em>距离转换</em></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">IRTestController</span>: <span class="title">UIViewController</span> </span>&#123;</div><div class="line">	<span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</div><div class="line">		<span class="keyword">super</span>.viewDidLoad()</div><div class="line">		<span class="keyword">let</span> aMarathon = <span class="number">25.5</span>.mm + <span class="number">1.2</span>.m</div><div class="line">         <span class="built_in">print</span>(<span class="string">"A marathon is <span class="subst">\(aMarathon)</span> meters long"</span>)</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Double</span></span>&#123;</div><div class="line">    <span class="keyword">var</span> m : <span class="type">Double</span> &#123; <span class="keyword">return</span> <span class="keyword">self</span> &#125;</div><div class="line">    <span class="keyword">var</span> mm : <span class="type">Double</span> &#123; <span class="keyword">return</span> <span class="keyword">self</span> / <span class="number">1_000.0</span> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在上述代码中，计算属性的含义是把一个Double型的值看作是某单位下的长度值，实现距离转换</p>
+<h2 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h2><p>扩展能向类中添加新的便利构造器，<strong>不能向类中添加新的指定的构造器或析构造函数</strong>。指定构造器和析构造函数必须由原始类实现提供</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">IRTestController</span>: <span class="title">UIViewController</span> </span>&#123;</div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="keyword">super</span>.viewDidLoad()</div><div class="line">        <span class="keyword">let</span> rect = <span class="type">CGRect</span>(center: <span class="type">CGPoint</span>(x: <span class="number">4.0</span>,y: <span class="number">4.0</span>), size: <span class="type">CGSize</span>(width: <span class="number">3</span>,height: <span class="number">3</span>))</div><div class="line">        <span class="built_in">print</span>(rect)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">CGRect</span> </span>&#123;</div><div class="line">    <span class="keyword">init</span>(center: <span class="type">CGPoint</span>,size: <span class="type">CGSize</span>) &#123;</div><div class="line">        <span class="keyword">let</span> originX = center.x - size.width * <span class="number">0.5</span></div><div class="line">        <span class="keyword">let</span> originY = center.y - size.height * <span class="number">0.5</span></div><div class="line">        <span class="keyword">self</span>.<span class="keyword">init</span>( origin: <span class="type">CGPoint</span>( x: originX, y: originY ) ,size: size 		)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="扩展方法"><a href="#扩展方法" class="headerlink" title="扩展方法"></a>扩展方法</h2><p>可以向已有类型添加新的实例方法和类型方法。</p>
+<p>扩展增加的实例方法可以修改实例本身。结构体和枚举类型中的方法如果想要修改实例本身或者属性的话需要用<code>mutating</code>来修饰方法，所以扩展这样的方法也需要加<code>mutating</code>。</p>
+<p><em>向Int类型中添加一个名为repetions的新实例方法</em></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">IRTestController</span>: <span class="title">UIViewController</span> </span>&#123;</div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="keyword">super</span>.viewDidLoad()</div><div class="line">        <span class="keyword">var</span> num = <span class="number">2</span></div><div class="line">        num.repetions &#123;</div><div class="line">            <span class="built_in">print</span>(<span class="string">"irena"</span>)</div><div class="line">        &#125;</div><div class="line">        num.square()</div><div class="line">        <span class="built_in">print</span>(<span class="string">"<span class="subst">\(num)</span> square is <span class="subst">\(num)</span>"</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Int</span> </span>&#123;</div><div class="line">    <span class="comment">/// 参数是一个单类型的闭包，没有参数，没有返回值的闭包 ()-()</span></div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">repetions</span><span class="params">(task: <span class="params">()</span></span></span> -&gt; ()) &#123;</div><div class="line">        <span class="keyword">for</span> <span class="number">_</span> <span class="keyword">in</span> <span class="number">1</span>...<span class="keyword">self</span> &#123;</div><div class="line">            task()</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/// 要修改self，就需要是可改类型方法，需要加上关键字mutating</span></div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">square</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="keyword">self</span> = <span class="keyword">self</span> * <span class="keyword">self</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="下标"><a href="#下标" class="headerlink" title="下标"></a>下标</h2><p>扩展可以向一个已有类型添加新下标</p>
+<p><em>如果位数不足返回0</em></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">IRTestController</span>: <span class="title">UIViewController</span> </span>&#123;</div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="keyword">super</span>.viewDidLoad()</div><div class="line">        <span class="built_in">print</span>(<span class="string">"<span class="subst">\(<span class="number">289435733</span>[<span class="number">3</span>])</span>"</span>)  <span class="comment">//return 5</span></div><div class="line">        <span class="built_in">print</span>(<span class="string">"<span class="subst">\(<span class="number">2</span>[<span class="number">3</span>])</span>"</span>)          <span class="comment">//return 0</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Int</span> </span>&#123;</div><div class="line">    <span class="comment">/// 下标[n]会返回十进制数字从右向左第n个数字</span></div><div class="line">    <span class="keyword">subscript</span>(index: <span class="type">Int</span>) -&gt; <span class="type">Int</span>&#123;</div><div class="line">        <span class="keyword">var</span> decimalBase = <span class="number">1</span></div><div class="line">        <span class="keyword">if</span> index &gt; <span class="number">0</span> &#123;</div><div class="line">            <span class="keyword">for</span> <span class="number">_</span> <span class="keyword">in</span> <span class="number">1</span>...index &#123;</div><div class="line">                decimalBase *= <span class="number">10</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> (<span class="keyword">self</span> / decimalBase) % <span class="number">10</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="嵌套类型"><a href="#嵌套类型" class="headerlink" title="嵌套类型"></a>嵌套类型</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">IRTestController</span>: <span class="title">UIViewController</span> </span>&#123;</div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="keyword">super</span>.viewDidLoad()</div><div class="line">        printIntegerKinds([<span class="number">3</span>, <span class="number">19</span>, -<span class="number">27</span>, <span class="number">0</span>, -<span class="number">6</span>, <span class="number">0</span>, <span class="number">7</span>])   <span class="comment">// return  + + - 0 - 0 + </span></div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">printIntegerKinds</span><span class="params">(<span class="number">_</span> numbers: [Int])</span></span> &#123;</div><div class="line">        <span class="keyword">for</span> number <span class="keyword">in</span> numbers &#123;</div><div class="line">            <span class="keyword">switch</span> number.kind &#123;</div><div class="line">            <span class="keyword">case</span> .negative:</div><div class="line">                <span class="built_in">print</span>(<span class="string">"- "</span>, terminator: <span class="string">""</span>)</div><div class="line">            <span class="keyword">case</span> .zero:</div><div class="line">                <span class="built_in">print</span>(<span class="string">"0 "</span>, terminator: <span class="string">""</span>)</div><div class="line">            <span class="keyword">case</span> .positive:</div><div class="line">                <span class="built_in">print</span>(<span class="string">"+ "</span>, terminator: <span class="string">""</span>)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">print</span>(<span class="string">""</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Int</span> </span>&#123;</div><div class="line">    <span class="class"><span class="keyword">enum</span> <span class="title">Kind</span> </span>&#123;</div><div class="line">        <span class="keyword">case</span> negative, zero, positive</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> kind: <span class="type">Kind</span> &#123;</div><div class="line">        <span class="keyword">switch</span> <span class="keyword">self</span> &#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> .zero</div><div class="line">        <span class="keyword">case</span> <span class="keyword">let</span> x <span class="keyword">where</span> x &gt; <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> .positive</div><div class="line">        <span class="keyword">default</span>:</div><div class="line">            <span class="keyword">return</span> .negative</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/01/04/17-01-04-makeFramework/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          iOS制作framework
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="17-01-05-swift-extension" data-title="Swift-extension【扩展】" data-url="http://irenachou.github.io/irena/2017/01/05/17-01-05-swift-extension/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"irena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Irena
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

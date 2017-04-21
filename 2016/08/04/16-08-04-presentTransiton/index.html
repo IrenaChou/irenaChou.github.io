@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>iOS自定义Present转场动画 | My First</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="每一个界面切换到另一个界面，都是不同场景之前的转换,场景的转换用的就是转场动画">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS自定义Present转场动画">
+<meta property="og:url" content="http://irenachou.github.io/irena/2016/08/04/16-08-04-presentTransiton/index.html">
+<meta property="og:site_name" content="My First">
+<meta property="og:description" content="每一个界面切换到另一个界面，都是不同场景之前的转换,场景的转换用的就是转场动画">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/transitioning.gif">
+<meta property="og:updated_time" content="2017-04-21T07:09:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS自定义Present转场动画">
+<meta name="twitter:description" content="每一个界面切换到另一个界面，都是不同场景之前的转换,场景的转换用的就是转场动画">
+<meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com/transitioning.gif">
+  
+    <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ae638a74013a8514501ff77ee4200154";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Irena</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Irena</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Irena</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-16-08-04-presentTransiton" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/04/16-08-04-presentTransiton/" class="article-date">
+  	<time datetime="2016-08-04T08:49:01.000Z" itemprop="datePublished">2016-08-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS自定义Present转场动画
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>每一个界面切换到另一个界面，都是不同场景之前的转换,场景的转换用的就是转场动画<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/transitioning.gif" alt="要实现的效果"><br><a id="more"></a><br>自定义转场：</p>
+<ol>
+<li>设置自定义转场<pre><code>playerVC.modalPresentationStyle = UIModalPresentationCustom;
+</code></pre><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">/**</span></div><div class="line"> 系统转场效果</div><div class="line"> *</div><div class="line"> 当从A场景过度到B场景，A场景消失，B场景会加到一个容器View中(UITransitionView)</div><div class="line"> */</div><div class="line"><span class="comment">// （设置系统自带转场）修改转场动画的动画效果</span></div><div class="line">playerVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+  <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">/**</span></div><div class="line"> *  自定义转场效果</div><div class="line"> *    当从A场景过度到B场景，A场景不消失，B场景会加到一个容器View中(UITransitionView)</div><div class="line"> *   如果设置了自定义转场，未实现转场效果，还会使用系统默认的转场动画</div><div class="line"> */</div><div class="line"><span class="comment">//    设置自定义转场动画</span></div><div class="line">playerVC.modalPresentationStyle = UIModalPresentationCustom;</div></pre></td></tr></table></figure>
+<ol>
+<li>通过代理设置如何进行自定义转场<pre><code>playerVC.transitioningDelegate = self;
+[self presentViewController:playerVC animated:YES completion:nil];
+</code></pre></li>
+<li>实现代理方法<pre><code>&lt;UIViewControllerTransitioningDelegate&gt;的代理方法，代码中会详细说明  
+</code></pre></li>
+</ol>
+<p><strong>UIViewControllerTransitioningDelegate</strong><br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> *  弹出时执行的动画</div><div class="line"> *  当A控制器转场到B控制器时，弹出</div><div class="line"> *  @param presented  A控制器</div><div class="line"> *  @param presenting B控制器</div><div class="line"> *</div><div class="line"> *  @return 当view呈现的时候，要通过哪个对象来执行方法</div><div class="line"> */</div><div class="line">- (<span class="keyword">nullable</span> <span class="keyword">id</span>&lt;<span class="built_in">UIViewControllerAnimatedTransitioning</span>&gt;)</div><div class="line">animationControllerForPresentedController:(<span class="built_in">UIViewController</span> *)presented</div><div class="line">                     presentingController:(<span class="built_in">UIViewController</span> *)presenting</div><div class="line">                         sourceController:(<span class="built_in">UIViewController</span> *)source &#123;</div><div class="line">  <span class="comment">//    返回一个对象</span></div><div class="line">  IRAnimationPresentedProxy *presentedProxy =</div><div class="line">      [[IRAnimationPresentedProxy alloc] init];</div><div class="line">  <span class="keyword">return</span> presentedProxy;</div><div class="line">&#125;</div><div class="line"><span class="comment">/**</span></div><div class="line"> *  消失时执行的动画</div><div class="line"> *  当B控制器消失时，消失</div><div class="line"> *  @param dismissed B控制器</div><div class="line"> *</div><div class="line"> *  @return 控制器在dismiss时，要通过哪个对象来执行转场动画</div><div class="line"> */</div><div class="line">- (<span class="keyword">nullable</span> <span class="keyword">id</span>&lt;<span class="built_in">UIViewControllerAnimatedTransitioning</span>&gt;)</div><div class="line">animationControllerForDismissedController:(<span class="built_in">UIViewController</span> *)dismissed &#123;</div><div class="line">  <span class="comment">//    返回一个对象</span></div><div class="line">  IRAnimationDismissedProxy *dismissedProxy =</div><div class="line">      [[IRAnimationDismissedProxy alloc] init];</div><div class="line">  <span class="keyword">return</span> dismissedProxy;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>其他代码在Demo中提现，需要注意如下几点：</strong></p>
+<ul>
+<li>B控制器旋转出来时anchorPoint必须在设置frame之前设置</li>
+<li>当转场动画方法执行完之后，必须调用此方法<strong>[transitionContext completeTransition:YES];</strong>，否则B控制器将无法监听任何事件</li>
+<li>其他具体代码看Demo</li>
+</ul>
+<p><a href="http://7xrirn.com1.z0.glb.clouddn.com/codeIRTransitionAnimation.zip" target="_blank" rel="external">Demo下载</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/28/16-07-28-anchorPoint/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          anchorPoint锚点
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/08/08/16-08-08-bundle/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Bundle中常用</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="16-08-04-presentTransiton" data-title="iOS自定义Present转场动画" data-url="http://irenachou.github.io/irena/2016/08/04/16-08-04-presentTransiton/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"irena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Irena
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

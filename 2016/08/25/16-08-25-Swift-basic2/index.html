@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Swift基本语法2 | My First</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Swift中如果使用十进制表示指数，需使用e/E表示幂e2表示10^2 12let num = 2e2    //输出打印num = 200.0let num1 = 2e-2  //输出打印num = 0.2">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift基本语法2">
+<meta property="og:url" content="http://irenachou.github.io/irena/2016/08/25/16-08-25-Swift-basic2/index.html">
+<meta property="og:site_name" content="My First">
+<meta property="og:description" content="Swift中如果使用十进制表示指数，需使用e/E表示幂e2表示10^2 12let num = 2e2    //输出打印num = 200.0let num1 = 2e-2  //输出打印num = 0.2">
+<meta property="og:updated_time" content="2017-04-21T07:09:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift基本语法2">
+<meta name="twitter:description" content="Swift中如果使用十进制表示指数，需使用e/E表示幂e2表示10^2 12let num = 2e2    //输出打印num = 200.0let num1 = 2e-2  //输出打印num = 0.2">
+  
+    <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ae638a74013a8514501ff77ee4200154";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Irena</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Irena</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Irena</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-16-08-25-Swift-basic2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/25/16-08-25-Swift-basic2/" class="article-date">
+  	<time datetime="2016-08-25T07:38:08.000Z" itemprop="datePublished">2016-08-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Swift基本语法2
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Swift/">Swift</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Swift中如果使用十进制表示指数，需使用e/E表示幂e2表示10^2</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> <span class="attr">num</span> = <span class="number">2</span>e2    //输出打印<span class="attr">num</span> = <span class="number">200.0</span></div><div class="line"><span class="keyword">let</span> <span class="attr">num1</span> = <span class="number">2</span>e-<span class="number">2</span>  //输出打印<span class="attr">num</span> = <span class="number">0.2</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><strong>用十六进制表示指数，需用p/P表示幂，p2表示2^2</strong><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let num = <span class="number">0xA</span>p2     <span class="comment">// 40.0</span></div><div class="line">let num1 = <span class="number">0xA</span>p<span class="number">-2</span>   <span class="comment">//2.5</span></div></pre></td></tr></table></figure></p>
+<p><strong>Swift中数字比较大的整数可以用‘_’分割，其实际意义不变</strong><br><figure class="highlight ceylon"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> num = <span class="number">2_234_500</span>     <span class="comment">//2234500</span></div></pre></td></tr></table></figure></p>
+<p><strong>将整数、浮点数等其它数据类型与字符串拼接可用’()’</strong><br><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> <span class="attr">num</span> = <span class="number">3</span></div><div class="line"><span class="keyword">let</span> <span class="attr">total</span> = <span class="string">"\(num) 加 10 等于 \(num + 10)"</span></div></pre></td></tr></table></figure></p>
+<p><strong>switch条件表达式可以使用整数、浮点数、字符、字符串和元组等类型，<br>      case分支不需要显示地添加break语句，分支执行完成就会跳出case<br>      case可以是闭区间’…’和半闭区间’..’运算符
+</strong><br><strong>元组switch</strong><br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> student = (id:<span class="string">"1001"</span>,name:<span class="string">"李四"</span>,age:<span class="number">32</span>)  </div><div class="line"><span class="keyword">switch</span> student &#123;</div><div class="line"><span class="keyword">case</span> (<span class="number">_</span>,<span class="number">_</span>,<span class="keyword">let</span> age) <span class="keyword">where</span> age &gt;= <span class="number">32</span>:     <span class="comment">//case中使用where语句，进行条件过滤，类似SQL中的where</span></div><div class="line">    <span class="keyword">if</span> (age&gt;<span class="number">30</span>) &#123;</div><div class="line">        <span class="built_in">print</span>(<span class="string">"a"</span>)</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="built_in">print</span>(<span class="string">"b"</span>)</div><div class="line">    &#125;</div><div class="line"><span class="keyword">default</span>:</div><div class="line">    <span class="built_in">print</span>(<span class="string">""</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>跳转语句</strong><br><strong>continue</strong>同break使用相似，也可选择是否使用标签<br><strong>break</strong>可选择是否带标签，如break,break label<br>默认情况下break只会跳出最近的内循环，带标签break会直接跳出指定标签的循环<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">abc: <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="number">0</span>  ..&lt; <span class="number">10</span> &#123;</div><div class="line">    <span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> <span class="number">0</span>  ..&lt; <span class="number">10</span> &#123;</div><div class="line">        print(i)</div><div class="line">        <span class="keyword">if</span> <span class="selector-tag">i</span> == <span class="number">3</span> &#123;</div><div class="line">            break abc</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>fallthrough</strong>：是贯通语句，只能使用在switch语句中。<br>switch中的case默认不支持贯通，只有case中添加<strong>fallthrough</strong>的才可以贯通<br><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> j = <span class="number">1</span></div><div class="line"><span class="keyword">switch</span> j &#123;</div><div class="line"><span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">    j += <span class="number">1</span></div><div class="line">    <span class="built_in">print</span>(<span class="string">"1"</span>)</div><div class="line">    <span class="keyword">fallthrough</span></div><div class="line"><span class="keyword">default</span>:</div><div class="line">    j += <span class="number">1</span></div><div class="line">    <span class="built_in">print</span>(<span class="string">"4"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>数组：有序，可重复，不可变数组在访问效率上比可变数组高</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> studentList1 : <span class="built_in">Array</span>&lt;<span class="built_in">String</span>&gt;   <span class="comment">//&lt;String&gt;此数组是一个泛型数组，其中只能放字符串</span></div><div class="line">studentList1 = [<span class="string">"aa"</span>,<span class="string">"bb"</span>]         <span class="comment">//初始化数组</span></div><div class="line">studentList1 += [<span class="string">"abc"</span>,<span class="string">"aab"</span>]      <span class="comment">//数组可以使用+=添加数组</span></div><div class="line">studentList1.append(<span class="string">"cc"</span>)          <span class="comment">//想数组中添加单个元素，元素添加到数组最后一个元素的后面</span></div><div class="line"><span class="comment">//移除数组中的元素</span></div><div class="line">studentList1.removeLast()</div><div class="line">studentList1.insert(<span class="string">"a0"</span>, <span class="attr">atIndex</span>: <span class="number">0</span>)  <span class="comment">//添加元素到制定下标</span></div><div class="line">studentList1.removeAtIndex(<span class="number">1</span>)          <span class="comment">//移除指定下标的元素</span></div></pre></td></tr></table></figure></p>
+<p><strong>字典：键不要重复，值可重复，键值无序，Swift中的集合都是结构体类型</strong><br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> studentDictionary : <span class="type">Dictionary</span>&lt;<span class="type">Int</span>,<span class="type">String</span>&gt; = [<span class="number">101</span>:<span class="string">"aa"</span>,<span class="number">102</span>:<span class="string">"bb"</span>]</div><div class="line"><span class="comment">//遍历</span></div><div class="line"><span class="keyword">for</span> (stuId ,stuName) <span class="keyword">in</span> studentDictionary &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"stuId: <span class="subst">\(stuId)</span> == stuName:<span class="subst">\(stuName)</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>函数的定义语法，函数可以重载</strong><br>    //<strong>Swift中函数的返回值是用这种格式来的</strong><br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">testFunc</span><span class="params">()</span></span>-&gt;<span class="type">CGPathRef</span>&#123;</div><div class="line">   <span class="comment">//函数体，函数的具体实现</span></div><div class="line">   <span class="keyword">return</span> xx.<span class="type">CGPath</span> </div><div class="line">&#125;</div><div class="line"><span class="keyword">private</span> :  函数的作用域</div><div class="line"><span class="function"><span class="keyword">func</span>    :  函数的修饰符</span></div><div class="line"><span class="title">testFunc</span>:  函数名</div><div class="line"><span class="params">()</span>      :  函数名后的这对小括号中间的为函数的参数列表【多个参数用'**,**'分割】</div><div class="line"><span class="comment">//如果没有返回值，下面两个省略</span></div><div class="line">-&gt;<span class="type">CGPathRef</span>：  函数的返回值类型【返回值可以是单个或多个，多个用元组】</div><div class="line"><span class="keyword">return</span> ：  函数的返回值，类型要和返回值类型一致</div></pre></td></tr></table></figure></p>
+<p><strong>函数的嵌套和函数作为返回值</strong><br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">func calculate<span class="function"><span class="params">(opr:String)</span> -&gt;</span> <span class="function"><span class="params">(Int,Int)</span>-&gt;</span>Int &#123;</div><div class="line">    func add<span class="function"><span class="params">(a:Int,b:Int)</span>-&gt;</span>Int&#123;</div><div class="line">        <span class="keyword">return</span> a+b</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> result : <span class="function"><span class="params">(Int,Int)</span>-&gt;</span>Int</div><div class="line">    result = add</div><div class="line">    <span class="keyword">return</span> result</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>闭包：</strong><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">var</span> result : (Int,Int)-&gt;Int</div><div class="line">  result = &#123;$<span class="number">0</span> + $<span class="number">1</span>&#125;</div><div class="line">  result = &#123;(<span class="selector-tag">a</span>:Int, <span class="selector-tag">b</span>:Int)-&gt;Int <span class="keyword">in</span></div><div class="line">      return <span class="selector-tag">a</span> + <span class="selector-tag">b</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/08/24/16-08-24-IRPlusLessSwift/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          加减控件IRPlusLessSwift
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/12/16-09-12-sliderConvertPhotoSize/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">通过slider调整图片的大小</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="16-08-25-Swift-basic2" data-title="Swift基本语法2" data-url="http://irenachou.github.io/irena/2016/08/25/16-08-25-Swift-basic2/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"irena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Irena
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

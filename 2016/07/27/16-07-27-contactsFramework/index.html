@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>iOS 9+ 通讯录 Contacts Framework | My First</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="iOS9的联系人相关框架 Contacts FrameworkiOS 9.0介绍了Contacts和Contacts UI frameworks（ Contacts.framework和ContactsUI.framework ） ，这对于通讯簿提供现代化的面向对象的替换和Address Book UI frameworks.这个框架是线程安全的 要了解更多信息.">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 9+ 通讯录 Contacts Framework">
+<meta property="og:url" content="http://irenachou.github.io/irena/2016/07/27/16-07-27-contactsFramework/index.html">
+<meta property="og:site_name" content="My First">
+<meta property="og:description" content="iOS9的联系人相关框架 Contacts FrameworkiOS 9.0介绍了Contacts和Contacts UI frameworks（ Contacts.framework和ContactsUI.framework ） ，这对于通讯簿提供现代化的面向对象的替换和Address Book UI frameworks.这个框架是线程安全的 要了解更多信息.">
+<meta property="og:updated_time" content="2017-04-21T07:09:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS 9+ 通讯录 Contacts Framework">
+<meta name="twitter:description" content="iOS9的联系人相关框架 Contacts FrameworkiOS 9.0介绍了Contacts和Contacts UI frameworks（ Contacts.framework和ContactsUI.framework ） ，这对于通讯簿提供现代化的面向对象的替换和Address Book UI frameworks.这个框架是线程安全的 要了解更多信息.">
+  
+    <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ae638a74013a8514501ff77ee4200154";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Irena</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Irena</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Irena</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-16-07-27-contactsFramework" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/27/16-07-27-contactsFramework/" class="article-date">
+  	<time datetime="2016-07-27T03:05:03.000Z" itemprop="datePublished">2016-07-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS 9+ 通讯录 Contacts Framework
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="iOS9的联系人相关框架-Contacts-Framework"><a href="#iOS9的联系人相关框架-Contacts-Framework" class="headerlink" title="iOS9的联系人相关框架 Contacts Framework"></a>iOS9的联系人相关框架 Contacts Framework</h2><p><strong>iOS 9.0</strong>介绍了Contacts和Contacts UI frameworks（ Contacts.framework和ContactsUI.framework ） ，这对于通讯簿提供现代化的面向对象的替换和Address Book UI frameworks.<strong>这个框架是线程安全的</strong> <a href="https://developer.apple.com/reference/contacts" target="_blank" rel="external">要了解更多信息</a>.</p>
+<a id="more"></a>
+<p><strong>CNContactStore</strong>:是线程安全的类，它可以读取并保存联系人，组和容器。它代表了用户的联系人数据库。它封装了所有的I / O操作和负责获取和联系人和群组的保存。由于联系人存储方法是同步的，所以建议您使用他们在后台线程。</p>
+<p><strong>CNSaveRequest</strong>：该类定义了一个保存请求操作联系人。该类存储每个操作的请求。可以批量多次更改到一个保存请求（注意，这些更改仅适用于对象）。在重叠的多个并发或保存请求变更的情况下，最后的改变获胜。如果您尝试添加一个对象（即，联系人或组，）已经存在于CNContactStore，CNErrorCodeInsertedRecordAlreadyExists出现错误和CNErrorUserInfoAffectedRecordsKey阵列更新为包含您试图添加的对象。如果您尝试更新或删除对象，它是不存在的联系人存储，保存请求不执行更新或删除，则CNErrorCodeRecordDoesNotExist发生错误，CNErrorUserInfoAffectedRecordsKey阵列更新为包含您尝试更新或删除对象。而保存请求正在执行，不能存取保存请求对象。</p>
+<h2 id="CNContactPickerDelegate"><a href="#CNContactPickerDelegate" class="headerlink" title="CNContactPickerDelegate"></a><strong>CNContactPickerDelegate</strong></h2><p>CNContactPickerDelegate提供了单次选择单个联系人和多个联系人的方法，实现了单次选择多个联系人的方法，选择单个联系人的方法就会失效</p>
+<h2 id="需要注意的："><a href="#需要注意的：" class="headerlink" title="需要注意的："></a><strong>需要注意的</strong>：</h2><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> /**</div><div class="line">*  此处需要注意的是</div><div class="line">*- (void)deleteContact:(CNMutableContact *)contact;</div><div class="line">*方法需要的是CNMutableContact，如果传CNContact会报如下错误</div><div class="line">*-[CNContact setSnapshot:]: unrecognized selector sent to<span class="built_in"> instance</span></div><div class="line">*0x1488be1a0</div><div class="line">* 解决错误的方法就是使用CNMutableContact</div><div class="line">[saveRequest deleteContact:self.contact]; //错误的</div><div class="line">解决方法如下</div><div class="line">*/</div><div class="line">[saveRequest deleteContact:[self.contact mutableCopy]];</div></pre></td></tr></table></figure>
+<h2 id="Demo提供"><a href="#Demo提供" class="headerlink" title="Demo提供"></a>Demo提供</h2><p><a href="http://7xrirn.com1.z0.glb.clouddn.com/codeBookAddressTestComplete.zip" target="_blank" rel="external">Demo提供</a>  </p>
+<p>下面提供一个添加联系人的代码，如需其它方法的使用，请看Demo</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//创建一个可变对象添加到联系人</span></div><div class="line"> <span class="built_in">CNMutableContact</span> *contact = [[<span class="built_in">CNMutableContact</span> alloc] init];</div><div class="line"> <span class="comment">//将资料图片作为NSData对象</span></div><div class="line"> <span class="comment">//  contact.imageData = [NSData data];</span></div><div class="line"> <span class="comment">//设置名字</span></div><div class="line"> contact.givenName = <span class="string">@"John"</span>;</div><div class="line"> <span class="comment">//设置姓氏</span></div><div class="line"> contact.familyName = <span class="string">@"Appleseed"</span>;</div><div class="line"> <span class="built_in">CNLabeledValue</span> *homeEmail =</div><div class="line">     [<span class="built_in">CNLabeledValue</span> labeledValueWithLabel:<span class="built_in">CNLabelHome</span></div><div class="line">                                     value:<span class="string">@"john@example.com"</span>];</div><div class="line"> <span class="built_in">CNLabeledValue</span> *workEmail =</div><div class="line">     [<span class="built_in">CNLabeledValue</span> labeledValueWithLabel:<span class="built_in">CNLabelWork</span></div><div class="line">                                     value:<span class="string">@"j.appleseed@icloud.com"</span>];</div><div class="line"> contact.emailAddresses = @[ homeEmail, workEmail ];</div><div class="line"> <span class="comment">//</span></div><div class="line"> <span class="comment">/**</span></div><div class="line">  *  设置电话号码</div><div class="line">  */</div><div class="line"> contact.phoneNumbers = @[</div><div class="line">   [<span class="built_in">CNLabeledValue</span></div><div class="line">       labeledValueWithLabel:<span class="built_in">CNLabelPhoneNumberiPhone</span></div><div class="line">                       value:[<span class="built_in">CNPhoneNumber</span> phoneNumberWithStringValue:</div><div class="line">                                                <span class="string">@"(408) 555-0126"</span>]]</div><div class="line"> ];</div><div class="line"> <span class="comment">/**</span></div><div class="line">  设置地址</div><div class="line">  */</div><div class="line"> <span class="built_in">CNMutablePostalAddress</span> *homeAdress = [[<span class="built_in">CNMutablePostalAddress</span> alloc] init];</div><div class="line"> <span class="comment">//街道</span></div><div class="line"> homeAdress.street = <span class="string">@"1 Infinite Loop"</span>;</div><div class="line"> <span class="comment">//城市</span></div><div class="line"> homeAdress.city = <span class="string">@"Cupertino"</span>;</div><div class="line"> <span class="comment">//国家代码</span></div><div class="line"> homeAdress.state = <span class="string">@"CA"</span>;</div><div class="line"> <span class="comment">//邮编</span></div><div class="line"> homeAdress.postalCode = <span class="string">@"95014"</span>;</div><div class="line"> contact.postalAddresses =</div><div class="line">     @[ [<span class="built_in">CNLabeledValue</span> labeledValueWithLabel:<span class="built_in">CNLabelHome</span> value:homeAdress] ];</div><div class="line"> <span class="comment">/**</span></div><div class="line">  设置生日</div><div class="line">  */</div><div class="line"> <span class="built_in">NSDateComponents</span> *birthday = [[<span class="built_in">NSDateComponents</span> alloc] init];</div><div class="line"> birthday.day = <span class="number">1</span>;</div><div class="line"> birthday.month = <span class="number">4</span>;</div><div class="line"> birthday.year = <span class="number">1988</span>;</div><div class="line"> contact.birthday = birthday;</div><div class="line"> <span class="comment">//初始化方法</span></div><div class="line"> <span class="built_in">CNSaveRequest</span> *saveRequest = [[<span class="built_in">CNSaveRequest</span> alloc] init];</div><div class="line"> <span class="comment">//保存新创建的contact</span></div><div class="line"> [saveRequest addContact:contact toContainerWithIdentifier:<span class="literal">nil</span>];</div><div class="line"> <span class="comment">//更新用户的联系人数据库</span></div><div class="line"> <span class="built_in">CNContactStore</span> *store = [[<span class="built_in">CNContactStore</span> alloc] init];</div><div class="line"> [store executeSaveRequest:saveRequest error:<span class="literal">nil</span>];</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/05/16-07-05-automaticallyAdjustsScrollViewInsets/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          scrollView添加子控件向下偏移automaticallyAdjustsScrollViewInsets
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/28/16-07-28-anchorPoint/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">anchorPoint锚点</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="16-07-27-contactsFramework" data-title="iOS 9+ 通讯录 Contacts Framework" data-url="http://irenachou.github.io/irena/2016/07/27/16-07-27-contactsFramework/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"irena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Irena
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

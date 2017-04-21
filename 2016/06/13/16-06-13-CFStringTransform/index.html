@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>iOS 汉字转换拼音 CFStringTransform | My First</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="参考原文 CFStringTransform 是 Core Foundation 中的一部分12CF_EXPORTBoolean CFStringTransform(CFMutableStringRef string, CFRange *range, CFStringRef transform, Boolean reverse) 这个函数传入以下参数，并返回一个 Boolean 来表示转换是否成功">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 汉字转换拼音 CFStringTransform">
+<meta property="og:url" content="http://irenachou.github.io/irena/2016/06/13/16-06-13-CFStringTransform/index.html">
+<meta property="og:site_name" content="My First">
+<meta property="og:description" content="参考原文 CFStringTransform 是 Core Foundation 中的一部分12CF_EXPORTBoolean CFStringTransform(CFMutableStringRef string, CFRange *range, CFStringRef transform, Boolean reverse) 这个函数传入以下参数，并返回一个 Boolean 来表示转换是否成功">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/pinyin-1.png">
+<meta property="og:updated_time" content="2017-04-21T07:09:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS 汉字转换拼音 CFStringTransform">
+<meta name="twitter:description" content="参考原文 CFStringTransform 是 Core Foundation 中的一部分12CF_EXPORTBoolean CFStringTransform(CFMutableStringRef string, CFRange *range, CFStringRef transform, Boolean reverse) 这个函数传入以下参数，并返回一个 Boolean 来表示转换是否成功">
+<meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com/pinyin-1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ae638a74013a8514501ff77ee4200154";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Irena</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Irena</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Irena</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-16-06-13-CFStringTransform" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/13/16-06-13-CFStringTransform/" class="article-date">
+  	<time datetime="2016-06-13T06:21:38.000Z" itemprop="datePublished">2016-06-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS 汉字转换拼音 CFStringTransform
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://nshipster.cn/cfstringtransform/" target="_blank" rel="external">参考原文</a></p>
+<p><strong>CFStringTransform</strong> 是 Core Foundation 中的一部分<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">CF_EXPORT</span></div><div class="line">Boolean <span class="built_in">CFStringTransform</span>(<span class="built_in">CFMutableStringRef</span> string, <span class="built_in">CFRange</span> *range, <span class="built_in">CFStringRef</span> transform, Boolean reverse)</div></pre></td></tr></table></figure></p>
+<p>这个函数传入以下参数，并返回一个 Boolean 来表示转换是否成功：<br><strong>string</strong>: 需要转换的字符串。由于这个参数是 CFMutableStringRef 类型，一个 NSMutableString 类型也可以通过自由桥接的方式传入。<br><strong>range</strong>: 转换操作作用的范围。这个参数是 CFRange，而不是 NSRange。<br><strong>transform</strong>: 需要应用的变换。这个参数使用了包含下面将提到的字符串常量的 ICU transform   string。<br><strong>reverse</strong>: 如有需要，是否返回反转过的变换。  </p>
+<p><strong>CFStringTransform</strong> 中的 transform 参数涉及的内容很多。这里有个它能做什么的概述：<br><a id="more"></a></p>
+<h2 id="去掉重音和变音符"><a href="#去掉重音和变音符" class="headerlink" title="去掉重音和变音符"></a>去掉重音和变音符</h2><p>Énġlišh långuãge lẳcks iñterêßţing diaçrïtičş. 如此类的字符串，把扩展的拉丁字符集正则化为 ASCII 友好型的表示，它非常有用。用 <strong>kCFStringTransformStripCombiningMarks</strong> 变换来去掉任意字符串中弯弯扭扭的符号。</p>
+<h2 id="为-Unicode-字符命名"><a href="#为-Unicode-字符命名" class="headerlink" title="为 Unicode 字符命名"></a>为 Unicode 字符命名</h2><p><strong>kCFStringTransformToUnicodeName</strong> 让你可以找出特殊字符的 Unicode 标准名，包括 Emoji。例如：”🐑💨✨” 被转换成 “{SHEEP} {DASH SYMBOL} {SPARKLES}”，而 “🐷” 变成了 “{PIG FACE}”。</p>
+<h2 id="不同拼写之间转写"><a href="#不同拼写之间转写" class="headerlink" title="不同拼写之间转写"></a>不同拼写之间转写</h2><p>除了英语这个重大例外（和它那令人愉快的拼写不一致），书写系统一般是将语言音调编码成一致的符号表示。欧洲语言一般使用拉丁字母（外加一些变音符），俄罗斯用西里尔字母，日本用平假名和片假名，泰国、韩国和阿拉伯国家也都有自己的字母。</p>
+<p>虽然每种语言都有特殊的音调列表，也许有些其他语言会缺失，所有主要书写系统的交集已经足以让你高效的在不同字母之间转写（不要跟翻译搞混了）。</p>
+<p><strong>CFStringTransform</strong> 可以在拉丁语和阿拉伯语、西里尔语、希腊语、韩语（韩国）、希伯来语、日语（平假名和片假名）、普通话、泰语之间来回转写。</p>
+<p><em>并且这只是用了核心类库中常量定义！直接传入一个ICU transform表达式，CFStringTransform 还可以在拉丁语和阿拉伯语、亚美尼亚语、注音、西里尔字母、格鲁吉亚语、希腊语、汉语、韩语、希伯来语、平假名、印度语（梵文，古吉拉特语，旁遮普文，卡纳达语，马拉雅拉姆语，奥里雅语，泰米尔语，特卢固）、朝鲜语、片假名、叙利亚语、塔纳文、泰语之间转写。</em><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/pinyin-1.png" alt="不同拼写之间转写"></p>
+<h2 id="平时可能会遇到的问题"><a href="#平时可能会遇到的问题" class="headerlink" title="平时可能会遇到的问题"></a>平时可能会遇到的问题</h2><p>字符串变换的一个更实际的应用是正则化不可预知的用户输入。即使你的应用并不单独处理其他语言，你也应当能智能地处理用户向你的应用输入的任何内容。</p>
+<p>例如，你想在设备上建立一个可搜索的电影索引，它包含世界各地的人的问候：</p>
+<ul>
+<li>首先，应用 <strong>kCFStringTransformToLatin</strong> 变换将所有非英文文本转换为拉丁字母表示。<br>Hello! こんにちは! สวัสดี! مرحبا! 您好! → Hello! kon’nichiha! s̄wạs̄dī! mrḥbạ! nín hǎo!</li>
+<li>然后，应用 <strong>kCFStringTransformStripCombiningMarks</strong> 变换来去除变音符和重音。<br>Hello! kon’nichiha! s̄wạs̄dī! mrḥbạ! nín hǎo! → Hello! kon’nichiha! swasdi! mrhba! nin hao!</li>
+<li>最后，用 <strong>CFStringLowercase</strong> 转为小写，<strong>并用CFStringTokenizer</strong> 分词用作文本的索引。<br>(hello, kon’nichiha, swasdi, mrhba, nin, hao)</li>
+</ul>
+<p><strong>通过对用户输入的文本使用同样的变换，你就可以实现一个通用的搜索，无论搜索文本或内容是什么语言！</strong></p>
+<p><strong>下面我提供一个包含如下两个方法的Category</strong><br><strong><a href="http://pan.baidu.com/s/1c27aX9I" target="_blank" rel="external">Category下载地址</a></strong><br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> *  汉字转成没有声调有空格的拼音</div><div class="line"> *  (空格可根据需求调整return的withString后的字符串)</div><div class="line"> *  @param wordStr 需要拼音的汉字(词组/句子)</div><div class="line"> *</div><div class="line"> *  @return 拼音</div><div class="line"> */</div><div class="line">+ (<span class="built_in">NSString</span> *)transformToPinYin:(<span class="built_in">NSString</span> *)wordStr &#123;</div><div class="line">  <span class="built_in">NSMutableString</span> *mutableString = [<span class="built_in">NSMutableString</span> stringWithString:wordStr];</div><div class="line">  <span class="comment">//带声调</span></div><div class="line">  <span class="built_in">CFStringTransform</span>((<span class="built_in">CFMutableStringRef</span>)mutableString, <span class="literal">NULL</span>,</div><div class="line">                    kCFStringTransformToLatin, <span class="literal">NO</span>);</div><div class="line">  <span class="comment">//  //不带声调</span></div><div class="line">  <span class="built_in">CFStringTransform</span>((<span class="built_in">CFMutableStringRef</span>)mutableString, <span class="literal">NULL</span>,</div><div class="line">                    kCFStringTransformStripDiacritics, <span class="literal">NO</span>);</div><div class="line">  <span class="comment">//你好 -&gt; ni hao -&gt; nihao</span></div><div class="line">  <span class="keyword">return</span> [mutableString stringByReplacingOccurrencesOfString:<span class="string">@" "</span></div><div class="line">                                                  withString:<span class="string">@"    "</span>];</div><div class="line">&#125;</div><div class="line"><span class="comment">/**</span></div><div class="line"> *  汉字转成有声调有空格的拼音</div><div class="line"> *  (空格可根据需求调整return的withString后的字符串)</div><div class="line"> *  @param wordStr 需要拼音的汉字(词组/句子)</div><div class="line"> *</div><div class="line"> *  @return 带声调的拼音</div><div class="line"> */</div><div class="line">+ (<span class="built_in">NSString</span> *)transformToPinYinHaveTone:(<span class="built_in">NSString</span> *)wordStr &#123;</div><div class="line">  <span class="built_in">NSMutableString</span> *mutableString = [<span class="built_in">NSMutableString</span> stringWithString:wordStr];</div><div class="line">  <span class="comment">//带声调</span></div><div class="line">  <span class="built_in">CFStringTransform</span>((<span class="built_in">CFMutableStringRef</span>)mutableString, <span class="literal">NULL</span>,</div><div class="line">                    kCFStringTransformToLatin, <span class="literal">NO</span>);</div><div class="line">  <span class="comment">//你好 -&gt; ni hao -&gt; nihao</span></div><div class="line">  <span class="keyword">return</span> [mutableString stringByReplacingOccurrencesOfString:<span class="string">@" "</span></div><div class="line">                                                  withString:<span class="string">@"    "</span>];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/07/16-06-07-AFNetworking-SOAP/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          iOS Web service SOAP消息(基于AFNetworking)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/13/16-06-13-UIMenuController/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">UIMenuController UITextField 的功能(复制，剪切...)菜单</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="16-06-13-CFStringTransform" data-title="iOS 汉字转换拼音 CFStringTransform" data-url="http://irenachou.github.io/irena/2016/06/13/16-06-13-CFStringTransform/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"irena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Irena
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

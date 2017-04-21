@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>iOS 使用 ASI 调webService | My First</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Web service是一个平台独立的，低耦合的，自包含的、基于可编程的web的应用程序，可使用开放的XML（标准通用标记语言下的一个子集）标准来描述、发布、发现、协调和配置这些应用程序，用于开发分布式的互操作的应用程序。Web Service技术， 能使得运行在不同机器上的不同应用无须借助附加的、专门的第三方软件或硬件， 就可相互交换数据或集成。依据Web Service规范实施的应用之间， 无">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 使用 ASI 调webService">
+<meta property="og:url" content="http://irenachou.github.io/irena/2016/05/25/16-05-25-ASI-WebService/index.html">
+<meta property="og:site_name" content="My First">
+<meta property="og:description" content="Web service是一个平台独立的，低耦合的，自包含的、基于可编程的web的应用程序，可使用开放的XML（标准通用标记语言下的一个子集）标准来描述、发布、发现、协调和配置这些应用程序，用于开发分布式的互操作的应用程序。Web Service技术， 能使得运行在不同机器上的不同应用无须借助附加的、专门的第三方软件或硬件， 就可相互交换数据或集成。依据Web Service规范实施的应用之间， 无">
+<meta property="og:updated_time" content="2017-04-21T07:09:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS 使用 ASI 调webService">
+<meta name="twitter:description" content="Web service是一个平台独立的，低耦合的，自包含的、基于可编程的web的应用程序，可使用开放的XML（标准通用标记语言下的一个子集）标准来描述、发布、发现、协调和配置这些应用程序，用于开发分布式的互操作的应用程序。Web Service技术， 能使得运行在不同机器上的不同应用无须借助附加的、专门的第三方软件或硬件， 就可相互交换数据或集成。依据Web Service规范实施的应用之间， 无">
+  
+    <link rel="alternative" href="/atom.xml" title="My First" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ae638a74013a8514501ff77ee4200154";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Irena</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Irena</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Irena</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如有问题请留言「Stay hungry. Stay foolish.」</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-16-05-25-ASI-WebService" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/25/16-05-25-ASI-WebService/" class="article-date">
+  	<time datetime="2016-05-25T08:34:41.000Z" itemprop="datePublished">2016-05-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS 使用 ASI 调webService
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Web service</strong>是一个平台独立的，低耦合的，自包含的、基于可编程的web的应用程序，可使用开放的XML（标准通用标记语言下的一个子集）标准来描述、发布、发现、协调和配置这些应用程序，用于开发分布式的互操作的应用程序。<br>Web Service技术， 能使得运行在不同机器上的不同应用无须借助附加的、专门的第三方软件或硬件， 就可相互交换数据或集成。依据Web Service规范实施的应用之间， 无论它们所使用的语言、 平台或内部协议是什么， 都可以相互交换数据。Web Service是自描述、 自包含的可用网络模块， 可以执行具体的业务功能。Web Service也很容易部署， 因为它们基于一些常规的产业标准以及已有的一些技术，诸如标准通用标记语言下的子集XML、HTTP。Web Service减少了应用接口的花费。<br>Web Service为整个企业甚至多个组织之间的业务流程的集成提供了一个通用机制。 </p>
+<p>步骤:</p>
+<ol>
+<li>添加SystemConfiguration.framework和libz.tbd</li>
+<li>将asi中类添加不使用arc标志</li>
+<li>下面上代码</li>
+</ol>
+<h2 id="Demo下载"><a href="#Demo下载" class="headerlink" title="Demo下载"></a><a href="http://7xrirn.com1.z0.glb.clouddn.com/codeASIWebServiceDemo.zip" target="_blank" rel="external">Demo下载</a></h2><a id="more"></a>
+<p>我们使用的是xml传输数据，其中XML创建和解析我使用的是GDataXML，下面先说说xml的生成和解析</p>
+<h2 id="通过实体类生成xml字符串，实体类的具体属性就不一一贴出了具体通过需求而定"><a href="#通过实体类生成xml字符串，实体类的具体属性就不一一贴出了具体通过需求而定" class="headerlink" title="通过实体类生成xml字符串，实体类的具体属性就不一一贴出了具体通过需求而定"></a>通过实体类生成xml字符串，实体类的具体属性就不一一贴出了<em>具体通过需求而定</em></h2><figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line">#pragma mark - xml文件创建</div><div class="line"><span class="comment">/**</span></div><div class="line"> *  xml文件创建</div><div class="line"> *</div><div class="line"> *  @return 创建好的XML字符串</div><div class="line"> */</div><div class="line">- (<span class="symbol">NSString</span> *)requestXmlStringCreateWithArgs:(<span class="symbol">NSArray</span> *)args &#123;</div><div class="line">  <span class="comment">/**</span></div><div class="line">   *  创建一个标签元素   一级标签</div><div class="line">   *  如果value不设置值，生成的标签为&lt;soapenv:Header/&gt;</div><div class="line">   */</div><div class="line">  <span class="symbol">GDataXMLElement</span> *element =</div><div class="line">      [<span class="symbol">GDataXMLNode</span> elementWithName:@<span class="string">"soapenv:Header"</span> stringValue:@<span class="string">""</span>];</div><div class="line">  <span class="symbol">GDataXMLElement</span> *element12 =</div><div class="line">      [<span class="symbol">GDataXMLNode</span> elementWithName:@<span class="string">"soapenv:Body"</span> stringValue:@<span class="string">""</span>];</div><div class="line">  // 创建一个标签元素   二级标签</div><div class="line">  <span class="symbol">GDataXMLElement</span> *element21 =</div><div class="line">      [<span class="symbol">GDataXMLNode</span> elementWithName:@<span class="string">""</span> stringValue:@<span class="string">""</span>];</div><div class="line">  <span class="comment">/**</span></div><div class="line">   获取当前类的属性列表</div><div class="line">   */</div><div class="line">  <span class="symbol">PayModel</span> *payModel = [[<span class="symbol">PayModel</span> alloc] init];</div><div class="line">  <span class="symbol">NSArray</span> *propertyList = [payModel propertyNameList];</div><div class="line">  [args enumerateObjectsUsingBlock:^(<span class="symbol">PayModel</span> *obj, <span class="symbol">NSUInteger</span> idx,</div><div class="line">                                     <span class="symbol">BOOL</span> *<span class="symbol">_Nonnull</span> stop) &#123;</div><div class="line">    <span class="symbol">GDataXMLElement</span> *arg =</div><div class="line">        [<span class="symbol">GDataXMLNode</span> elementWithName:[<span class="symbol">NSString</span> stringWithFormat:@<span class="string">"zz%zd"</span>, idx]</div><div class="line">                          stringValue:@<span class="string">""</span>];</div><div class="line">    for (int i = <span class="number">0</span>; i &lt; [propertyList count]; i++) &#123;</div><div class="line">      // 创建一个标签元素   四级标签  存储内容</div><div class="line">      if ([obj valueForKey:propertyList[i]] != nil) &#123;</div><div class="line">        <span class="symbol">GDataXMLElement</span> *element41 =</div><div class="line">            [<span class="symbol">GDataXMLNode</span> elementWithName:propertyList[i]</div><div class="line">                              stringValue:[obj valueForKey:propertyList[i]]];</div><div class="line">        [arg addChild:element41];</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    [element21 addChild:arg];</div><div class="line">  &#125;];</div><div class="line">  // 创建一个属性  根标签属性</div><div class="line">  <span class="symbol">GDataXMLElement</span> *rootElementAttribute1 = [<span class="symbol">GDataXMLNode</span></div><div class="line">      attributeWithName:@<span class="string">"xmlns:"</span></div><div class="line">            stringValue:@<span class="string">"根据情况而定"</span>];</div><div class="line">  <span class="symbol">GDataXMLElement</span> *rootElementAttribute2 =</div><div class="line">      [<span class="symbol">GDataXMLNode</span> attributeWithName:@<span class="string">""</span></div><div class="line">                          stringValue:@<span class="string">"根据情况而定"</span>];</div><div class="line">  // 创建一个根标签</div><div class="line">  <span class="symbol">GDataXMLElement</span> *rootElement =</div><div class="line">      [<span class="symbol">GDataXMLNode</span> elementWithName:@<span class="string">":"</span>];</div><div class="line">  //将二级标签添加到一级标签上</div><div class="line">  [element12 addChild:element21];</div><div class="line">  // 把标签与属性添加到根标签中</div><div class="line">  [rootElement addChild:element];</div><div class="line">  [rootElement addChild:element12];</div><div class="line">  [rootElement addAttribute:rootElementAttribute1];</div><div class="line">  [rootElement addAttribute:rootElementAttribute2];</div><div class="line">  // 生成xml文件内容</div><div class="line">  <span class="symbol">GDataXMLDocument</span> *xmlDoc =</div><div class="line">      [[<span class="symbol">GDataXMLDocument</span> alloc] initWithRootElement:rootElement];</div><div class="line">  <span class="symbol">NSData</span> *data = [xmlDoc <span class="symbol">XMLData</span>];</div><div class="line">  <span class="symbol">NSString</span> *xmlString =</div><div class="line">      [[<span class="symbol">NSString</span> alloc] initWithData:data encoding:<span class="symbol">NSUTF8StringEncoding</span>];</div><div class="line">  return xmlString;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="解析xml"><a href="#解析xml" class="headerlink" title="解析xml"></a>解析xml</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#pragma mark - 解析xml</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> *  解析xml</div><div class="line"> */</div><div class="line">- (<span class="keyword">void</span>)pareXMLWithXMLString:(<span class="built_in">NSString</span> *)xmlString &#123;</div><div class="line">  GDataXMLDocument *xmlDoc =</div><div class="line">      [[GDataXMLDocument alloc] initWithXMLString:xmlString</div><div class="line">                                         encoding:<span class="built_in">NSUTF8StringEncoding</span></div><div class="line">                                            error:<span class="literal">nil</span>];</div><div class="line">  GDataXMLElement *rootElement = [xmlDoc rootElement];</div><div class="line">  <span class="keyword">for</span> (GDataXMLElement *ele <span class="keyword">in</span> rootElement.children) &#123;</div><div class="line">    <span class="keyword">if</span> (ele.childCount &gt; <span class="number">0</span>) &#123;</div><div class="line">      <span class="keyword">for</span> (GDataXMLElement *ele1 <span class="keyword">in</span> ele.children) &#123;</div><div class="line">        <span class="keyword">for</span> (GDataXMLElement *ele2 <span class="keyword">in</span> ele1.children) &#123;</div><div class="line">          <span class="keyword">for</span> (GDataXMLElement *ele3 <span class="keyword">in</span> ele2.children) &#123;</div><div class="line">            <span class="built_in">NSLog</span>(<span class="string">@"标签名：%@\n"</span>, ele3.name);</div><div class="line">            <span class="built_in">NSLog</span>(<span class="string">@"内容：%@\n"</span>, ele3.stringValue);</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="发送请求"><a href="#发送请求" class="headerlink" title="发送请求"></a>发送请求</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#pragma mark - 发送请求</span></div><div class="line">- (<span class="keyword">void</span>)webServiceRequestWithsoapMessage:(<span class="built_in">NSString</span> *)soapMessage &#123;</div><div class="line">  <span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:urlString];</div><div class="line">  <span class="comment">//请求发送到的路径</span></div><div class="line">  ASIHTTPRequest *theRequest = [ASIHTTPRequest requestWithURL:url];</div><div class="line">  [theRequest addRequestHeader:<span class="string">@"Content-Type"</span></div><div class="line">                         value:<span class="string">@"text/xml; charset=utf-8"</span>];</div><div class="line"> [theRequest setRequestMethod:<span class="string">@"POST"</span>];</div><div class="line">  [theRequest</div><div class="line">      appendPostData:[soapMessage dataUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>]];</div><div class="line">  [theRequest setDefaultResponseEncoding:<span class="built_in">NSUTF8StringEncoding</span>];</div><div class="line">  [theRequest startSynchronous];</div><div class="line">  <span class="built_in">NSError</span> *error = [theRequest error];</div><div class="line">  <span class="keyword">if</span> (!error) &#123;</div><div class="line">    <span class="built_in">NSMutableData</span> *mData = [<span class="built_in">NSMutableData</span></div><div class="line">        dataWithData:[theRequest responseData]];  <span class="comment">// WebService接口返回的数据</span></div><div class="line">    <span class="built_in">NSString</span> *theXML = [[<span class="built_in">NSString</span> alloc]</div><div class="line">        initWithBytes:[mData mutableBytes]</div><div class="line">               length:[mData length]</div><div class="line">             encoding:</div><div class="line">                 <span class="built_in">NSUTF8StringEncoding</span>];  <span class="comment">//将返回数据转换为字符串，进行解析（本文中返回的数据为XML数据）</span></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, theXML);</div><div class="line">    <span class="comment">/**</span></div><div class="line">     *  解析xml</div><div class="line">     */</div><div class="line">    [<span class="keyword">self</span> pareXMLWithXMLString:theXML];</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"请求错误：\n%@"</span>, error);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/23/16-05-23-TouchID/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          iOS Touch ID
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/07/16-06-07-AFNetworking-SOAP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS Web service SOAP消息(基于AFNetworking)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="16-05-25-ASI-WebService" data-title="iOS 使用 ASI 调webService" data-url="http://irenachou.github.io/irena/2016/05/25/16-05-25-ASI-WebService/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"irena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Irena
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

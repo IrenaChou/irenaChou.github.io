@@ -181,66 +181,6 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
-    <article id="post-16-04-29-博客迁移" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/29/16-04-29-博客迁移/" class="article-date">
-  	<time datetime="2016-04-29T06:02:58.000Z" itemprop="datePublished">2016-04-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/29/16-04-29-博客迁移/">博客迁移</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>原来的博客地址：<a href="http://irena.gitcafe.io" target="_blank" rel="external">http://irena.gitcafe.io</a><br>现在的博客地址：<a href="http://irenachou.github.io/">http://irenachou.github.io/</a></p>
-<p>第一次搭博客首选了gitcafe，是因为gitcafe访问相对快一些，github比较慢，转了一圈，最终又回到了github上来。</p>
-<p>前两天写了一篇关于UI-Touch的小短文发现gitcafe被coding收购了，5月31号前要把所有gitcafe上的项目都迁移到coding，接着就始迁移了，在coding部署要交费了，试了几天，实在很贵，也没有找到比较好的较便宜的方法，又放弃coding向github上迁移</p>
-<p>迁移的过程中还是遇到了一个小问题，以前在gitcafe的时候，使用的是gitcafe-pages子分支，也就想在github上直接使用这个子分支，但是将默认分支改成子分支后，访问的还是master分支，英文很烂，并且各种搜索后无解，最后只好曲线救国，先将博客指定到了master分支，有知道我问题的朋友，留言告诉我哦，谢谢了</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-16-04-29-coreImageDemo" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -777,6 +717,60 @@ UIApplication,UIViewController,UIView都继承自UIResponder,因此它们都是�
         <p><a href="http://pan.baidu.com/s/1gfIwpmb" target="_blank" rel="external">原码下载</a></p>
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">"ViewController.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;AVFoundation/AVFoundation.h&gt;</span></span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">AVCaptureDevice</span> *device;</div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">AVCaptureTorchMode</span> torchModeMe;</div><div class="line"><span class="keyword">@property</span>(<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UISwitch</span> *controlSwitch;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></div><div class="line"><span class="comment">/**</span></div><div class="line"> *  开关手电桶</div><div class="line"> */</div><div class="line">- (<span class="keyword">IBAction</span>)onOrOff:(<span class="keyword">id</span>)sender &#123;</div><div class="line">  <span class="comment">// AVCaptureDevice代表抽象的硬件设备</span></div><div class="line">  <span class="comment">// 返回用于捕获给定媒体类型的数据的默认设备</span></div><div class="line">  _device = [<span class="built_in">AVCaptureDevice</span> defaultDeviceWithMediaType:<span class="built_in">AVMediaTypeVideo</span>];</div><div class="line">  <span class="comment">//检查设备是否支持手电筒</span></div><div class="line">  <span class="keyword">if</span> (![_device hasTorch]) &#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"设备不支持手电筒"</span>);</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">if</span> ([sender isOn]) &#123;</div><div class="line">    [<span class="keyword">self</span>.view setBackgroundColor:[<span class="built_in">UIColor</span> whiteColor]];</div><div class="line">    _torchModeMe = <span class="built_in">AVCaptureTorchModeOn</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    [<span class="keyword">self</span>.view setBackgroundColor:[<span class="built_in">UIColor</span> blackColor]];</div><div class="line">    _torchModeMe = <span class="built_in">AVCaptureTorchModeOff</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">// lockForConfiguration 来尝试在捕获设备上获取锁</span></div><div class="line">  [_device lockForConfiguration:<span class="literal">nil</span>];</div><div class="line">  [_device setTorchMode:_torchModeMe];</div><div class="line">  <span class="comment">//来放弃锁定</span></div><div class="line">  [_device unlockForConfiguration];</div><div class="line">&#125;</div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">  [<span class="keyword">super</span> viewDidLoad];</div><div class="line">  [<span class="keyword">self</span> onOrOff:_controlSwitch];</div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-seeSandboxDirectory" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/23/seeSandboxDirectory/" class="article-date">
+  	<time datetime="2016-03-23T02:09:18.000Z" itemprop="datePublished">2016-03-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/23/seeSandboxDirectory/">查看真机 / 模拟器沙盒</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="查看真机沙盒"><a href="#查看真机沙盒" class="headerlink" title=" 查看真机沙盒"></a> 查看真机沙盒</h2><p> <img src="http://7xrirn.com1.z0.glb.clouddn.com/irenasandbox_1.png" alt="1"><br> <img src="http://7xrirn.com1.z0.glb.clouddn.com/irenasandbox_2.png" alt="2"><br> <img src="http://7xrirn.com1.z0.glb.clouddn.com/irenasandbox_3.png" alt="3"><br> <img src="http://7xrirn.com1.z0.glb.clouddn.com/irenasandbox_4.png" alt="4"></p>
+<h2 id="查看模拟器沙盒"><a href="#查看模拟器沙盒" class="headerlink" title=" 查看模拟器沙盒"></a> 查看模拟器沙盒</h2><p> 查看模拟器沙盒，可使用simpholders工具，点击下面的下载，可下载simpholders破解版工具<br> <a href="http://pan.baidu.com/s/1baRwiM" target="_blank" rel="external">下载</a></p>
+
       
     </div>
     

@@ -117,7 +117,7 @@ var _hmt = _hmt || [];
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/swift/" style="font-size: 10px;">swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
 					</div>
 				</section>
 				
@@ -180,6 +180,66 @@ var _hmt = _hmt || [];
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-16-05-20-navigationBarBackgroundTransparent" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/20/16-05-20-navigationBarBackgroundTransparent/" class="article-date">
+  	<time datetime="2016-05-20T11:40:36.000Z" itemprop="datePublished">2016-05-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/20/16-05-20-navigationBarBackgroundTransparent/">设置navigationBar背景透明</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>效果如下图红色窗体</strong>  </p>
+<ul>
+<li><img src="http://7xrirn.com1.z0.glb.clouddn.com/navigationNavigationBarBackgroundShow.gif" alt="效果显示">  </li>
+</ul>
+<h2 id="我将此方法放在了一个Category里面，下载请点击此链接下载代码"><a href="#我将此方法放在了一个Category里面，下载请点击此链接下载代码" class="headerlink" title="我将此方法放在了一个Category里面，下载请点击此链接下载代码"></a><strong>我将此方法放在了一个Category里面，下载请点击此链接<a href="http://pan.baidu.com/s/1o8u4u0a">下载代码</a></strong></h2><h2 id="设置NavigationBar背景为透明"><a href="#设置NavigationBar背景为透明" class="headerlink" title="设置NavigationBar背景为透明"></a>设置NavigationBar背景为透明</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</div><div class="line"> *  将navigationBar背景颜色设置为透明</div><div class="line"> */</span></div><div class="line">[<span class="keyword">self</span> setNavigationBarBackgroundShow:<span class="literal">NO</span>];</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/05/20/16-05-20-navigationBarBackgroundTransparent/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-statusBarBackgroundColor" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -691,66 +751,6 @@ SSH 密钥的创建需要在终端（命令行）环境下进行，我们首先�
         <p class="article-more-link">
           <a  href="/2016/05/02/16-05-02-ssh公钥/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-16-04-29-博客迁移" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/29/16-04-29-博客迁移/" class="article-date">
-  	<time datetime="2016-04-29T06:02:58.000Z" itemprop="datePublished">2016-04-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/29/16-04-29-博客迁移/">博客迁移</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>原来的博客地址：<a href="http://irena.gitcafe.io" target="_blank" rel="external">http://irena.gitcafe.io</a><br>现在的博客地址：<a href="http://irenachou.github.io/">http://irenachou.github.io/</a></p>
-<p>第一次搭博客首选了gitcafe，是因为gitcafe访问相对快一些，github比较慢，转了一圈，最终又回到了github上来。</p>
-<p>前两天写了一篇关于UI-Touch的小短文发现gitcafe被coding收购了，5月31号前要把所有gitcafe上的项目都迁移到coding，接着就始迁移了，在coding部署要交费了，试了几天，实在很贵，也没有找到比较好的较便宜的方法，又放弃coding向github上迁移</p>
-<p>迁移的过程中还是遇到了一个小问题，以前在gitcafe的时候，使用的是gitcafe-pages子分支，也就想在github上直接使用这个子分支，但是将默认分支改成子分支后，访问的还是master分支，英文很烂，并且各种搜索后无解，最后只好曲线救国，先将博客指定到了master分支，有知道我问题的朋友，留言告诉我哦，谢谢了</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-
       
       <div class="clearfix"></div>
     </div>

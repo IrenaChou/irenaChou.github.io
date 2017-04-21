@@ -181,234 +181,6 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
-    <article id="post-16-05-02-迪士尼七宝" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/02/16-05-02-迪士尼七宝/" class="article-date">
-  	<time datetime="2016-05-02T14:36:35.000Z" itemprop="datePublished">2016-05-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/02/16-05-02-迪士尼七宝/">迪士尼七宝</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://7xrirn.com1.z0.glb.clouddn.com/DSN1.JPG" alt="迪士尼"></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/05/02/16-05-02-迪士尼七宝/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-16-05-02-pictureCompress" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/02/16-05-02-pictureCompress/" class="article-date">
-  	<time datetime="2016-05-02T12:02:22.000Z" itemprop="datePublished">2016-05-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/02/16-05-02-pictureCompress/">图片压缩</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>可以将如下两个方法写在分类中,方便不同项目的重复使用</strong></p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//压缩图片质量</span></div><div class="line">+ (<span class="built_in">UIImage</span>*)reduceImage:(<span class="built_in">UIImage</span>*)image percent:(<span class="keyword">float</span>)percent &#123;</div><div class="line">  <span class="built_in">NSData</span>* imageData = <span class="built_in">UIImageJPEGRepresentation</span>(image, percent);</div><div class="line">  <span class="built_in">UIImage</span>* newImage = [<span class="built_in">UIImage</span> imageWithData:imageData];</div><div class="line">  <span class="keyword">return</span> newImage;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/05/02/16-05-02-pictureCompress/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-16-05-02-获取storyboard箭头指向的根控制器" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/02/16-05-02-获取storyboard箭头指向的根控制器/" class="article-date">
-  	<time datetime="2016-05-02T11:56:16.000Z" itemprop="datePublished">2016-05-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/02/16-05-02-获取storyboard箭头指向的根控制器/">获取storyboard箭头指向的根控制器</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> *  通过名称获取storyboard箭头指向的根控制器</div><div class="line"> *</div><div class="line"> *  @param sbName storyboard名字</div><div class="line"> *</div><div class="line"> *  @return storyboard instantiateInitialViewController</div><div class="line"> */</div><div class="line">- (<span class="keyword">id</span>)viewControllerWithSBName:(<span class="built_in">NSString</span>*)sbName &#123;</div><div class="line"><span class="comment">//获取程序的名字</span></div><div class="line">  <span class="built_in">NSDictionary</span>* info = [[<span class="built_in">NSBundle</span> mainBundle] infoDictionary];</div><div class="line">  <span class="built_in">NSString</span>* prodName = [info objectForKey:<span class="string">@"CFBundleExecutable"</span>];</div><div class="line">  <span class="built_in">NSString</span>* sbPath = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%@/%@/"</span>, prodName, sbName];</div><div class="line">  <span class="comment">//  NSLog(@"%@", [[UIStoryboard</span></div><div class="line">  <span class="comment">//                   storyboardWithName:sbName</span></div><div class="line">  <span class="comment">//                               bundle:[[NSBundle alloc]</span></div><div class="line">  <span class="comment">//                               initWithPath:sbPath]]</span></div><div class="line">  <span class="comment">//                   instantiateInitialViewController]);</span></div><div class="line">  <span class="keyword">return</span></div><div class="line">      [[<span class="built_in">UIStoryboard</span> storyboardWithName:sbName</div><div class="line">                                 bundle:[[<span class="built_in">NSBundle</span> alloc] initWithPath:sbPath]]</div><div class="line">          instantiateInitialViewController];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-16-05-02-ssh公钥" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/02/16-05-02-ssh公钥/" class="article-date">
-  	<time datetime="2016-05-02T07:42:40.000Z" itemprop="datePublished">2016-05-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/02/16-05-02-ssh公钥/">SSH公钥</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>SSH （ Secure Shell）是一种安全协议，在你的电脑与 GitHub 服务器进行通信时，我们使用 SSH 密钥（SSH Keys）认证的方式来保证通信安全。
-
-SSH 密钥的创建需要在终端（命令行）环境下进行，我们首先进入命令行环境。通常在 Mac OS X 和 Linux 平台下我们使用终端工具（Terminal），在 Windows 平台中，可以使用 Git Bash 工具。
-</code></pre><p>进入命令行环境后，我们执行以下操作来创建 SSH 密钥</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/05/02/16-05-02-ssh公钥/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-16-04-29-博客迁移" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -802,9 +574,237 @@ UIApplication,UIViewController,UIView都继承自UIResponder,因此它们都是�
 
 
   
+    <article id="post-a-file-makeAndUse" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/11/a-file-makeAndUse/" class="article-date">
+  	<time datetime="2016-04-11T02:38:08.000Z" itemprop="datePublished">2016-04-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/11/a-file-makeAndUse/">制作/使用.a文件</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="制作步骤："><a href="#制作步骤：" class="headerlink" title="制作步骤："></a>制作步骤：</h2><ol>
+<li>File–New–Project<br>按照如下图创建项目<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/1.png" alt="操作"></li>
+<li>按照下图创完成所需类的定义和实现<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/2.png" alt="操作">    </li>
+<li>创建后Command + B 进行编辑，如果device选择的是真机，生成的.a文件就适合真机的<br>想要创建适用于模拟器的.a文件，将device改成模拟器就可以      </li>
+<li>如果没有生成所需头文件，按下图逐步操作添加<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/.a1.png" alt="操作"><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/.a2.png" alt="操作">      </li>
+<li>按下图查看制作好的.a文件<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3.png" alt="2"></li>
+</ol>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/11/a-file-makeAndUse/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-tagView" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/30/tagView/" class="article-date">
+  	<time datetime="2016-03-30T07:26:56.000Z" itemprop="datePublished">2016-03-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/30/tagView/">标签</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://pan.baidu.com/s/1cv6eUM" target="_blank" rel="external">原码下载</a></p>
+<p>OC原码中用了两种方法实现标签功能:<br>  一种是使用collectionView实现<br>  另一种是用draw实现</p>
+<p>  显示如下图：<br>   <img src="http://7xrirn.com1.z0.glb.clouddn.com/irenaUntitled.gif" alt="1"><br>   <img src="http://7xrirn.com1.z0.glb.clouddn.com/irenacollection.gif" alt="2">    </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-tabbarShowOrHidden" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/30/tabbarShowOrHidden/" class="article-date">
+  	<time datetime="2016-03-30T01:09:07.000Z" itemprop="datePublished">2016-03-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/30/tabbarShowOrHidden/">显示隐藏tabbar</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.csdn.net/riveram/article/details/7345577">参考原文</a></p>
+<h2 id="隐藏TabBar："><a href="#隐藏TabBar：" class="headerlink" title="隐藏TabBar："></a>隐藏TabBar：</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)hideTabBar &#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.tabBarController.tabBar.hidden == <span class="literal">YES</span>) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">UIView</span> *contentView;</div><div class="line">    <span class="keyword">if</span> ( [[<span class="keyword">self</span>.tabBarController.view.subviews objectAtIndex:<span class="number">0</span>] isKindOfClass:[<span class="built_in">UITabBar</span> <span class="keyword">class</span>]] )</div><div class="line">        contentView = [<span class="keyword">self</span>.tabBarController.view.subviews objectAtIndex:<span class="number">1</span>];</div><div class="line">    <span class="keyword">else</span></div><div class="line">        contentView = [<span class="keyword">self</span>.tabBarController.view.subviews objectAtIndex:<span class="number">0</span>];</div><div class="line">    contentView.frame = <span class="built_in">CGRectMake</span>(contentView.bounds.origin.x,  contentView.bounds.origin.y,  contentView.bounds.size.width, contentView.bounds.size.height + <span class="keyword">self</span>.tabBarController.tabBar.frame.size.height);        </div><div class="line">    <span class="keyword">self</span>.tabBarController.tabBar.hidden = <span class="literal">YES</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/30/tabbarShowOrHidden/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Flashlight" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/28/Flashlight/" class="article-date">
+  	<time datetime="2016-03-28T06:06:15.000Z" itemprop="datePublished">2016-03-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/28/Flashlight/">手电筒</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://pan.baidu.com/s/1gfIwpmb" target="_blank" rel="external">原码下载</a></p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">"ViewController.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;AVFoundation/AVFoundation.h&gt;</span></span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">AVCaptureDevice</span> *device;</div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">AVCaptureTorchMode</span> torchModeMe;</div><div class="line"><span class="keyword">@property</span>(<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UISwitch</span> *controlSwitch;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></div><div class="line"><span class="comment">/**</span></div><div class="line"> *  开关手电桶</div><div class="line"> */</div><div class="line">- (<span class="keyword">IBAction</span>)onOrOff:(<span class="keyword">id</span>)sender &#123;</div><div class="line">  <span class="comment">// AVCaptureDevice代表抽象的硬件设备</span></div><div class="line">  <span class="comment">// 返回用于捕获给定媒体类型的数据的默认设备</span></div><div class="line">  _device = [<span class="built_in">AVCaptureDevice</span> defaultDeviceWithMediaType:<span class="built_in">AVMediaTypeVideo</span>];</div><div class="line">  <span class="comment">//检查设备是否支持手电筒</span></div><div class="line">  <span class="keyword">if</span> (![_device hasTorch]) &#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"设备不支持手电筒"</span>);</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">if</span> ([sender isOn]) &#123;</div><div class="line">    [<span class="keyword">self</span>.view setBackgroundColor:[<span class="built_in">UIColor</span> whiteColor]];</div><div class="line">    _torchModeMe = <span class="built_in">AVCaptureTorchModeOn</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    [<span class="keyword">self</span>.view setBackgroundColor:[<span class="built_in">UIColor</span> blackColor]];</div><div class="line">    _torchModeMe = <span class="built_in">AVCaptureTorchModeOff</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">// lockForConfiguration 来尝试在捕获设备上获取锁</span></div><div class="line">  [_device lockForConfiguration:<span class="literal">nil</span>];</div><div class="line">  [_device setTorchMode:_torchModeMe];</div><div class="line">  <span class="comment">//来放弃锁定</span></div><div class="line">  [_device unlockForConfiguration];</div><div class="line">&#125;</div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">  [<span class="keyword">super</span> viewDidLoad];</div><div class="line">  [<span class="keyword">self</span> onOrOff:_controlSwitch];</div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
     </nav>
   
 </div>

@@ -181,6 +181,63 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-tabbarShowOrHidden" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/30/tabbarShowOrHidden/" class="article-date">
+  	<time datetime="2016-03-30T01:09:07.000Z" itemprop="datePublished">2016-03-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/30/tabbarShowOrHidden/">显示隐藏tabbar</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.csdn.net/riveram/article/details/7345577">参考原文</a></p>
+<h2 id="隐藏TabBar："><a href="#隐藏TabBar：" class="headerlink" title="隐藏TabBar："></a>隐藏TabBar：</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)hideTabBar &#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.tabBarController.tabBar.hidden == <span class="literal">YES</span>) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">UIView</span> *contentView;</div><div class="line">    <span class="keyword">if</span> ( [[<span class="keyword">self</span>.tabBarController.view.subviews objectAtIndex:<span class="number">0</span>] isKindOfClass:[<span class="built_in">UITabBar</span> <span class="keyword">class</span>]] )</div><div class="line">        contentView = [<span class="keyword">self</span>.tabBarController.view.subviews objectAtIndex:<span class="number">1</span>];</div><div class="line">    <span class="keyword">else</span></div><div class="line">        contentView = [<span class="keyword">self</span>.tabBarController.view.subviews objectAtIndex:<span class="number">0</span>];</div><div class="line">    contentView.frame = <span class="built_in">CGRectMake</span>(contentView.bounds.origin.x,  contentView.bounds.origin.y,  contentView.bounds.size.width, contentView.bounds.size.height + <span class="keyword">self</span>.tabBarController.tabBar.frame.size.height);        </div><div class="line">    <span class="keyword">self</span>.tabBarController.tabBar.hidden = <span class="literal">YES</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/30/tabbarShowOrHidden/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Flashlight" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -674,63 +731,6 @@ var _hmt = _hmt || [];
       
       
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-gradientColor" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/01/gradientColor/" class="article-date">
-  	<time datetime="2016-03-01T02:23:25.000Z" itemprop="datePublished">2016-03-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/01/gradientColor/">iOS渐变颜色可设置渐变方向</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://blog.csdn.net/caryaliu/article/details/49283419">参考原文</a></p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIKit.h&gt;</span></span></div><div class="line"><span class="comment">//渐变方向</span></div><div class="line"><span class="keyword">typedef</span> <span class="built_in">NS_ENUM</span>(<span class="built_in">NSUInteger</span>, GradientType) &#123;</div><div class="line">  GradientTypeTopToBottom = <span class="number">0</span>,      <span class="comment">//从上到小</span></div><div class="line">  GradientTypeLeftToRight = <span class="number">1</span>,      <span class="comment">//从左到右</span></div><div class="line">  GradientTypeUpleftToLowright = <span class="number">2</span>, <span class="comment">//左上到右下</span></div><div class="line">  GradientTypeUprightToLowleft = <span class="number">3</span>, <span class="comment">//右上到左下</span></div><div class="line">&#125;;</div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">UIImage</span> (<span class="title">GradientColor</span>)</span></div><div class="line">+ (<span class="built_in">UIImage</span> *)gradientColorImageFromColors:(<span class="built_in">NSArray</span> *)colors</div><div class="line">                             gradientType:(GradientType)gradientType</div><div class="line">                                  imgSize:(<span class="built_in">CGSize</span>)imgSize;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/01/gradientColor/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>

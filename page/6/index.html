@@ -181,6 +181,58 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-16-05-02-获取storyboard箭头指向的根控制器" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/02/16-05-02-获取storyboard箭头指向的根控制器/" class="article-date">
+  	<time datetime="2016-05-02T11:56:16.000Z" itemprop="datePublished">2016-05-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/02/16-05-02-获取storyboard箭头指向的根控制器/">获取storyboard箭头指向的根控制器</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> *  通过名称获取storyboard箭头指向的根控制器</div><div class="line"> *</div><div class="line"> *  @param sbName storyboard名字</div><div class="line"> *</div><div class="line"> *  @return storyboard instantiateInitialViewController</div><div class="line"> */</div><div class="line">- (<span class="keyword">id</span>)viewControllerWithSBName:(<span class="built_in">NSString</span>*)sbName &#123;</div><div class="line"><span class="comment">//获取程序的名字</span></div><div class="line">  <span class="built_in">NSDictionary</span>* info = [[<span class="built_in">NSBundle</span> mainBundle] infoDictionary];</div><div class="line">  <span class="built_in">NSString</span>* prodName = [info objectForKey:<span class="string">@"CFBundleExecutable"</span>];</div><div class="line">  <span class="built_in">NSString</span>* sbPath = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%@/%@/"</span>, prodName, sbName];</div><div class="line">  <span class="comment">//  NSLog(@"%@", [[UIStoryboard</span></div><div class="line">  <span class="comment">//                   storyboardWithName:sbName</span></div><div class="line">  <span class="comment">//                               bundle:[[NSBundle alloc]</span></div><div class="line">  <span class="comment">//                               initWithPath:sbPath]]</span></div><div class="line">  <span class="comment">//                   instantiateInitialViewController]);</span></div><div class="line">  <span class="keyword">return</span></div><div class="line">      [[<span class="built_in">UIStoryboard</span> storyboardWithName:sbName</div><div class="line">                                 bundle:[[<span class="built_in">NSBundle</span> alloc] initWithPath:sbPath]]</div><div class="line">          instantiateInitialViewController];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-16-05-02-ssh公钥" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -733,63 +785,6 @@ UIApplication,UIViewController,UIView都继承自UIResponder,因此它们都是�
       
       
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-tabbarShowOrHidden" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/30/tabbarShowOrHidden/" class="article-date">
-  	<time datetime="2016-03-30T01:09:07.000Z" itemprop="datePublished">2016-03-30</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/30/tabbarShowOrHidden/">显示隐藏tabbar</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://blog.csdn.net/riveram/article/details/7345577">参考原文</a></p>
-<h2 id="隐藏TabBar："><a href="#隐藏TabBar：" class="headerlink" title="隐藏TabBar："></a>隐藏TabBar：</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)hideTabBar &#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.tabBarController.tabBar.hidden == <span class="literal">YES</span>) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">UIView</span> *contentView;</div><div class="line">    <span class="keyword">if</span> ( [[<span class="keyword">self</span>.tabBarController.view.subviews objectAtIndex:<span class="number">0</span>] isKindOfClass:[<span class="built_in">UITabBar</span> <span class="keyword">class</span>]] )</div><div class="line">        contentView = [<span class="keyword">self</span>.tabBarController.view.subviews objectAtIndex:<span class="number">1</span>];</div><div class="line">    <span class="keyword">else</span></div><div class="line">        contentView = [<span class="keyword">self</span>.tabBarController.view.subviews objectAtIndex:<span class="number">0</span>];</div><div class="line">    contentView.frame = <span class="built_in">CGRectMake</span>(contentView.bounds.origin.x,  contentView.bounds.origin.y,  contentView.bounds.size.width, contentView.bounds.size.height + <span class="keyword">self</span>.tabBarController.tabBar.frame.size.height);        </div><div class="line">    <span class="keyword">self</span>.tabBarController.tabBar.hidden = <span class="literal">YES</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/30/tabbarShowOrHidden/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>

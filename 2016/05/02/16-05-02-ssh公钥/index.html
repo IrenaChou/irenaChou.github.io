@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://irenachou.github.io/irena/2016/05/02/16-05-02-ssh公钥/index.html">
 <meta property="og:site_name" content="My First">
 <meta property="og:description" content="SSH （ Secure Shell）是一种安全协议，在你的电脑与 GitHub 服务器进行通信时，我们使用 SSH 密钥（SSH Keys）认证的方式来保证通信安全。  SSH 密钥的创建需要在终端（命令行）环境下进行，我们首先进入命令行环境。通常在 Mac OS X 和 Linux 平台下我们使用终端工具（Terminal），在 Windows 平台中，可以使用 Git Bash 工具。 进入">
-<meta property="og:updated_time" content="2017-04-21T07:09:44.000Z">
+<meta property="og:updated_time" content="2017-04-21T08:22:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSH公钥">
 <meta name="twitter:description" content="SSH （ Secure Shell）是一种安全协议，在你的电脑与 GitHub 服务器进行通信时，我们使用 SSH 密钥（SSH Keys）认证的方式来保证通信安全。  SSH 密钥的创建需要在终端（命令行）环境下进行，我们首先进入命令行环境。通常在 Mac OS X 和 Linux 平台下我们使用终端工具（Terminal），在 Windows 平台中，可以使用 Git Bash 工具。 进入">
@@ -219,19 +219,20 @@ var _hmt = _hmt || [];
 SSH 密钥的创建需要在终端（命令行）环境下进行，我们首先进入命令行环境。通常在 Mac OS X 和 Linux 平台下我们使用终端工具（Terminal），在 Windows 平台中，可以使用 Git Bash 工具。
 </code></pre><p>进入命令行环境后，我们执行以下操作来创建 SSH 密钥</p>
 <a id="more"></a>
-<h2 id="1-进入-SSH-目录"><a href="#1-进入-SSH-目录" class="headerlink" title="1. 进入 SSH 目录"></a>1. 进入 SSH 目录</h2><pre><code>cd ~/.ssh
-如果还没有 /.ssh 目录，可以手工创建一个 mkdir /.ssh，之后再通过 cd /.ssh 进入 SSH 目录
+<h2 id="1-进入-SSH-目录"><a href="#1-进入-SSH-目录" class="headerlink" title="1. 进入 SSH 目录"></a>1. 进入 SSH 目录</h2><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cd</span> ~<span class="string">/.ssh</span></div></pre></td></tr></table></figure>
+<pre><code>如果还没有 /.ssh 目录，可以手工创建一个 mkdir /.ssh，之后再通过 cd /.ssh 进入 SSH 目录
 可以通过 ls 命令查看 SSH 目录下的文件，来确认你是否已经生成过 SSH 密钥；如果 SSH 目录为空，我们开始第二步，生成 SSH 密钥；如果存在 id_rsa.pub 这个文件，说明你之前生成过 SSH 密钥，可以跳过第二步，直接进行密钥的获取。
 </code></pre><h2 id="2-生成-SSH-密钥"><a href="#2-生成-SSH-密钥" class="headerlink" title="2. 生成 SSH 密钥"></a>2. 生成 SSH 密钥</h2><p>我们通过下面的命令生成密钥，请将命令中的 YOUR_EMAIL@YOUREMAIL.COM 替换为你自己的 Email 地址。</p>
-<pre><code>ssh-keygen -t rsa -C &quot;YOUR_EMAIL@YOUREMAIL.COM&quot;
-</code></pre><p>在 SSH 生成过程中会出现以下信息，按屏幕的提示操作即可；当提示Enter passphrase ( empty for no passphrase ) : 时，可以直接按两次回车键输入一个空的 passphrase；也可以选择输入一个 passphrase 口令，如果此时你输入了一个 passphrase，请牢记，之后每次提交时都需要输入这个口令来确认。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ssh-keygen</span> <span class="selector-tag">-t</span> <span class="selector-tag">rsa</span> <span class="selector-tag">-C</span> "<span class="selector-tag">YOUR_EMAIL</span>@<span class="keyword">YOUREMAIL</span>.<span class="keyword">COM</span>"</div></pre></td></tr></table></figure>
+<p>在 SSH 生成过程中会出现以下信息，按屏幕的提示操作即可；当提示Enter passphrase ( empty for no passphrase ) : 时，可以直接按两次回车键输入一个空的 passphrase；也可以选择输入一个 passphrase 口令，如果此时你输入了一个 passphrase，请牢记，之后每次提交时都需要输入这个口令来确认。</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">`$ ssh-keygen -t rsa -C <span class="string">"YOUR_EMAIL@YOUREMAIL.COM"</span></div><div class="line">Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa key pair.</div><div class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</div><div class="line">Enter same passphrase <span class="string">again:</span></div><div class="line">Your identification has been saved <span class="keyword">in</span> <span class="regexp">/Users/</span>USERNAME<span class="regexp">/.ssh/</span>id_rsa.</div><div class="line">Your <span class="keyword">public</span> key has been saved <span class="keyword">in</span> <span class="regexp">/Users/</span>USERNAME<span class="regexp">/.ssh/</span>id_rsa.pub.</div><div class="line">The key fingerprint <span class="string">is:</span></div><div class="line"><span class="number">15</span>:<span class="number">81</span>:<span class="string">d2:</span><span class="number">7</span><span class="string">a:</span><span class="string">c6:</span><span class="number">6</span><span class="string">c:</span><span class="number">0</span><span class="string">f:</span><span class="string">ec:</span><span class="string">b0:</span><span class="string">b6:</span><span class="string">d4:</span><span class="number">18</span>:<span class="string">b8:</span><span class="string">d1:</span><span class="number">41</span>:<span class="number">48</span> YOUR_EMAIL<span class="meta">@YOUREMAIL</span>.COM</div></pre></td></tr></table></figure>
 <p>`<br>一般情况下，在命令行中输入密码、口令一类的信息时是没有信息回显的。在我们这一步的操作中，输入 passphrase 口令时，命令行界面上不会随着键盘敲入密码而有什么反馈。</p>
-<h2 id="3-获取-SSH-公钥信息"><a href="#3-获取-SSH-公钥信息" class="headerlink" title="3. 获取 SSH 公钥信息"></a>3. 获取 SSH 公钥信息</h2><p>SSH 秘钥生成结束后，你可以在 SSH 目录下看到私钥 id_rsa 和公钥 id_rsa.pub 这两个文件，不要把私钥文件 id_rsa 的信息透露给任何人。我们可以通过文本编辑器或 cat 命令来查看 id_rsa.pub 公钥信息。</p>
+<h2 id="3-获取-SSH-公钥信息"><a href="#3-获取-SSH-公钥信息" class="headerlink" title="3. 获取 SSH 公钥信息"></a>3. 获取 SSH 公钥信息</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">cat</span> <span class="selector-tag">id_rsa</span><span class="selector-class">.pub</span></div></pre></td></tr></table></figure>
+<p>SSH 秘钥生成结束后，你可以在 SSH 目录下看到私钥 id_rsa 和公钥 id_rsa.pub 这两个文件，不要把私钥文件 id_rsa 的信息透露给任何人。我们可以通过文本编辑器或 cat 命令来查看 id_rsa.pub 公钥信息。</p>
 <pre><code>通过编辑器。使用你熟悉的文本编辑器，比如 记事本、Sublime Text 等软件打开 id_rsa.pub ，复制里面的所有内容以备下一步使用。
-通过 cat命令。在命令行中敲入**cat id_rsa.pub** ，回车执行后命令行界面中会显示 id_rsa.pub 文件里的内容，复制后在下一步使用。
+通过 cat命令。在命令行中敲入 **cat id_rsa.pub** ，回车执行后命令行界面中会显示 id_rsa.pub 文件里的内容，复制后在下一步使用。
 </code></pre><h2 id="5-测试-GitHub-SSH-连接"><a href="#5-测试-GitHub-SSH-连接" class="headerlink" title="5. 测试 GitHub SSH 连接"></a>5. 测试 GitHub SSH 连接</h2><p>完成上面的操作后，可以通过下面的命令来测试一下是否可以连接服务器。</p>
-<pre><code>ssh -T git@github.com
+<pre><code><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">-T</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></div></pre></td></tr></table></figure>
 </code></pre><p>如果你操作的电脑是第一次与 GitHub 建立连接，会出现以下警告，</p>
 <pre><code>The authenticity of host &apos;github.com (50.116.2.223)&apos; can&apos;t be established.
 # RSA key fingerprint is     84:9e:c9:8e:7f:36:28:08:7e:13:bf:43:12:74:11:4e.

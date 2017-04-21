@@ -117,7 +117,7 @@ var _hmt = _hmt || [];
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/ReactNative/" style="font-size: 10px;">ReactNative</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
 					</div>
 				</section>
 				
@@ -180,6 +180,61 @@ var _hmt = _hmt || [];
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-tagView" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/30/tagView/" class="article-date">
+  	<time datetime="2016-03-30T07:26:56.000Z" itemprop="datePublished">2016-03-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/30/tagView/">标签</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://pan.baidu.com/s/1cv6eUM" target="_blank" rel="external">原码下载</a></p>
+<p>OC原码中用了两种方法实现标签功能:<br>  一种是使用collectionView实现<br>  另一种是用draw实现</p>
+<p>  显示如下图：<br>   <img src="http://7xrirn.com1.z0.glb.clouddn.com/irenaUntitled.gif" alt="1"><br>   <img src="http://7xrirn.com1.z0.glb.clouddn.com/irenacollection.gif" alt="2">    </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-tabbarShowOrHidden" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -693,64 +748,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-bug1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/01/bug1/" class="article-date">
-  	<time datetime="2016-03-01T06:09:39.000Z" itemprop="datePublished">2016-03-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/01/bug1/">问题记录</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>如下错误是没有rootViewController，我平时并不这么写<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application</div><div class="line">    didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</div><div class="line">  <span class="comment">// Override point for customization after application launch.</span></div><div class="line">  <span class="keyword">self</span>.window = [[<span class="built_in">UIWindow</span> alloc] initWithFrame:[<span class="built_in">UIScreen</span> mainScreen].bounds];</div><div class="line">  [<span class="keyword">self</span>.window addSubview:controller.view];</div><div class="line">  [<span class="keyword">self</span>.window makeKeyAndVisible];</div><div class="line">  <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>错误：<br><figure class="highlight x86asm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">*** Assertion failure <span class="keyword">in</span> -[UIApplication _runWithMainScene:transitionContext:completion:], /BuildRoot/Library/Caches/com.apple.xbs/Sources/UIKit/UIKit-<span class="number">3512.30</span><span class="meta">.14</span>/UIApplication.m:<span class="number">3315</span></div><div class="line">*** Terminating app due to uncaught exception <span class="string">'NSInternalInconsistencyException'</span>, reason: <span class="string">'Application windows are expected to have a root view controller at the end of application launch'</span></div><div class="line">*** First throw <span class="keyword">call</span> stack:</div><div class="line">(<span class="number">0x1821c5900</span> <span class="number">0x181833f80</span> <span class="number">0x1821c57d0</span> <span class="number">0x182b3899c</span> <span class="number">0x187160ac0</span> <span class="number">0x18715d5c0</span> <span class="number">0x18377b790</span> <span class="number">0x18377bb10</span> <span class="number">0x18217cefc</span> <span class="number">0x18217c990</span> <span class="number">0x18217a690</span> <span class="number">0x1820a9680</span> <span class="number">0x186f26580</span> <span class="number">0x186f20d90</span> <span class="number">0x1000de108</span> <span class="number">0x181c4a8b8</span>)</div><div class="line">libc++abi.dylib: terminating with uncaught exception of type NSException</div></pre></td></tr></table></figure></p>
-<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法：  "></a>解决方法：  </h2><p>设置rootViewController<br><figure class="highlight scheme"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="name">self.window</span> setRootViewController:[<span class="name">UIViewController</span> new]]<span class="comment">;</span></div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
     </nav>
   
 </div>

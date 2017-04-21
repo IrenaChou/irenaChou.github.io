@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="My First">
 <meta property="og:description" content="Swift中取余运算符可用于浮点型Swift3 取消了’++’，’–’ 第一个问题：Property &amp;apos;self.test&amp;apos; not initialized at super.init call">
 <meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blog_photoswift_base_error1.png">
-<meta property="og:updated_time" content="2017-04-21T07:09:44.000Z">
+<meta property="og:updated_time" content="2017-04-21T09:04:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift基础1">
 <meta name="twitter:description" content="Swift中取余运算符可用于浮点型Swift3 取消了’++’，’–’ 第一个问题：Property &amp;apos;self.test&amp;apos; not initialized at super.init call">
@@ -121,7 +121,7 @@ var _hmt = _hmt || [];
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/swift/" style="font-size: 10px;">swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+						<a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
 					</div>
 				</section>
 				
@@ -229,6 +229,7 @@ var _hmt = _hmt || [];
 <p>  <strong>二：有初使值</strong><br>  <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">internal</span> <span class="keyword">var</span> test : <span class="built_in">Int</span> = <span class="number">5</span></div></pre></td></tr></table></figure></p>
 <h2 id="第二个问题："><a href="#第二个问题：" class="headerlink" title="第二个问题："></a>第二个问题：</h2><pre><code>为UIButton添加点击事件时，func转selector问题
 </code></pre><h2 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> testBtn = <span class="type">UIButton</span>.<span class="keyword">init</span>()</div><div class="line">testBtn.addTarget(<span class="keyword">self</span>, action:#selector(<span class="type">ViewController</span>.test(<span class="number">_</span>:)), forControlEvents: <span class="type">UIControlEvents</span>.<span class="type">TouchUpInside</span>)</div><div class="line"><span class="comment">/**</span></div><div class="line">按钮点击调用函数</div><div class="line">- parameter sender: 被点击的按钮</div><div class="line"> */</div><div class="line"><span class="meta">@objc</span></div><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">test</span><span class="params">(sender:UIButton)</span></span> &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"aaa"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     

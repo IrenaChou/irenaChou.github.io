@@ -181,6 +181,110 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-17-04-21-madeCocoaPods" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/21/17-04-21-madeCocoaPods/" class="article-date">
+  	<time datetime="2017-04-21T08:04:35.000Z" itemprop="datePublished">2017-04-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/21/17-04-21-madeCocoaPods/">CocoaPods制作</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>IRMakeCocoapodsLibaryTest</strong> 这个是我制作的一个Demo，亲们可以先用 <strong>Podfile</strong> 先看一下，使用一下<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">pod</span> <span class="string">'IRMakeCocoapodsLibaryTest'</span></div></pre></td></tr></table></figure></p>
+<p><a href="IRMakeCocoapodsLibaryTest">这是IRMakeCocoapodsLibaryTest在github上的代码</a></p>
+<h2 id="言归正传，开始创建仓库"><a href="#言归正传，开始创建仓库" class="headerlink" title="言归正传，开始创建仓库"></a>言归正传，开始创建仓库</h2><p>按照如下gif的步骤:</p>
+<ol>
+<li>在github上进行项目的创建</li>
+<li>将创建好的项目clone到本地</li>
+<li>在clone下来的项目中创建一个OC项目<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/CocoaPods_1.gif" alt="创建仓库"></li>
+</ol>
+<h2 id="创建项目到本地仓库"><a href="#创建项目到本地仓库" class="headerlink" title="创建项目到本地仓库"></a>创建项目到本地仓库</h2><p>创建一个项目放到clone到本地的仓库内， 注意：<strong>一定要为创建的项目添加Class prefix</strong>，不加如果有相同的类名会报错，很麻烦 <strong>【图中我只修改了一部分的类前缀，具体按项目文件修改】</strong><br><strong>创建的项目名跟远程项目名相同</strong><br>这一步相对简单，如果有问题可以看下图：<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/CocoaPods_2.gif" alt="创建项目"></p>
+<h2 id="为项目添加-podspec-文件并进行相关设置"><a href="#为项目添加-podspec-文件并进行相关设置" class="headerlink" title="为项目添加 .podspec 文件并进行相关设置"></a>为项目添加 <strong>.podspec</strong> 文件并进行相关设置</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod spec create IRMakeCocoapodsLibaryTest<span class="tag">&lt;<span class="name">根据你的项目名更改</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>按如下图片步骤操作：</p>
+<ol>
+<li>打开终端，输入 <strong>cd 目录</strong> 进入到本地仓库</li>
+<li>输入 <strong>pod spec create IRMakeCocoapodsLibaryTest&lt;此处要改成您自己的项目名&gt;</strong><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/CocoaPods_3.png" alt="为项目添加.podspec"></li>
+</ol>
+<p>打开.podspec文件进行相关设置<br>下图是.podspec文件的设置及说明，根据自己的项目进行配制</p>
+<p><img src="http://7xrirn.com1.z0.glb.clouddn.com/CocoaPods_4.png" alt=".podspec文件的设置"></p>
+<p>这是我的本地仓库目录<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/CocoaPods_5.png" alt="本地仓库目录"></p>
+<h2 id="pod验证及代码提交"><a href="#pod验证及代码提交" class="headerlink" title="pod验证及代码提交"></a>pod验证及代码提交</h2><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod <span class="class"><span class="keyword">lib</span> <span class="title">lint</span></span></div></pre></td></tr></table></figure>
+<p>出现如下图的passed validation.就验证通过了， <strong>如果报了问题，仔细看问题描述，根据描述修改</strong><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/CocoaPods_6.png" alt="验证"></p>
+<p><strong>上传到github远程仓库</strong><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//添加</span></div><div class="line">git add .</div><div class="line"></div><div class="line"><span class="comment">//提交 -m 后面为描述说明</span></div><div class="line">git commit -m 'version <span class="number">0.0</span><span class="number">.1</span>'</div><div class="line"></div><div class="line"><span class="comment">//推到远程仓库</span></div><div class="line">git push</div><div class="line"></div><div class="line"><span class="comment">//打上标签</span></div><div class="line">git tag <span class="number">0.0</span><span class="number">.1</span></div><div class="line"></div><div class="line"><span class="comment">//将标签上传到远程仓库</span></div><div class="line">git push --tags</div></pre></td></tr></table></figure></p>
+<h2 id="上传-project-podspec到CocoaPods官方仓库中【搞完这个才是真正的完成】"><a href="#上传-project-podspec到CocoaPods官方仓库中【搞完这个才是真正的完成】" class="headerlink" title="上传{project}.podspec到CocoaPods官方仓库中【搞完这个才是真正的完成】"></a>上传{project}.podspec到CocoaPods官方仓库中【搞完这个才是真正的完成】</h2><p>按照git的规则,要想向别人的仓库中添加文件,fork一份,添加修改,然后push给作者,等待审核,然而这条路已经被堵死了..<br>CocoaPods为我们提供了另外一个更方便安全的方法 <a href="http://blog.cocoapods.org/CocoaPods-Trunk/#transition" target="_blank" rel="external">trunk</a></p>
+<ol>
+<li>注册trunk<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">pod</span> <span class="selector-tag">trunk</span> <span class="selector-tag">register</span> *<span class="selector-tag">youremail</span>*@<span class="keyword">gmail</span>.<span class="keyword">com</span> <span class="string">'*yourname*'</span> --description=<span class="string">'iMac'</span> --verbose</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>youremail@gmail.com 换成你自己的，此处我用的是与github相同的emial<br>yourname 换成你的名字</p>
+<p><strong>以上命令是注册所需的,替换你的邮箱,用户名,以及描述内容, –verbose可以输入详细的debug</strong></p>
+<p><em>完成后需要到邮箱验证一下才能继续往下做</em></p>
+<p>注册完成后可以使用如下命令查看注册信息<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod trunk <span class="keyword">me</span></div></pre></td></tr></table></figure></p>
+<h2 id="提交-project-podspec"><a href="#提交-project-podspec" class="headerlink" title="提交{project}.podspec"></a>提交{project}.podspec</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">pod</span> trunk <span class="keyword">push </span>IRMakeCocoapodsLibaryTest.podspec</div></pre></td></tr></table></figure>
+<p>这条命令做了如下三件事:</p>
+<ul>
+<li>验证本地的podspec文件,也可以使用 pod lib lint验证</li>
+<li>上传podspec文件到trunk服务</li>
+<li>将{project}.podspec文件转为{poject}.podspec.json文件</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">pod search IRMakeCocoapodsLibaryTest</span></div></pre></td></tr></table></figure>
+<p><strong>查询后按键盘上的Q键退出</strong><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/CocoaPods_7.png" alt="使用"></p>
+<h2 id="更新版本"><a href="#更新版本" class="headerlink" title="更新版本"></a>更新版本</h2><p>添加新功能或是修改bug的时候，必然要更新版本的，下面说说版本更新<br>大概步骤如下：</p>
+<ol>
+<li>修改或添加项目文件喽</li>
+<li>将.podspec文件中的s.version更新成自己对应的版本，如s.version=0.0.5</li>
+<li><strong>pod lib lint</strong>,验证一下</li>
+<li><p>在将本地仓库提交到远程仓库</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span> .</div><div class="line">git commit -m <span class="string">'version 0.0.5'</span></div><div class="line">git <span class="keyword">push</span></div><div class="line">git tag <span class="number">0.0</span><span class="meta">.5</span>&lt;更新的版本&gt;</div><div class="line">git <span class="keyword">push</span> --tags</div><div class="line">pod trunk <span class="keyword">push</span> IRMakeCocoapodsLibaryTest.podspec</div></pre></td></tr></table></figure>
+</li>
+<li><p>更新完在pod search IRMakeCocoapodsLibaryTest一下就看到版本号更新了，大功告成<br><em>下图我已经更新过几个版本了，所以版本号是0.0.5</em><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/CocoaPods_8.png" alt="查询结果"></p>
+</li>
+</ol>
+<h2 id="使用-1"><a href="#使用-1" class="headerlink" title="  使用"></a>  使用</h2><p>  创建一个项目使用一下自己创建好的pods吧</p>
+<p>参考：<a href="http://www.jianshu.com/p/98407f0c175b" target="_blank" rel="external">http://www.jianshu.com/p/98407f0c175b</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-17-01-06-swift-lazy" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -709,65 +813,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a  href="/2016/11/09/16-11-09-appJumpAppStore/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-16-11-08-qrcodecreate" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/11/08/16-11-08-qrcodecreate/" class="article-date">
-  	<time datetime="2016-11-08T09:18:45.000Z" itemprop="datePublished">2016-11-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/08/16-11-08-qrcodecreate/">生成二维码图片</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="条码样式显示"><a href="#条码样式显示" class="headerlink" title="条码样式显示"></a>条码样式显示</h2><p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCICode128BarcodeGenerator.png" alt="条形码"></p>
-<p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCIPDF417BarcodeGenerator.png" alt="PDF417二维码"></p>
-<p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCIAztecCodeGenerator.png" alt="Aztec码"></p>
-<p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogQRCodeCIQRCodeGenerator.png" alt="二维码"></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/11/08/16-11-08-qrcodecreate/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

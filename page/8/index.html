@@ -181,6 +181,61 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-brightNess" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/01/brightNess/" class="article-date">
+  	<time datetime="2016-03-01T01:51:51.000Z" itemprop="datePublished">2016-03-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/01/brightNess/">iOS在程序中控制系统的屏幕亮度</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.sina.com.cn/s/blog_9693f61a0102uymd.html" target="_blank" rel="external">参考原文</a></p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 0 .. 1.0, where 1.0 is maximum brightness. Only supported by main screen.</span></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">CGFloat</span> brightness <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) __TVOS_PROHIBITED;</div></pre></td></tr></table></figure>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取系统屏幕当前的亮度值</span></div><div class="line">CGFloat <span class="keyword">value</span> = [UIScreen mainScreen].brightness;</div><div class="line"><span class="comment">//设置系统屏幕亮度值</span></div><div class="line"><span class="keyword">value</span> += <span class="number">0.8</span>;</div><div class="line">[[UIScreen mainScreen] setBrightness:<span class="keyword">value</span>];</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-macInstallWithUdisk" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

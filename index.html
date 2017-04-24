@@ -181,6 +181,74 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-17-04-24-irmenuPopover" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/24/17-04-24-irmenuPopover/" class="article-date">
+  	<time datetime="2017-04-24T01:52:52.000Z" itemprop="datePublished">2017-04-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/24/17-04-24-irmenuPopover/">IRMenuPopover</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong><a href="https://github.com/IrenaChou/IRMenuPopover" target="_blank" rel="external">原码地址</a></strong></p>
+<p><em>一个轻量级的menuPop可以通完 <em>*IRMenuPopoverGlobal.h</em></em></p>
+<p>文件进行弹出框的圆角及其它的基本信息的设置，可以通过storyboard或masonry使用<br>*</p>
+<h1 id="效果显示"><a href="#效果显示" class="headerlink" title="效果显示"></a>效果显示</h1><p><img src="http://7xrirn.com1.z0.glb.clouddn.com/IRMenuPopoverResultImage.gif" alt="效果图"></p>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
+<li>此项目依赖于Masonry，使用cocoapods<br>请在引用此项目文件前导入 pod ‘Masonry’<br>项目文件主要包括： <strong>menuPopoverImages.bundle、UIView+LayoutMethods.h、UIView+LayoutMethods.m、IRMenuPopover.h、IRMenuPopover.m、IRMenuPopoverGlobal.h</strong></li>
+</ul>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>通过此代理方法获取所选中的值 <strong>menuPopover:didSelectMenuItemAtIndex:</strong></p>
+<p>需实现 <strong>IRMenuPopoverDelegate</strong> 的两个代理方法</p>
+<h2 id="使用方法1"><a href="#使用方法1" class="headerlink" title="使用方法1"></a>使用方法1</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSArray</span> * menuSelectOption = @[<span class="string">@"医生"</span>,<span class="string">@"警察"</span>,<span class="string">@"农民"</span>,<span class="string">@"工人"</span>];</div><div class="line"></div><div class="line">IRMenuPopover *menuPopver = [[IRMenuPopover alloc] initWithTargetFrame:targetFrame menuItems:menuSelectOption showArrow:<span class="literal">YES</span> scrollEnabled:<span class="literal">YES</span>];</div><div class="line"></div><div class="line">menuPopver.menuPopoverDelegate = <span class="keyword">self</span>;</div><div class="line"></div><div class="line">[<span class="keyword">self</span>.menuPopver show];</div></pre></td></tr></table></figure>
+<p>#API介绍</p>
+<h2 id="自动适配弹出框显示的位置"><a href="#自动适配弹出框显示的位置" class="headerlink" title="自动适配弹出框显示的位置"></a>自动适配弹出框显示的位置</h2><p><strong>initWithTargetFrame:menuItems:showArrow:scrollEnabled:</strong></p>
+<p><strong>自动对框框进行布局，targetFrame为目标控件的frame<br> 框框自身的size由IRMenuPopoverGlobal.h文件配制<br> 框框在目标控件上显示的位置自动生成<br> 箭头的位置根据所显示的框框的位置自行以适配</strong></p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> 自动对框框进行布局，targetFrame为目标控件的frame</div><div class="line"> 框框自身的size由IRMenuPopoverGlobal.h文件配制</div><div class="line"> 框框在目标控件上显示的位置自动生成</div><div class="line"> 箭头的位置根据所显示的框框的位置自行以适配</div><div class="line"></div><div class="line"> <span class="doctag">@param</span> targetFrame 目标控件的位置</div><div class="line"> <span class="doctag">@param</span> aMenuItems 显示的列表项</div><div class="line"> <span class="doctag">@param</span> showArrow 是否显示箭头</div><div class="line"> <span class="doctag">@param</span> scrollEnabled 内部的列表项是否可以滚动</div><div class="line"></div><div class="line"> <span class="doctag">@return</span> 选择框</div><div class="line"> */</div><div class="line">- (id)<span class="string">initWithTargetFrame:</span>(CGRect)targetFrame <span class="string">menuItems:</span>(NSArray *)aMenuItems <span class="string">showArrow:</span>(BOOL)showArrow <span class="string">scrollEnabled:</span>(BOOL)scrollEnabled;</div></pre></td></tr></table></figure>
+<h2 id="弹出框的位置通过isTop级对弹出框的布局决定"><a href="#弹出框的位置通过isTop级对弹出框的布局决定" class="headerlink" title="弹出框的位置通过isTop级对弹出框的布局决定"></a>弹出框的位置通过isTop级对弹出框的布局决定</h2><p><strong>initWithFrame:menuItems:showArrow:scrollEnabled:isTop:</strong><br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> 通过外部对框框的布局配合isTop进行生成框框</div><div class="line"></div><div class="line"> <span class="doctag">@param</span> frame 框框要显示的位置</div><div class="line"> <span class="doctag">@param</span> aMenuItems 显示的列表项</div><div class="line"> <span class="doctag">@param</span> showArrow 是否显示箭头</div><div class="line"> <span class="doctag">@param</span> scrollEnabled 内部的列表项是否可以滚动</div><div class="line"> <span class="doctag">@param</span> isTop 是否在控件上面显示【需要与外部框框的布局配合使用】</div><div class="line"></div><div class="line"> <span class="doctag">@return</span> 选择框</div><div class="line"> */</div><div class="line">- (id)<span class="string">initWithFrame:</span>(CGRect)frame <span class="string">menuItems:</span>(NSArray *)aMenuItems <span class="string">showArrow:</span>(BOOL)showArrow <span class="string">scrollEnabled:</span>(BOOL)scrollEnabled <span class="string">isTop:</span>(BOOL)isTop;</div></pre></td></tr></table></figure></p>
+<p>###使用<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#pragma mark - 特别提示，isTop是与menuPopver的上布局配合使用</span></div><div class="line"><span class="meta">#pragma mark - 特别提示，此处的menuPopver是弹出的框框</span></div><div class="line"></div><div class="line">IRMenuPopover* menuPopver = [[IRMenuPopover alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="keyword">self</span>.menuPopoverX, menuPopoverY, MENU_POP_VIEW_WIDTH, MENU_POP_VIEW_HEIGHT) menuItems:<span class="keyword">self</span>.menuItems showArrow:<span class="literal">YES</span> scrollEnabled:<span class="literal">YES</span> isTop:<span class="literal">NO</span>];</div><div class="line"></div><div class="line"><span class="keyword">self</span>.menuPopver.menuPopoverDelegate = <span class="keyword">self</span>;</div><div class="line"></div><div class="line">[<span class="keyword">self</span>.menuPopver showInView:[<span class="built_in">UIApplication</span> sharedApplication].keyWindow];</div><div class="line"></div><div class="line"><span class="meta">#pragma mark - 特别提示，此处的布局是弹出框框的位置布局</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> *  当isTop=YES的时候</div><div class="line"> */</div><div class="line">[<span class="keyword">self</span>.menuPopver mas_makeConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line"><span class="comment">//下  *** 当isTop == NO 的时候，此处必须为这句布局</span></div><div class="line">  make.top.equalTo(<span class="keyword">self</span>.mas_bottom);</div><div class="line"></div><div class="line"><span class="comment">//上  *** 当isTop == YES的时候，此处必须为这句布局，否则会出现布局乱混</span></div><div class="line"><span class="comment">//        make.bottom.equalTo(self.mas_top);</span></div><div class="line"></div><div class="line"><span class="comment">//左  ** 当框框在左面显示的时候</span></div><div class="line"><span class="comment">//        make.left.equalTo(self.mas_left);</span></div><div class="line"></div><div class="line"><span class="comment">//右  ** 当框框在右面显示的时候</span></div><div class="line">  make.right.equalTo(<span class="keyword">self</span>.mas_right);</div><div class="line"></div><div class="line">  make.height.mas_equalTo(MENU_POP_VIEW_HEIGHT);</div><div class="line">  make.width.mas_equalTo(MENU_POP_VIEW_WIDTH);</div><div class="line">&#125;];</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-17-04-21-reactNative-node-1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -730,61 +798,6 @@ var _hmt = _hmt || [];
         <p class="article-more-link">
           <a  href="/2016/12/26/16-12-26-cocospodsQuestion/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-16-11-17-LaunchHideStatusBar" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/11/17/16-11-17-LaunchHideStatusBar/" class="article-date">
-  	<time datetime="2016-11-17T06:07:51.000Z" itemprop="datePublished">2016-11-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/17/16-11-17-LaunchHideStatusBar/">Launch时隐藏StatusBar</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文使用LaunchScreen.storyboard上添加imageView<br>主要解决在Launch时隐藏StatusBar</p>
-<p>在<strong>info.plist</strong>中添加<br><strong>UIStatusBarHidden</strong></p>
-<p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blog_photostatusBarLaunch.png" alt="要实现的效果">  </p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
       
       <div class="clearfix"></div>
     </div>

@@ -181,6 +181,68 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-a-file-makeAndUse" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/11/a-file-makeAndUse/" class="article-date">
+  	<time datetime="2016-04-11T02:38:08.000Z" itemprop="datePublished">2016-04-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/11/a-file-makeAndUse/">制作/使用.a文件</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="制作步骤："><a href="#制作步骤：" class="headerlink" title="制作步骤："></a>制作步骤：</h2><ol>
+<li>File–New–Project<br>按照如下图创建项目<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/1.png" alt="操作"></li>
+<li>按照下图创完成所需类的定义和实现<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/2.png" alt="操作">    </li>
+<li>创建后Command + B 进行编辑，如果device选择的是真机，生成的.a文件就适合真机的<br>想要创建适用于模拟器的.a文件，将device改成模拟器就可以      </li>
+<li>如果没有生成所需头文件，按下图逐步操作添加<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/.a1.png" alt="操作"><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/.a2.png" alt="操作">      </li>
+<li>按下图查看制作好的.a文件<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/3.png" alt="2"></li>
+</ol>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/11/a-file-makeAndUse/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-tagView" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -672,64 +734,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a  href="/2016/03/09/updateLoginPassword/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-applePayDemo" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/04/applePayDemo/" class="article-date">
-  	<time datetime="2016-03-04T06:03:40.000Z" itemprop="datePublished">2016-03-04</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/04/applePayDemo/">applePayDemo</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://developer.apple.com/library/ios/ApplePay_Guide/">参考原文</a></p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">"ViewController.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;PassKit/PassKit.h&gt;</span></span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()&lt;<span class="title">PKPaymentAuthorizationViewControllerDelegate</span>&gt;</span></div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">  [<span class="keyword">super</span> viewDidLoad];</div><div class="line">&#125;</div><div class="line">- (<span class="keyword">void</span>)applePayTest &#123;</div><div class="line">  <span class="comment">//设备可用</span></div><div class="line">  <span class="comment">// PKPaymentAuthorizationViewController用来显示ApplePay的Controller</span></div><div class="line">  <span class="keyword">if</span> (![PKPaymentAuthorizationViewController canMakePayments]) &#123;</div><div class="line">    <span class="comment">//设备不支持</span></div><div class="line">    <span class="comment">//不让ApplePay的支付按钮去显示</span></div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">//想当自己的应用支持的卡类型</span></div><div class="line">  <span class="comment">/*</div><div class="line">   [PKPaymentAuthorizationViewController</div><div class="line">   canMakePaymentsUsingNetworks:@[PKPaymentNetworkVisa]]</div><div class="line">   */</span></div><div class="line">  <span class="comment">//判断支持的卡类型</span></div><div class="line">  <span class="keyword">if</span> (![PKPaymentAuthorizationViewController canMakePaymentsUsingNetworks:@[</div><div class="line">        PKPaymentNetworkVisa,</div><div class="line">        PKPaymentNetworkChinaUnionPay</div><div class="line">      ]]) &#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"不支持visa和银联"</span>);</div><div class="line">    <span class="comment">//进入设置银行卡的页面</span></div><div class="line">    [[[PKPassLibrary alloc] init] openPaymentSetup];</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">//创建支付请求</span></div><div class="line">  PKPaymentRequest *request = [[PKPaymentRequest alloc] init];</div><div class="line">  <span class="comment">//显示支付页面</span></div><div class="line">  PKPaymentAuthorizationViewController *vc =</div><div class="line">      [[PKPaymentAuthorizationViewController alloc]</div><div class="line">          initWithPaymentRequest:request];</div><div class="line">  vc.delegate = <span class="keyword">self</span>;</div><div class="line">  <span class="comment">//*设置商户的ID(网站配制的id)</span></div><div class="line">  request.merchantIdentifier = <span class="string">@"merchant.com.irena.AppleiPayDemo"</span>;</div><div class="line">  <span class="comment">//*设置国家代码</span></div><div class="line">  request.countryCode = <span class="string">@"CN"</span>;</div><div class="line">  <span class="comment">//*设置支付的卡类型</span></div><div class="line">  request.supportedNetworks = @[ PKPaymentNetworkVisa ];</div><div class="line">  <span class="comment">//*设置商户的支付标准(必须支持3DS)</span></div><div class="line">  request.merchantCapabilities = PKMerchantCapability3DS;</div><div class="line">  <span class="comment">//*设置货币单位(中文CNY)</span></div><div class="line">  request.currencyCode = <span class="string">@"CNY"</span>;</div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/04/applePayDemo/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

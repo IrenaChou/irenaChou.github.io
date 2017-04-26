@@ -40,7 +40,7 @@
     <entry>
       <title><![CDATA[Swift-lazy懒加载]]></title>
       <url>%2F2017%2F04%2F21%2F17-01-06-swift-lazy%2F</url>
-      <content type="text"><![CDATA[Swift-lazy懒加载懒加载属性1234private lazy var testView : UIView = &#123; let tView = UIView() return tView&#125;()]]></content>
+      <content type="text"><![CDATA[Swift-lazy懒加载1234private lazy var testView : UIView = &#123; let tView = UIView() return tView&#125;()]]></content>
     </entry>
 
     

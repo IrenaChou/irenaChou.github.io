@@ -287,6 +287,143 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/02/24/hexStringConvertUIColor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Irena">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My First">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/24/hexStringConvertUIColor/" itemprop="url">
+                  十六进制颜色转换成UIColor
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-24T13:41:53+08:00">
+                2016-02-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/02/24/hexStringConvertUIColor/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/02/24/hexStringConvertUIColor/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><a href="http://wonderzl.iteye.com/blog/1569123">原文出自</a></p>
+<h2 id="interface"><a href="#interface" class="headerlink" title="interface"></a>interface</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">UIColor</span> (<span class="title">hex</span>)</span></div><div class="line">  + (<span class="built_in">UIColor</span> *)colorWithHexString:(<span class="built_in">NSString</span> *)stringToConvert;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+<h2 id="implementation"><a href="#implementation" class="headerlink" title="implementation"></a>implementation</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">&lt;QuartzCore/QuartzCore.h&gt;</span></span></div><div class="line"><span class="meta">#define DEFAULT_VOID_COLOR [UIColor whiteColor]</span></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">UIColor</span> (<span class="title">hex</span>)</span></div><div class="line">+ (<span class="built_in">UIColor</span> *)colorWithHexString:(<span class="built_in">NSString</span> *)stringToConvert &#123;</div><div class="line">  <span class="built_in">NSString</span> *cString = [[stringToConvert</div><div class="line">      stringByTrimmingCharactersInSet:[<span class="built_in">NSCharacterSet</span></div><div class="line">                                          whitespaceAndNewlineCharacterSet]]</div><div class="line">      uppercaseString];</div><div class="line">  <span class="keyword">if</span> ([cString length] &lt; <span class="number">6</span>)</div><div class="line">    <span class="keyword">return</span> DEFAULT_VOID_COLOR;</div><div class="line">  <span class="keyword">if</span> ([cString hasPrefix:<span class="string">@"#"</span>])</div><div class="line">    cString = [cString substringFromIndex:<span class="number">1</span>];</div><div class="line">  <span class="keyword">if</span> ([cString length] != <span class="number">6</span>)</div><div class="line">    <span class="keyword">return</span> DEFAULT_VOID_COLOR;</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/02/24/hexStringConvertUIColor/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/02/16/capturePicture/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -868,7 +1005,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">84</span>
+                <span class="site-state-item-count">85</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[python之scrapy抓虫框架]]></title>
+      <url>%2F2017%2F05%2F10%2F17-05-10-python-scrapy-cnblogs%2F</url>
+      <content type="text"><![CDATA[此文章使用 macOS Sierra]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[IRCategoryCollection]]></title>
       <url>%2F2017%2F05%2F10%2F17-05-10-category-collection%2F</url>
       <content type="text"><![CDATA[IRCategoryCollection 功能说明整合category 此库只是整合Category，方便多个项目重复使用有些category是由其它作者提供的，由于时间过长，有些原文链接已经找不到了， 原文链接：UIButton+IRImageTitleSpacing： https://github.com/mokong/MKButtonStyle原文名字叫 UIButton+ImageTitleSpacing 为了避免重复发生，添加了IR前缀 大致包括如下： NSString字符串【NSString】： 【 IRVerify 】验证 【 IRDate 】日期转换 【 IRPinYin 】转换成拼音 【 IRTrans 】与十六进制和Ascii转换 IRVerify验证主要包括如下验证： 身份证合法性 手机号的合法性 银行卡号的合法性 数字字符串是否为整数 数字字符串是否为浮点型 金额的合法性【保留两位小数】 UIButtonUIButton： 【 IRImageTitleSpacing 】设置button的titleLabel和imageView的布局样式，及间距 NSDictionary/NSArrayNSDictionary/NSArray： 【 IRLOG 】控制台打印中文 UIColorUIColor： 【 IRExtend 】十六进制的颜色值转为objective-c的颜色 UIViewUIView： 【 IRLayoutMethods 】 UIViewController： 【 IRNavigationBarBackgrounTransparent 】状态栏是否显示背景色 UIImageUIImage： 【 IREx 】去除图片渲染效果 【 IRQRCode 】通过二维码字符串生成可扫描的二维码图片，具体详情 使用通过 Cocoapods 导入 1pod 'IRCategoryCollection' 剩下的只要import相应的头文件就Ok了，相应的category实现都可以看到]]></content>
@@ -82,7 +89,7 @@
     <entry>
       <title><![CDATA[macOS配制SublimeText3运行JavaScript]]></title>
       <url>%2F2016%2F12%2F27%2F16-12-27-macOS-SublimeText3%2F</url>
-      <content type="text"><![CDATA[本文使用macOS Sierra 版本 10.12.1 运行javaScript11、下载安装Sublime Text 3 https://download.sublimetext.com/Sublime%20Text%20Build%203126.dmg安装好 键盘command + q 退出Sublime Text 3 12、下载安装nodejs https://nodejs.org/dist/v6.9.2/node-v6.9.2.pkg 安装nodejs时需要注意如下图中红框标的路径【先将其复制保存，如果地址跟我文中的地址相同，可以不用复制，下面直接拷贝我写好的就行】，下面会用到 打开安装好的Sublime Text 3 按如下图片操作 将如下代码复制粘贴 12"cmd": ["/usr/local/bin/node","$file"],"selector":"*.js" ​ 保存起来【名字后面要用到的，起的规范点哦】 点击键盘的command + q，先将Sublime Text 3退出，打开后按如下图操作 输入如下测试代码，保存成.js文件 1console.log('Irena Test') 输入键盘的command + b build一下 安装Package Controlhttps://packagecontrol.io/installation ctrl + ~ ：调出控制台 将如下代码复制到控制台 1import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) 当出现如下图红框中的这两个就可以了 选择下图红框所指向的位置 相关插件请参考如下链接 https://packagecontrol.io/browse]]></content>
+      <content type="text"><![CDATA[本文使用macOS Sierra 版本 10.12.1 运行javaScript11、下载安装Sublime Text 3 https://download.sublimetext.com/Sublime%20Text%20Build%203126.dmg安装好 键盘command + q 退出Sublime Text 3 12、下载安装nodejs 如果已经存在可以在终端运行如下命令查看node的位置1where node https://nodejs.org/dist/v6.9.2/node-v6.9.2.pkg 安装nodejs时需要注意如下图中红框标的路径【先将其复制保存，如果地址跟我文中的地址相同，可以不用复制，下面直接拷贝我写好的就行】，下面会用到 打开安装好的Sublime Text 3 按如下图片操作 将如下代码复制粘贴 12"cmd": ["/usr/local/bin/node","$file"],"selector":"*.js" ​ 保存起来【名字后面要用到的，起的规范点哦】 点击键盘的command + q，先将Sublime Text 3退出，打开后按如下图操作 输入如下测试代码，保存成.js文件 1console.log('Irena Test') 输入键盘的command + b build一下 安装Package Controlhttps://packagecontrol.io/installation ctrl + ~ ：调出控制台 将如下代码复制到控制台 1import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) 当出现如下图红框中的这两个就可以了 选择下图红框所指向的位置 相关插件请参考如下链接 https://packagecontrol.io/browse]]></content>
     </entry>
 
     

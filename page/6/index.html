@@ -287,6 +287,146 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/05/13/statusBarBackgroundColor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Irena">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My First">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/13/statusBarBackgroundColor/" itemprop="url">
+                  设置statusBar背景色
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-13T16:54:21+08:00">
+                2016-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/05/13/statusBarBackgroundColor/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/05/13/statusBarBackgroundColor/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>本文使用iOS9.3</p>
+<ul>
+<li><img src="http://7xrirn.com1.z0.glb.clouddn.com/statusBarstatusBarColorChange.gif" alt="效果显示"></li>
+</ul>
+<p><em>本人写的这个有一个侧滑，开始只在navigationController中将状态栏设置成了light，发现不行，后来将侧滑的控制器也设置成了白色，才可以</em></p>
+<h2 id="设置statusBar背景颜色"><a href="#设置statusBar背景颜色" class="headerlink" title="设置statusBar背景颜色"></a>设置statusBar背景颜色</h2><figure class="highlight inform7"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">[<span class="comment">[UINavigationBar appearance]</span> setTintColor:<span class="comment">[UIColor whiteColor]</span>]</span>;</div><div class="line"> UIView *statusBarView =</div><div class="line">     <span class="comment">[<span class="comment">[UIView alloc]</span> initWithFrame:CGRectMake(0, 0, 320, 20)]</span>;</div><div class="line"> statusBarView.backgroundColor = <span class="comment">[UIColor blackColor]</span>;</div><div class="line"> <span class="comment">[self.view addSubview:statusBarView]</span>;</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/05/13/statusBarBackgroundColor/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/05/09/16-05-09-NSStringConvertNSData/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1504,152 +1644,6 @@ SSH 密钥的创建需要在终端（命令行）环境下进行，我们首先�
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/04/29/16-04-29-coreImageDemo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Irena">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My First">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/29/16-04-29-coreImageDemo/" itemprop="url">
-                  coreImage图片滤镜处理
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-29T10:59:22+08:00">
-                2016-04-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/04/29/16-04-29-coreImageDemo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/04/29/16-04-29-coreImageDemo/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="http://www.csdn.net/article/2015-02-13/2823961-core-image">参考</a></p>
-<p>CoreImage 是一种图像处理和分析技术，为图片和视频图像提供近实时处理。图像数据类型从核心图形核心视频和图像的I / O框架，可使用GPU或CPU渲染路径。核心图像通过提供一个易于使用的应用程序接口（接口），隐藏低级别图形处理的细节。你不需要知道OpenGL和OpenGLES的细节，利用GPU的能力，你也不需要知道任何关于Grand Central Dispatch（GCD）得到的多核处理的效益。核心图像为你处理细节。<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/coreImage1.png" alt="1"><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/coreImage1.png" alt="1"></p>
-<p><strong>CIContext</strong>： 所有图像处理都是在一个CIContext 中完成的，这很像是一个Core Image处理器或是OpenGL的上下文。 </p>
-<p><strong>CIImage</strong>： 这个类保存图像数据。它可以从UIImage、图像文件、或者是像素数据中构造出来。</p>
-<p><strong>CIFilter</strong>： 滤镜类包含一个字典结构，对各种滤镜定义了属于他们各自的属性。滤镜有很多种，比如鲜艳程度滤镜，色彩反转滤镜，剪裁滤镜等等。</p>
-<h2 id="Core-Image架构"><a href="#Core-Image架构" class="headerlink" title="Core Image架构"></a>Core Image架构</h2><p>Core Image有一个插件架构，这意味着它允许用户编写自定义的滤镜并与系统提供的滤镜集成来扩展其功能。我们在这篇文章中不会用到Core Image的可扩展性；我提到它只是因为它影响到了框架的API。</p>
-<p>包含了Core Image提供的图像滤镜的完整列表，以及用法示例。</p>
-<p>无回路有向图</p>
-<p>一个滤镜图表是一个链接在一起的滤镜网络（<a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">无回路有向图</a>），使得一个滤镜的输出可以是另一个滤镜的输入。以这种方式，可以实现精心制作的效果。我们将在下面看到如何连接滤镜来创建一个复古的拍照效果。</p>
-<p><a href="https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CoreImageFilterReference/index.html#//apple_ref/doc/filter/ci/CIColorClamp">Core Image Filter Reference</a>包含了Core Image提供的图像滤镜的完整列表，以及用法示例。</p>
-<p><strong>本文中的Demo使用iOS9.3测试</strong><br>Demo包含两个:<br>  一个是单纯的基本滤镜的处理<br>  另一个是照相,图片压缩和简单滤镜处理</p>
-<p><a href="http://pan.baidu.com/s/1jIm3VD0">Demo代码下载</a><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/04/29/16-04-29-coreImageDemo/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1699,7 +1693,7 @@ SSH 密钥的创建需要在终端（命令行）环境下进行，我们首先�
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-count">87</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1712,7 +1706,7 @@ SSH 密钥的创建需要在终端（命令行）环境下进行，我们首先�
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

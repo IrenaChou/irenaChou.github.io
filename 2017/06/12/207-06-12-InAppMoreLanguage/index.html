@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Swift," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -90,19 +90,19 @@
 
 
 
-<meta name="description" content="Swift中取余运算符可用于浮点型Swift3 取消了’++’，’–’ 第一个问题：Property &amp;apos;self.test&amp;apos; not initialized at super.init call">
-<meta name="keywords" content="Swift">
+<meta name="description" content="效果如下图： Demo下载请点击下面链接Demo下载">
+<meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swift基础1">
-<meta property="og:url" content="http://irenachou.github.io/irena/2016/08/23/16-08-23-swift-basic-1/index.html">
+<meta property="og:title" content="iOS应用内多语言切换">
+<meta property="og:url" content="http://irenachou.github.io/irena/2017/06/12/207-06-12-InAppMoreLanguage/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="Swift中取余运算符可用于浮点型Swift3 取消了’++’，’–’ 第一个问题：Property &amp;apos;self.test&amp;apos; not initialized at super.init call">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blog_photoswift_base_error1.png">
-<meta property="og:updated_time" content="2017-04-21T09:04:51.000Z">
+<meta property="og:description" content="效果如下图： Demo下载请点击下面链接Demo下载">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogInAppMoreLanguage.gif">
+<meta property="og:updated_time" content="2017-06-13T06:57:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swift基础1">
-<meta name="twitter:description" content="Swift中取余运算符可用于浮点型Swift3 取消了’++’，’–’ 第一个问题：Property &amp;apos;self.test&amp;apos; not initialized at super.init call">
-<meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blog_photoswift_base_error1.png">
+<meta name="twitter:title" content="iOS应用内多语言切换">
+<meta name="twitter:description" content="效果如下图： Demo下载请点击下面链接Demo下载">
+<meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogInAppMoreLanguage.gif">
 
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://irenachou.github.io/irena/2016/08/23/16-08-23-swift-basic-1/"/>
+  <link rel="canonical" href="http://irenachou.github.io/irena/2017/06/12/207-06-12-InAppMoreLanguage/"/>
 
 
 
 
 
-  <title>Swift基础1 | My First</title>
+  <title>iOS应用内多语言切换 | My First</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -289,7 +289,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/08/23/16-08-23-swift-basic-1/">
+    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2017/06/12/207-06-12-InAppMoreLanguage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Irena">
@@ -310,7 +310,7 @@
             
             
               
-                Swift基础1
+                iOS应用内多语言切换
               
             
           </h1>
@@ -325,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-23T17:44:47+08:00">
-                2016-08-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-12T10:52:59+08:00">
+                2017-06-12
               </time>
             
 
@@ -344,9 +344,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/08/23/16-08-23-swift-basic-1/#comments" itemprop="discussionUrl">
+                <a href="/2017/06/12/207-06-12-InAppMoreLanguage/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/08/23/16-08-23-swift-basic-1/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/06/12/207-06-12-InAppMoreLanguage/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -371,15 +371,8 @@
       
 
       
-        <p><strong>Swift中取余运算符可用于浮点型</strong><br><strong>Swift3 取消了’++’，’–’</strong></p>
-<h2 id="第一个问题："><a href="#第一个问题：" class="headerlink" title="第一个问题："></a>第一个问题：</h2><pre><code>Property &apos;self.test&apos; not initialized at super.init call
-</code></pre><p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blog_photoswift_base_error1.png" alt="问题"></p>
-<a id="more"></a>  
-<h2 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h2><p><strong>Swift中定义的属性必须要满足以下两者之一，如果没有满足以下二者之一，就会报如下错误
-  </strong>一：可以为空  **<br>  <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">var</span> test : <span class="built_in">Int</span>?</div></pre></td></tr></table></figure></p>
-<p>  <strong>二：有初使值</strong><br>  <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">internal</span> <span class="keyword">var</span> test : <span class="built_in">Int</span> = <span class="number">5</span></div></pre></td></tr></table></figure></p>
-<h2 id="第二个问题："><a href="#第二个问题：" class="headerlink" title="第二个问题："></a>第二个问题：</h2><pre><code>为UIButton添加点击事件时，func转selector问题
-</code></pre><h2 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> testBtn = <span class="type">UIButton</span>.<span class="keyword">init</span>()</div><div class="line">testBtn.addTarget(<span class="keyword">self</span>, action:#selector(<span class="type">ViewController</span>.test(<span class="number">_</span>:)), forControlEvents: <span class="type">UIControlEvents</span>.<span class="type">TouchUpInside</span>)</div><div class="line"><span class="comment">/**</span></div><div class="line">按钮点击调用函数</div><div class="line">- parameter sender: 被点击的按钮</div><div class="line"> */</div><div class="line"><span class="meta">@objc</span></div><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">test</span><span class="params">(sender:UIButton)</span></span> &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"aaa"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h2 id="效果如下图："><a href="#效果如下图：" class="headerlink" title="效果如下图："></a>效果如下图：</h2><p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogInAppMoreLanguage.gif" alt="效果如图"></p>
+<h2 id="Demo下载请点击下面链接"><a href="#Demo下载请点击下面链接" class="headerlink" title="Demo下载请点击下面链接"></a>Demo下载请点击下面链接</h2><p><a href="https://git.coding.net/IrenaC/IRMoreLanguage.git" target="_blank" rel="external">Demo下载</a></p>
 
       
     </div>
@@ -407,12 +400,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Swift/" rel="tag"># Swift</a>
-          
-        </div>
-      
 
       
         
@@ -422,18 +409,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/24/16-08-24-IRPlusLessSwift/" rel="next" title="加减控件IRPlusLessSwift">
-                <i class="fa fa-chevron-left"></i> 加减控件IRPlusLessSwift
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/19/16-08-19-plusLessView/" rel="prev" title="加减控件IRPlusLessView">
-                加减控件IRPlusLessView <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/11/17-05-11-macOS-tools/" rel="prev" title="macOS实用工具">
+                macOS实用工具 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -595,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一个问题："><span class="nav-number">1.</span> <span class="nav-text">第一个问题：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解答："><span class="nav-number">2.</span> <span class="nav-text">解答：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二个问题："><span class="nav-number">3.</span> <span class="nav-text">第二个问题：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解答：-1"><span class="nav-number">4.</span> <span class="nav-text">解答：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#效果如下图："><span class="nav-number">1.</span> <span class="nav-text">效果如下图：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Demo下载请点击下面链接"><span class="nav-number">2.</span> <span class="nav-text">Demo下载请点击下面链接</span></a></li></ol></div>
             
 
           </div>
@@ -745,9 +728,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://irenachou.github.io/irena/2016/08/23/16-08-23-swift-basic-1/';
-          this.page.identifier = '2016/08/23/16-08-23-swift-basic-1/';
-          this.page.title = 'Swift基础1';
+          this.page.url = 'http://irenachou.github.io/irena/2017/06/12/207-06-12-InAppMoreLanguage/';
+          this.page.identifier = '2017/06/12/207-06-12-InAppMoreLanguage/';
+          this.page.title = 'iOS应用内多语言切换';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://irena.disqus.com/embed.js';

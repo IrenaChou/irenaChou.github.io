@@ -287,6 +287,146 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2017/07/05/2017-07-05-reactNative-node-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Irena">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My First">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/05/2017-07-05-reactNative-node-2/" itemprop="url">
+                  ReactNativeNode
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-05T14:05:08+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/05/2017-07-05-reactNative-node-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/07/05/2017-07-05-reactNative-node-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Print-Entry-“-CFBundleIdentifier”-Does-Not-Exist"><a href="#Print-Entry-“-CFBundleIdentifier”-Does-Not-Exist" class="headerlink" title="Print: Entry, “:CFBundleIdentifier”, Does Not Exist"></a>Print: Entry, “:CFBundleIdentifier”, Does Not Exist</h2><p>在终端执行如下命令时：<br><em>react-native run-ios</em></p>
+<p>报如下错误：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Failed to <span class="keyword">install</span> the requested application</div><div class="line">An application bundle was <span class="keyword">not</span> <span class="keyword">found</span> <span class="keyword">at</span> the provided path.</div><div class="line">Provide a valid <span class="keyword">path</span> <span class="keyword">to</span> the desired application bundle.</div><div class="line">Print: Entry, <span class="string">":CFBundleIdentifier"</span>, Does <span class="keyword">Not</span> Exist</div><div class="line"></div><div class="line">Command <span class="keyword">failed</span>: /usr/libexec/PlistBuddy -c Print:CFBundleIdentifier <span class="keyword">build</span>/<span class="keyword">Build</span>/Products/Debug-iphonesimulator/ReactNativexx.app/Info.plist</div><div class="line">Print: Entry, <span class="string">":CFBundleIdentifier"</span>, Does <span class="keyword">Not</span> Exist</div></pre></td></tr></table></figure></p>
+<p><strong>问题解决：</strong><br>这是经过各种尝试后得出的结果了，查看的下面的链接，给出的前几个方法结过测试都不能解决我的问题，只有下面的的方法是可以的</p>
+<p><strong>解决步骤</strong>：</p>
+<ol>
+<li>首先删除node_modules  </li>
+<li>修改package.json中react-native的版本为0.44.3 react为16.0.0-alpha.6</li>
+<li>react-native run-ios 就可以了</li>
+</ol>
+<p>问题参考链接：<br><a href="http://www.jianshu.com/p/98c8f2a970eb" target="_blank" rel="external">http://www.jianshu.com/p/98c8f2a970eb</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2017/06/12/207-06-12-InAppMoreLanguage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1514,148 +1654,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2017/04/21/17-04-21-madeCocoaPods/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Irena">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My First">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/21/17-04-21-madeCocoaPods/" itemprop="url">
-                  CocoaPods制作与版本更新
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-21T16:04:35+08:00">
-                2017-04-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/21/17-04-21-madeCocoaPods/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/21/17-04-21-madeCocoaPods/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>IRMakeCocoapodsLibaryTest</strong> 这个是我制作的一个Demo，亲们可以先用 <strong>Podfile</strong> 先看一下，使用一下<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">pod</span> <span class="string">'IRMakeCocoapodsLibaryTest'</span></div></pre></td></tr></table></figure></p>
-<p><a href="https://github.com/IrenaChou/IRMakeCocoapodsLibaryTest">这是IRMakeCocoapodsLibaryTest在github上的代码</a></p>
-<h2 id="言归正传，开始创建仓库"><a href="#言归正传，开始创建仓库" class="headerlink" title="言归正传，开始创建仓库"></a>言归正传，开始创建仓库</h2><p>按照如下gif的步骤:</p>
-<ol>
-<li>在github上进行项目的创建</li>
-<li>将创建好的项目clone到本地</li>
-<li>在clone下来的项目中创建一个OC项目<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/CocoaPods_1.gif" alt="创建仓库"></li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/21/17-04-21-madeCocoaPods/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1705,7 +1703,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">88</span>
+                <span class="site-state-item-count">89</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

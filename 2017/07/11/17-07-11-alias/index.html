@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://irenachou.github.io/irena/2017/07/11/17-07-11-alias/index.html">
 <meta property="og:site_name" content="My First">
 <meta property="og:description" content="当前系统：macOS Sierra 简介Linux alias 是命令的一种别名，相当于给命令起一个名字，命令的另一个名字就像有一个人叫张三，有一天你给张三起了个别名叫张小三，以后你叫这个张三和张小三的就全是这个人，但是他的身份证上的名字还是张三，并不会变 1alias rn=&apos;react-native&apos; 也即，输入rn后，被自动定向到react-native这个命令了。alias的作用就是，给">
-<meta property="og:updated_time" content="2017-07-11T08:11:54.000Z">
+<meta property="og:updated_time" content="2017-07-11T08:15:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="alias别名永久生效与oh-my-zsh下别名配制">
 <meta name="twitter:description" content="当前系统：macOS Sierra 简介Linux alias 是命令的一种别名，相当于给命令起一个名字，命令的另一个名字就像有一个人叫张三，有一天你给张三起了个别名叫张小三，以后你叫这个张三和张小三的就全是这个人，但是他的身份证上的名字还是张三，并不会变 1alias rn=&apos;react-native&apos; 也即，输入rn后，被自动定向到react-native这个命令了。alias的作用就是，给">
@@ -387,20 +387,20 @@
 </ol>
 <p>下面使用vim的方式进行修改：</p>
 <ol>
-<li>打开新终端窗口，输入 <strong>vim ~/.bashrc</strong> 命令，后回车</li>
-<li>输入键盘上的 <strong>i</strong> ，将你要保存的alias输入到文件上【 <strong>alias rn=’react-native’</strong> 】</li>
-<li>【保存退出】输入键盘上的 <strong>:wq</strong> 后回车</li>
-<li>在终端输入 <strong>source ~/.bashrc</strong> 回车</li>
-</ol>
-<p>如果没有生效：</p>
-<ol>
-<li>打开新终端窗口，输入<br><code>vim ~/.bash_profile</code> 命令，后回车</li>
-<li>按上面的方法在里面添加一行 <strong>source ~/.bashrc</strong> 后保存退出</li>
-</ol>
-<h2 id="oh-my-zsh-永久保存-alias-指定指令别名"><a href="#oh-my-zsh-永久保存-alias-指定指令别名" class="headerlink" title="oh-my-zsh 永久保存 alias 指定指令别名"></a>oh-my-zsh 永久保存 alias 指定指令别名</h2><p><strong>修改方式与修改alias永久保存相同，只是文件不同</strong>：</p>
-<ol>
-<li>vim ~/.zshrc</li>
-<li>输入你要保存的alias命令，如 <strong>alias rn=’react-native’</strong></li>
+<li><p>打开新终端窗口，输入</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">    vim ~/.bashrc</div><div class="line">    ``` 命令，后回车</div><div class="line"><span class="number">2.</span>  输入键盘上的 **i** ，将你要保存的alias输入到文件上</div></pre></td></tr></table></figure>
+<p>alias rn=’react-native’</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">3.  </span>【保存退出】输入键盘上的 <span class="strong">**:wq**</span> 后回车</div><div class="line"><span class="bullet">4.  </span>在终端输入</div></pre></td></tr></table></figure>
+<p>source ~/.bashrc</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="code">    回车</span></div><div class="line"></div><div class="line">如果没有生效：</div><div class="line"><span class="bullet">1.  </span>打开新终端窗口，输入</div></pre></td></tr></table></figure>
+<p>vim ~/.bash_profile</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="code">    命令，后回车</span></div><div class="line"><span class="bullet">2.  </span>按上面的方法在里面添加一行</div></pre></td></tr></table></figure>
+<p>source ~/.bashrc</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="code">    后保存退出</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="section">oh-my-zsh 永久保存 alias 指定指令别名</span></div><div class="line">---</div><div class="line"></div><div class="line">*<span class="strong">*修改方式与修改alias永久保存相同，只是文件不同*</span><span class="strong">*：</span></div><div class="line">1.</div></pre></td></tr></table></figure>
+<p>vim ~/.zshrc</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">2.</span>  输入你要保存的<span class="built_in">alias</span>命令，</div><div class="line">    如</div></pre></td></tr></table></figure>
+<p>alias rn=’react-native’<br>```</p>
+</li>
 <li>source ~/.zshrc</li>
 </ol>
 <p><a href="http://blog.csdn.net/jianglei421/article/details/8510723" target="_blank" rel="external">参考自：</a></p>
@@ -615,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为命令定义alias"><span class="nav-number">2.</span> <span class="nav-text">为命令定义alias</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看alias"><span class="nav-number">3.</span> <span class="nav-text">查看alias</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除alias【此处的删除只是删除临时alias，永久删除与创建相反即可】"><span class="nav-number">4.</span> <span class="nav-text">删除alias【此处的删除只是删除临时alias，永久删除与创建相反即可】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#alias永久生效"><span class="nav-number">5.</span> <span class="nav-text">alias永久生效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oh-my-zsh-永久保存-alias-指定指令别名"><span class="nav-number">6.</span> <span class="nav-text">oh-my-zsh 永久保存 alias 指定指令别名</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为命令定义alias"><span class="nav-number">2.</span> <span class="nav-text">为命令定义alias</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看alias"><span class="nav-number">3.</span> <span class="nav-text">查看alias</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除alias【此处的删除只是删除临时alias，永久删除与创建相反即可】"><span class="nav-number">4.</span> <span class="nav-text">删除alias【此处的删除只是删除临时alias，永久删除与创建相反即可】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#alias永久生效"><span class="nav-number">5.</span> <span class="nav-text">alias永久生效</span></a></li></ol></div>
             
 
           </div>

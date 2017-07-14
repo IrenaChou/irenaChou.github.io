@@ -287,143 +287,6 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/03/04/applePayDemo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Irena">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My First">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/04/applePayDemo/" itemprop="url">
-                  applePayDemo
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-04T14:03:40+08:00">
-                2016-03-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/03/04/applePayDemo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/03/04/applePayDemo/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="https://developer.apple.com/library/ios/ApplePay_Guide/">参考原文</a></p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">"ViewController.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;PassKit/PassKit.h&gt;</span></span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()&lt;<span class="title">PKPaymentAuthorizationViewControllerDelegate</span>&gt;</span></div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">  [<span class="keyword">super</span> viewDidLoad];</div><div class="line">&#125;</div><div class="line">- (<span class="keyword">void</span>)applePayTest &#123;</div><div class="line">  <span class="comment">//设备可用</span></div><div class="line">  <span class="comment">// PKPaymentAuthorizationViewController用来显示ApplePay的Controller</span></div><div class="line">  <span class="keyword">if</span> (![PKPaymentAuthorizationViewController canMakePayments]) &#123;</div><div class="line">    <span class="comment">//设备不支持</span></div><div class="line">    <span class="comment">//不让ApplePay的支付按钮去显示</span></div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">//想当自己的应用支持的卡类型</span></div><div class="line">  <span class="comment">/*</div><div class="line">   [PKPaymentAuthorizationViewController</div><div class="line">   canMakePaymentsUsingNetworks:@[PKPaymentNetworkVisa]]</div><div class="line">   */</span></div><div class="line">  <span class="comment">//判断支持的卡类型</span></div><div class="line">  <span class="keyword">if</span> (![PKPaymentAuthorizationViewController canMakePaymentsUsingNetworks:@[</div><div class="line">        PKPaymentNetworkVisa,</div><div class="line">        PKPaymentNetworkChinaUnionPay</div><div class="line">      ]]) &#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"不支持visa和银联"</span>);</div><div class="line">    <span class="comment">//进入设置银行卡的页面</span></div><div class="line">    [[[PKPassLibrary alloc] init] openPaymentSetup];</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">//创建支付请求</span></div><div class="line">  PKPaymentRequest *request = [[PKPaymentRequest alloc] init];</div><div class="line">  <span class="comment">//显示支付页面</span></div><div class="line">  PKPaymentAuthorizationViewController *vc =</div><div class="line">      [[PKPaymentAuthorizationViewController alloc]</div><div class="line">          initWithPaymentRequest:request];</div><div class="line">  vc.delegate = <span class="keyword">self</span>;</div><div class="line">  <span class="comment">//*设置商户的ID(网站配制的id)</span></div><div class="line">  request.merchantIdentifier = <span class="string">@"merchant.com.irena.AppleiPayDemo"</span>;</div><div class="line">  <span class="comment">//*设置国家代码</span></div><div class="line">  request.countryCode = <span class="string">@"CN"</span>;</div><div class="line">  <span class="comment">//*设置支付的卡类型</span></div><div class="line">  request.supportedNetworks = @[ PKPaymentNetworkVisa ];</div><div class="line">  <span class="comment">//*设置商户的支付标准(必须支持3DS)</span></div><div class="line">  request.merchantCapabilities = PKMerchantCapability3DS;</div><div class="line">  <span class="comment">//*设置货币单位(中文CNY)</span></div><div class="line">  request.currencyCode = <span class="string">@"CNY"</span>;</div></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/03/04/applePayDemo/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/03/01/bug1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1638,6 +1501,145 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/02/16/dunsApply/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Irena">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ww3.sinaimg.cn/mw690/875db3e6jw1eiwxuf785wj204q04m749.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My First">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/16/dunsApply/" itemprop="url">
+                  D-U-N-S(邓白氏编码)申请
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-16T14:13:42+08:00">
+                2016-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/02/16/dunsApply/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/02/16/dunsApply/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>公司版和企业版的 Apple开发者帐户申请需要您提交邓白氏号码。申请的表格需要您用 <strong>英文或拼音填写</strong>。<br>请至 Apple 以下网站以查看贵公司是否已拥有邓白氏编号，如果您有查到任何记录，请确认记录中的公司是否就是贵公司；如果没有查到任何资料或系统调出的记录均不是贵公司的信息，请点击  <strong><code>“Submit Your Information”</code></strong> 提交申请，成功提交至邓白氏公司，他们将会继续协助您获取该编号，申请时间一般需要七个工作日：   </p>
+<p>申请地址请点击：<a href="https://developer.apple.com/program/enroll/dunsLookupForm.action" title="apple">申请地址</a></p>
+<p> <em>此电话有中文客服</em><br><strong>4006701855</strong> : 苹果电话<br><strong>02126107504</strong> : duns方负责专门负责被拒的电话   </p>
+<p><em>邓白氏公司全球支持部门</em><br><strong>appdeveloper@dnb.com</strong></p>
+<p><a href="https://developer.apple.com/contact/phone.php">各地区 Apple 开发者计划支援电话号码查询</a><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/02/16/dunsApply/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -1687,7 +1689,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">92</span>
+                <span class="site-state-item-count">91</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

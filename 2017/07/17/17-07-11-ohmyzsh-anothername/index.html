@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="当前系统：macOS Sierra 简介别名 是另一个名字就像有一个人叫张三，有一天你给张三起了个别名叫张小三，以后你叫这个张三和张小三的就全是这个人，但是他的身份证上的名字还是张三，并不会变 1alias rn=&apos;react-native&apos;">
+<meta name="description" content="当前系统：macOS Sierra 简介别名 是另一个名字就像有一个人叫张三，有一天你给张三起了个别名叫张小三，以后你叫这个张三和张小三的就全是这个人，但是他的身份证上的名字还是张三，并不会变 1alias rn=&apos;react-native&apos; 也即，输入rn后，被自动定向到react-native这个命令了。 别名 的作用就是，给命令起一个别名，方便记住，但并不会改变原命令，你可以使用原命令 re">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="别名永久生效与ohmyzsh下别名配制">
 <meta property="og:url" content="http://irenachou.github.io/irena/2017/07/17/17-07-11-ohmyzsh-anothername/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="当前系统：macOS Sierra 简介别名 是另一个名字就像有一个人叫张三，有一天你给张三起了个别名叫张小三，以后你叫这个张三和张小三的就全是这个人，但是他的身份证上的名字还是张三，并不会变 1alias rn=&apos;react-native&apos;">
-<meta property="og:updated_time" content="2017-07-17T02:46:08.000Z">
+<meta property="og:description" content="当前系统：macOS Sierra 简介别名 是另一个名字就像有一个人叫张三，有一天你给张三起了个别名叫张小三，以后你叫这个张三和张小三的就全是这个人，但是他的身份证上的名字还是张三，并不会变 1alias rn=&apos;react-native&apos; 也即，输入rn后，被自动定向到react-native这个命令了。 别名 的作用就是，给命令起一个别名，方便记住，但并不会改变原命令，你可以使用原命令 re">
+<meta property="og:updated_time" content="2017-07-17T02:52:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="别名永久生效与ohmyzsh下别名配制">
-<meta name="twitter:description" content="当前系统：macOS Sierra 简介别名 是另一个名字就像有一个人叫张三，有一天你给张三起了个别名叫张小三，以后你叫这个张三和张小三的就全是这个人，但是他的身份证上的名字还是张三，并不会变 1alias rn=&apos;react-native&apos;">
+<meta name="twitter:description" content="当前系统：macOS Sierra 简介别名 是另一个名字就像有一个人叫张三，有一天你给张三起了个别名叫张小三，以后你叫这个张三和张小三的就全是这个人，但是他的身份证上的名字还是张三，并不会变 1alias rn=&apos;react-native&apos; 也即，输入rn后，被自动定向到react-native这个命令了。 别名 的作用就是，给命令起一个别名，方便记住，但并不会改变原命令，你可以使用原命令 re">
 
 
 
@@ -372,6 +372,38 @@
         <p><em>当前系统：macOS Sierra</em></p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><strong>别名</strong> 是另一个名字<br><em>就像有一个人叫张三，有一天你给张三起了个别名叫张小三，以后你叫这个张三和张小三的就全是这个人，但是他的身份证上的名字还是张三，并不会变</em></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">alias</span> rn=<span class="string">'react-native'</span></div></pre></td></tr></table></figure>
+<p>也即，输入rn后，被自动定向到react-native这个命令了。 <strong>别名</strong> 的作用就是，给命令起一个别名，方便记住，但并不会改变原命令，你可以使用原命令 <strong>react-native</strong> 也可以使用你起的别名 <strong>rn</strong>。</p>
+<a id="more"></a>
+<h2 id="为命令定义别名"><a href="#为命令定义别名" class="headerlink" title="为命令定义别名"></a>为命令定义别名</h2><p><em>例：为react-native创建一个别名</em><br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">//</span> 语法：</div><div class="line"><span class="regexp">//</span> alias 你起的别名=<span class="string">'原命令名字'</span></div><div class="line"></div><div class="line">alias rn=<span class="string">'react-native'</span></div></pre></td></tr></table></figure></p>
+<h2 id="查看别名"><a href="#查看别名" class="headerlink" title="查看别名"></a>查看别名</h2><p>可以查看具体某一个命令的 <strong>别名</strong> ，使用<br><em>例：下面是查看别名rn</em><br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">//</span> 语法：</div><div class="line"><span class="string">//</span> <span class="keyword">alias</span> 你起的别名</div><div class="line"></div><div class="line"><span class="keyword">alias</span> rn</div></pre></td></tr></table></figure></p>
+<p>查看全部别名</p>
+<h2 id="删除-别名【此处的删除只是删除临时-别名-，永久删除与创建相反即可】"><a href="#删除-别名【此处的删除只是删除临时-别名-，永久删除与创建相反即可】" class="headerlink" title="删除 别名【此处的删除只是删除临时 别名 ，永久删除与创建相反即可】"></a>删除 <strong>别名</strong>【此处的删除只是删除临时 <strong>别名</strong> ，永久删除与创建相反即可】</h2><p><em>例：删除下面为rn的别名</em><br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">//</span> 语法：</div><div class="line"><span class="string">//</span> <span class="keyword">unalias</span> 你起的别名</div><div class="line"></div><div class="line"><span class="keyword">unalias</span> rn</div></pre></td></tr></table></figure></p>
+<h2 id="别名永久生效"><a href="#别名永久生效" class="headerlink" title="别名永久生效"></a>别名永久生效</h2><p>没有做过永久化的 <strong>别名</strong> 只有在创建 <strong>别名</strong> 的当前终端窗口有效，一但关闭此窗口或是新开一个窗口，均不生效，所以要长久使用，先要把他存起来</p>
+<p>下面是做一些配置文件的修改方式例出如下几种：</p>
+<ol>
+<li><strong>激活Finder</strong> ，按键盘的 <strong>command+shift+G</strong> 输入文件目录</li>
+<li><strong>激活Finder</strong> ，点击左上角的菜单，前往–前往文件夹，输入文件目录</li>
+<li>使用终端的vim</li>
+</ol>
+<p>下面使用vim的方式进行修改：</p>
+<ol>
+<li>打开新终端窗口，输入 <strong>vim ~/.bashrc</strong> 命令，后回车</li>
+<li><p>输入键盘上的 <strong>i</strong> ，将你要保存的 <strong>别名</strong> 输入到文件上</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">alias</span> rn=<span class="string">'react-native'</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>【保存退出】输入键盘上的 <strong>:wq</strong> 后回车</p>
+</li>
+<li>在终端输入 <strong>source ~/.bashrc</strong> 回车</li>
+</ol>
+<p>如果没有生效：</p>
+<ol>
+<li><p>打开新终端窗口，输入</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="code">    vim ~/.bash_profile</span></div><div class="line"><span class="code">    ``` 命令，后回车</span></div><div class="line">2.  按上面的方法在里面添加一行 *<span class="strong">*source ~/.bashrc*</span>* 后保存退出</div><div class="line"></div><div class="line"></div><div class="line"><span class="section">oh-my-zsh 永久保存 别名 指定指令别名</span></div><div class="line">---</div><div class="line"></div><div class="line">*<span class="strong">*修改方式与修改别名永久保存相同，只是文件不同*</span><span class="strong">*：</span></div><div class="line">1.  vim ~/.zshrc</div><div class="line">2.  输入你要保存的别名命令，</div><div class="line">    如</div></pre></td></tr></table></figure>
+<p> alias rn=’react-native’<br>```</p>
+</li>
+<li>source ~/.zshrc</li>
+</ol>
+<p><a href="http://blog.csdn.net/jianglei421/article/details/8510723" target="_blank" rel="external">参考自：</a></p>
 
       
     </div>
@@ -583,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为命令定义别名"><span class="nav-number">2.</span> <span class="nav-text">为命令定义别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看别名"><span class="nav-number">3.</span> <span class="nav-text">查看别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除-别名【此处的删除只是删除临时-别名-，永久删除与创建相反即可】"><span class="nav-number">4.</span> <span class="nav-text">删除 别名【此处的删除只是删除临时 别名 ，永久删除与创建相反即可】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#别名永久生效"><span class="nav-number">5.</span> <span class="nav-text">别名永久生效</span></a></li></ol></div>
             
 
           </div>

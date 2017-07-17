@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[17_07_11_ohmyzsh_anothername]]></title>
+    <title><![CDATA[别名永久生效与ohmyzsh下别名配制]]></title>
     <url>%2F2017%2F07%2F17%2F17-07-11-ohmyzsh-anothername%2F</url>
     <content type="text"></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[单个数求和后拆分]]></title>

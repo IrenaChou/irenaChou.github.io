@@ -98,7 +98,8 @@
 <meta property="og:site_name" content="My First">
 <meta property="og:description" content="Print: Entry, “:CFBundleIdentifier”, Does Not Exist在终端执行如下命令时：react-native run-ios   run-ios 报如下错误：1234567Failed to install the requested applicationAn application bundle was not found at the provided">
 <meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/ReactNativeNode-2.png">
-<meta property="og:updated_time" content="2017-07-07T10:05:21.000Z">
+<meta property="og:image" content="http://img.blog.csdn.net/20161028172822893?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:updated_time" content="2017-07-25T02:58:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ReactNativeNode">
 <meta name="twitter:description" content="Print: Entry, “:CFBundleIdentifier”, Does Not Exist在终端执行如下命令时：react-native run-ios   run-ios 报如下错误：1234567Failed to install the requested applicationAn application bundle was not found at the provided">
@@ -386,6 +387,14 @@
 <li>react-native run-ios 就可以了</li>
 </ol>
 <p>问题参考链接：<br><a href="http://www.jianshu.com/p/98c8f2a970eb" target="_blank" rel="external">http://www.jianshu.com/p/98c8f2a970eb</a></p>
+<h2 id="Error-watching-file-for-changes-EMFILE"><a href="#Error-watching-file-for-changes-EMFILE" class="headerlink" title="Error watching file for changes: EMFILE"></a>Error watching file for changes: EMFILE</h2><p>今天升级Mac系统到MacOS Sierra后(或者React Native升级导致?)，发现运行react-native start会出现Error watching file for changes: EMFILE异常，异常详情如下如：<br><img src="http://img.blog.csdn.net/20161028172822893?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
+<p><strong>解决步骤</strong>：</p>
+<ol>
+<li>卸载所有已安装的watchman：brew uninstall –force watchman</li>
+<li>删除watchman相关文件：rm -rf /usr/local/var/run/watchman/</li>
+<li>重新安装watchman：brew install watchman</li>
+</ol>
+<p>问题参考链接：<a href="http://blog.csdn.net/a1540077373/article/details/52955894" target="_blank" rel="external">http://blog.csdn.net/a1540077373/article/details/52955894</a></p>
 
       
     </div>
@@ -601,7 +610,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Print-Entry-“-CFBundleIdentifier”-Does-Not-Exist"><span class="nav-number">1.</span> <span class="nav-text">Print: Entry, “:CFBundleIdentifier”, Does Not Exist</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Print-Entry-“-CFBundleIdentifier”-Does-Not-Exist"><span class="nav-number">1.</span> <span class="nav-text">Print: Entry, “:CFBundleIdentifier”, Does Not Exist</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-watching-file-for-changes-EMFILE"><span class="nav-number">2.</span> <span class="nav-text">Error watching file for changes: EMFILE</span></a></li></ol></div>
             
 
           </div>

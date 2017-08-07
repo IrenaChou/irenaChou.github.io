@@ -287,6 +287,280 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/02/16/sendMail/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Irena">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogblog_icon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My First">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/16/sendMail/" itemprop="url">
+                  sendMail 发邮件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-16T14:17:03+08:00">
+                2016-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/02/16/sendMail/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/02/16/sendMail/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="使用SKPSMTPMessage无需弹框发送邮件"><a href="#使用SKPSMTPMessage无需弹框发送邮件" class="headerlink" title="使用SKPSMTPMessage无需弹框发送邮件"></a>使用SKPSMTPMessage无需弹框发送邮件</h2><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="string">//</span>使用SKPSMTPMessage无需弹框发送邮件</div><div class="line">我使用的是</div><div class="line">1.导入头文件</div><div class="line"><span class="comment">#import "NSData+Base64Additions.h"</span></div><div class="line"><span class="comment">#import "SKPSMTPMessage.h"</span></div><div class="line">  SKPSMTPMessage *mail = [[SKPSMTPMessage alloc] init];</div><div class="line">  [mail <span class="keyword">set</span>Subject:@<span class="string">"标题"</span>];                 <span class="string">//</span> 设置邮件主题</div><div class="line">  [mail <span class="keyword">set</span>ToEmail:@<span class="string">".com"</span>];                 <span class="string">//</span> 目标邮箱</div><div class="line">  [mail <span class="keyword">set</span>FromEmail:@<span class="string">".com"</span>];               <span class="string">//</span> 发送者邮箱</div><div class="line">  [mail <span class="keyword">set</span>RelayHost:@<span class="string">"smtp.qq.com"</span>];        <span class="string">//</span> 发送邮件代理服务器</div><div class="line">  [mail <span class="keyword">set</span>RequiresAuth<span class="function">:YES</span>];</div><div class="line">  [mail <span class="keyword">set</span>Login:@<span class="string">".com"</span>];                   <span class="string">//</span> 发送者邮箱账号</div><div class="line">  [mail <span class="keyword">set</span>Pass:@<span class="string">""</span>];                        <span class="string">//</span> 发送者邮箱密码</div><div class="line">  [mail <span class="keyword">set</span>WantsSecure<span class="function">:YES</span>];                 <span class="string">//</span> 需要加密</div><div class="line">  [mail <span class="keyword">set</span>Delegate<span class="function">:self</span>];</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/02/16/sendMail/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/02/16/dunsApply/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Irena">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogblog_icon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My First">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/16/dunsApply/" itemprop="url">
+                  D-U-N-S(邓白氏编码)申请
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-16T14:13:42+08:00">
+                2016-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/02/16/dunsApply/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/02/16/dunsApply/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>公司版和企业版的 Apple开发者帐户申请需要您提交邓白氏号码。申请的表格需要您用 <strong>英文或拼音填写</strong>。<br>请至 Apple 以下网站以查看贵公司是否已拥有邓白氏编号，如果您有查到任何记录，请确认记录中的公司是否就是贵公司；如果没有查到任何资料或系统调出的记录均不是贵公司的信息，请点击  <strong><code>“Submit Your Information”</code></strong> 提交申请，成功提交至邓白氏公司，他们将会继续协助您获取该编号，申请时间一般需要七个工作日：   </p>
+<p>申请地址请点击：<a href="https://developer.apple.com/program/enroll/dunsLookupForm.action" title="apple">申请地址</a></p>
+<p> <em>此电话有中文客服</em><br><strong>4006701855</strong> : 苹果电话<br><strong>02126107504</strong> : duns方负责专门负责被拒的电话   </p>
+<p><em>邓白氏公司全球支持部门</em><br><strong>appdeveloper@dnb.com</strong></p>
+<p><a href="https://developer.apple.com/contact/phone.php">各地区 Apple 开发者计划支援电话号码查询</a><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/02/16/dunsApply/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/01/24/suibi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -458,7 +732,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">91</span>
+                <span class="site-state-item-count">93</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -471,7 +745,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

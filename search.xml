@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[设置代码片断]]></title>
+    <url>%2F2017%2F08%2F03%2F17-08-03-set-code-snippet-library%2F</url>
+    <content type="text"><![CDATA[本文就要是说明代码片断的设置]]></content>
+      <tags>
+        <tag>objc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Xcode忽略警告]]></title>
+    <url>%2F2017%2F08%2F03%2F17-08-03-ignored-warn%2F</url>
+    <content type="text"><![CDATA[忽略行代码警告忽略整个项目中的相关警告忽略CocoaPods导入第三方库的警告 参考自]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[别名永久生效与ohmyzsh下别名配制]]></title>
     <url>%2F2017%2F07%2F17%2F17-07-11-ohmyzsh-anothername%2F</url>
     <content type="text"><![CDATA[当前系统：macOS Sierra 简介别名 是另一个名字就像有一个人叫张三，有一天你给张三起了个别名叫张小三，以后你叫这个张三和张小三的就全是这个人，但是他的身份证上的名字还是张三，并不会变 1alias rn='react-native' 也即，输入rn后，被自动定向到react-native这个命令了。 别名 的作用就是，给命令起一个别名，方便记住，但并不会改变原命令，你可以使用原命令 react-native 也可以使用你起的别名 rn。 为命令定义别名例：为react-native创建一个别名1234// 语法：// alias 你起的别名='原命令名字'alias rn='react-native' 查看别名可以查看具体某一个命令的 别名 ，使用例：下面是查看别名rn1234// 语法：// alias 你起的别名alias rn 查看全部别名 删除 别名【此处的删除只是删除临时 别名 ，永久删除与创建相反即可】例：删除下面为rn的别名1234// 语法：// unalias 你起的别名unalias rn 别名永久生效没有做过永久化的 别名 只有在创建 别名 的当前终端窗口有效，一但关闭此窗口或是新开一个窗口，均不生效，所以要长久使用，先要把他存起来 下面是做一些配置文件的修改方式例出如下几种： 激活Finder ，按键盘的 command+shift+G 输入文件目录 激活Finder ，点击左上角的菜单，前往–前往文件夹，输入文件目录 使用终端的vim 下面使用vim的方式进行修改： 打开新终端窗口，输入 vim ~/.bashrc 命令，后回车 输入键盘上的 i ，将你要保存的 别名 输入到文件上 1alias rn='react-native' 【保存退出】输入键盘上的 :wq 后回车 在终端输入 source ~/.bashrc 回车 如果没有生效： 打开新终端窗口，输入如下命令，后回车 1vim ~/.bash_profile 按上面的方法在里面添加一行 source ~/.bashrc 后保存退出 oh-my-zsh 永久保存 别名 指定指令别名修改方式与修改别名永久保存相同，只是文件不同： vim ~/.zshrc 输入你要保存的别名命令，如 1alias rn='react-native' source ~/.zshrc 参考自：]]></content>
@@ -16,7 +29,7 @@
   <entry>
     <title><![CDATA[ReactNativeNode]]></title>
     <url>%2F2017%2F07%2F05%2F2017-07-05-reactNative-node-2%2F</url>
-    <content type="text"><![CDATA[Print: Entry, “:CFBundleIdentifier”, Does Not Exist在终端执行如下命令时：react-native run-ios run-ios 报如下错误：1234567Failed to install the requested applicationAn application bundle was not found at the provided path.Provide a valid path to the desired application bundle.Print: Entry, ":CFBundleIdentifier", Does Not ExistCommand failed: /usr/libexec/PlistBuddy -c Print:CFBundleIdentifier build/Build/Products/Debug-iphonesimulator/ReactNativexx.app/Info.plistPrint: Entry, ":CFBundleIdentifier", Does Not Exist 在终端执行如下命令时： react-native run-android run-android 报如下错误：1unable to load script from assets 'index.android bundle' ,Make sure your bundle is packaged correctly or youu're runing a packager server 如上两个问题我的解决办法是一样的，只是安卓的时候把第4步的run-ios换成run-android就ok了 问题解决：这是经过各种尝试后得出的结果了，查看的下面的链接，给出的前几个方法结过测试都不能解决我的问题，只有下面的的方法是可以的 解决步骤： 首先删除node_modules 修改package.json中react-native的版本为0.44.3 react为16.0.0-alpha.6 执行npm install react-native run-ios 就可以了 问题参考链接：http://www.jianshu.com/p/98c8f2a970eb Error watching file for changes: EMFILE今天升级Mac系统到MacOS Sierra后(或者React Native升级导致?)，发现运行react-native start会出现Error watching file for changes: EMFILE异常，异常详情如下如： 解决步骤： 卸载所有已安装的watchman：brew uninstall –force watchman 删除watchman相关文件：rm -rf /usr/local/var/run/watchman/ 重新安装watchman：brew install watchman 问题参考链接：http://blog.csdn.net/a1540077373/article/details/52955894]]></content>
+    <content type="text"><![CDATA[Print: Entry, “:CFBundleIdentifier”, Does Not Exist在终端执行如下命令时：react-native run-ios run-ios 报如下错误：1234567Failed to install the requested applicationAn application bundle was not found at the provided path.Provide a valid path to the desired application bundle.Print: Entry, ":CFBundleIdentifier", Does Not ExistCommand failed: /usr/libexec/PlistBuddy -c Print:CFBundleIdentifier build/Build/Products/Debug-iphonesimulator/ReactNativexx.app/Info.plistPrint: Entry, ":CFBundleIdentifier", Does Not Exist 在终端执行如下命令时： react-native run-android run-android 报如下错误：1unable to load script from assets 'index.android bundle' ,Make sure your bundle is packaged correctly or youu're runing a packager server 如上两个问题我的解决办法是一样的，只是安卓的时候把第4步的run-ios换成run-android就ok了 问题解决：这是经过各种尝试后得出的结果了，查看的下面的链接，给出的前几个方法结过测试都不能解决我的问题，只有下面的的方法是可以的 解决步骤： 首先删除node_modules 修改package.json中react-native的版本为0.44.3 react为16.0.0-alpha.6 执行npm install react-native run-ios 就可以了 问题参考链接：http://www.jianshu.com/p/98c8f2a970eb 上面是一个治标不治本的方法【先记录一下】我使用xcode打开，运行，报如下错误 boost/iterator/iterator_adaptor.hpp’ file not found产生原因： /Users/Vanessa/.rncache 中 boost_1_63_0.tar.gz， double-conversion-1.1.5.tar.gz， folly-2016.09.26.00.tar.gz， glog-0.3.4.tar.gz 文件下载不完整 node_modules/react-native/third-party 文件不完整 解决方案： 我是手动下载后放入 【 选中Finder–&gt;command+g–&gt;输入~/.rncache 】将下载好的文件放到~/.rncache 中 下载链接 把以上文件解压后放入 当前项目目录下的 node_modules/react-native/third-party 下 Clean &amp; Build 【 我是使用Xcode 】 问题参考连接：http://vanessa.b3log.org/articles/2017/06/12/1497235254333.html Error watching file for changes: EMFILE今天升级Mac系统到MacOS Sierra后(或者React Native升级导致?)，发现运行react-native start会出现Error watching file for changes: EMFILE异常，异常详情如下如： 解决步骤： 卸载所有已安装的watchman：brew uninstall –force watchman 删除watchman相关文件：rm -rf /usr/local/var/run/watchman/ 重新安装watchman：brew install watchman 问题参考链接：http://blog.csdn.net/a1540077373/article/details/52955894]]></content>
       <tags>
         <tag>ReactNative</tag>
       </tags>

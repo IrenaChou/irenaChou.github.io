@@ -287,6 +287,293 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/12/26/16-12-26-cocospodsQuestion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Irena">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogblog_icon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My First">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/26/16-12-26-cocospodsQuestion/" itemprop="url">
+                  使用cocospods遇到的问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-26T14:47:17+08:00">
+                2016-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/12/26/16-12-26-cocospodsQuestion/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/12/26/16-12-26-cocospodsQuestion/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="问题1："><a href="#问题1：" class="headerlink" title="问题1："></a>问题1：</h2><p><code>[!] Unable to add a source with url https://github.com/CocoaPods/Specs.git named master-1.``You can try adding it manually in ~/.cocoapods/repos or via pod repo add.</code></p>
+<p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogImagecocoapods-Q1.png" alt="问题1"></p>
+<ul>
+<li>问题解决：<strong>您电脑上的Xcode大于一个，需自己手动选择一个使用版本</strong>，具体做法如下</li>
+<li><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogImagecocoapods-A1.png" alt="问题1"></li>
+<li>sudo xcode-select -switch <strong>/Applications/Xcode7.3.app</strong>【拖拽你要使用的xcode替换/Applications/Xcode7.3.app】</li>
+</ul>
+<ol>
+<li><p><code>ERROR:Could not find a valid gem &#39;cocoapods&#39; (&gt;= 0), here is why:</code></p>
+<p><code>Unable to download data from https://ruby.taobao.org/ - SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://ruby.taobao.org/specs.4.8.gz)</code></p>
+<ul>
+<li>问题解决：<strong>由于淘宝源已停止维护，我们需要更换新源</strong>，具体做法如下<ul>
+<li>查看源：<code>gem sources -l</code></li>
+<li>删除源：<code>gem sources --remove https://ruby.taobao.org/</code></li>
+<li>添加源：<code>gem sources -a https://gems.ruby-china.org/</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/12/26/16-12-26-cocospodsQuestion/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/11/17/16-11-17-LaunchHideStatusBar/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Irena">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogblog_icon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My First">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/17/16-11-17-LaunchHideStatusBar/" itemprop="url">
+                  Launch时隐藏StatusBar
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-17T14:07:51+08:00">
+                2016-11-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/11/17/16-11-17-LaunchHideStatusBar/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/11/17/16-11-17-LaunchHideStatusBar/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>本文使用LaunchScreen.storyboard上添加imageView<br>主要解决在Launch时隐藏StatusBar</p>
+<p>在<strong>info.plist</strong>中添加<br><strong>UIStatusBarHidden</strong></p>
+<p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blog_photostatusBarLaunch.png" alt="要实现的效果">  </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/11/17/16-11-17-MobileTerminalCutImage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1372,279 +1659,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/09/20/16-09-20-synthesize/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Irena">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogblog_icon.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My First">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/20/16-09-20-synthesize/" itemprop="url">
-                  oc-synthesize
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-20T16:43:26+08:00">
-                2016-09-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/09/20/16-09-20-synthesize/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/09/20/16-09-20-synthesize/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>在Xcode4版本之前@property和@synthesize的功能是独立开来的：</p>
-<p>.h中的代码</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//@property的作用是：自动的生成成员变量setter/getter方法的声明：</span></div><div class="line">  <span class="meta">@property</span> <span class="keyword">int</span> carName;  <span class="comment">//它的作用和下面两行代码的作用相同</span></div><div class="line">  - (<span class="keyword">void</span>)<span class="string">setCarName:</span>(<span class="keyword">int</span>)carName;</div><div class="line">  - (<span class="keyword">int</span>)carName;</div></pre></td></tr></table></figure>
-<p><strong>注意：属性名称不要加前缀_ 否则生成的setter/getter方法中也会有下划线</strong><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/09/20/16-09-20-synthesize/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2016/09/12/16-09-12-sliderConvertPhotoSize/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Irena">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogblog_icon.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My First">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/12/16-09-12-sliderConvertPhotoSize/" itemprop="url">
-                  通过slider调整图片的大小
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-12T13:46:02+08:00">
-                2016-09-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/09/12/16-09-12-sliderConvertPhotoSize/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/09/12/16-09-12-sliderConvertPhotoSize/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Demo下载"><a href="#Demo下载" class="headerlink" title="Demo下载  "></a><a href="http://7xrirn.com1.z0.glb.clouddn.com/blogIRSliderConvertPhotoSize.zip">Demo下载</a>  </h2><p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogsliderConvertPhotoSize.gif" alt="要实现的效果">  </p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/09/12/16-09-12-sliderConvertPhotoSize/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1694,7 +1708,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">91</span>
+                <span class="site-state-item-count">93</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1707,7 +1721,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

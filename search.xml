@@ -11,7 +11,7 @@
   <entry>
     <title><![CDATA[Xcode忽略警告]]></title>
     <url>%2F2017%2F08%2F03%2F17-08-03-ignored-warn%2F</url>
-    <content type="text"><![CDATA[忽略行代码警告忽略整个项目中的相关警告忽略CocoaPods导入第三方库的警告 参考自]]></content>
+    <content type="text"><![CDATA[本文主要是计忽略警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他 忽略源文件中单个警告忽略整个项目中的相关警告忽略CocoaPods导入第三方库的警告原文参考自]]></content>
   </entry>
   <entry>
     <title><![CDATA[别名永久生效与ohmyzsh下别名配制]]></title>

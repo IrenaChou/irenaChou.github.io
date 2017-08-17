@@ -90,17 +90,24 @@
 
 
 
-<meta name="description" content="本文主要是计忽略警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他 忽略源文件中单个警告忽略整个项目中的相关警告忽略CocoaPods导入第三方库的警告原文参考自">
+<meta name="description" content="本文主要是忽略Xcode警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他 获取警告标识可以说警告是分类型的， Issue navigator 中可以通过文件或是类型查看警告">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xcode忽略警告">
+<meta property="og:title" content="Xcode忽略Bulidtime警告">
 <meta property="og:url" content="http://irenachou.github.io/irena/2017/08/03/17-08-03-ignored-warn/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="本文主要是计忽略警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他 忽略源文件中单个警告忽略整个项目中的相关警告忽略CocoaPods导入第三方库的警告原文参考自">
-<meta property="og:updated_time" content="2017-08-15T09:58:32.000Z">
+<meta property="og:description" content="本文主要是忽略Xcode警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他 获取警告标识可以说警告是分类型的， Issue navigator 中可以通过文件或是类型查看警告">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogchooseType.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogwarnTypes.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogissue.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogissue1.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogissue2.png">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogissue3.png">
+<meta property="og:updated_time" content="2017-08-17T02:20:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xcode忽略警告">
-<meta name="twitter:description" content="本文主要是计忽略警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他 忽略源文件中单个警告忽略整个项目中的相关警告忽略CocoaPods导入第三方库的警告原文参考自">
+<meta name="twitter:title" content="Xcode忽略Bulidtime警告">
+<meta name="twitter:description" content="本文主要是忽略Xcode警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他 获取警告标识可以说警告是分类型的， Issue navigator 中可以通过文件或是类型查看警告">
+<meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogchooseType.png">
 
 
 
@@ -134,7 +141,7 @@
 
 
 
-  <title>Xcode忽略警告 | My First</title>
+  <title>Xcode忽略Bulidtime警告 | My First</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -308,7 +315,7 @@
             
             
               
-                Xcode忽略警告
+                Xcode忽略Bulidtime警告
               
             
           </h1>
@@ -369,8 +376,22 @@
       
 
       
-        <p><em>本文主要是计忽略警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下</em><br><em>忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他</em></p>
-<h2 id="忽略源文件中单个警告"><a href="#忽略源文件中单个警告" class="headerlink" title="忽略源文件中单个警告"></a>忽略源文件中单个警告</h2><h2 id="忽略整个项目中的相关警告"><a href="#忽略整个项目中的相关警告" class="headerlink" title="忽略整个项目中的相关警告"></a>忽略整个项目中的相关警告</h2><h2 id="忽略CocoaPods导入第三方库的警告"><a href="#忽略CocoaPods导入第三方库的警告" class="headerlink" title="忽略CocoaPods导入第三方库的警告"></a>忽略CocoaPods导入第三方库的警告</h2><p>原文<a href="http://www.jianshu.com/p/327078fda8dc" target="_blank" rel="external">参考自</a></p>
+        <p><em>本文主要是忽略Xcode警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下</em><br><em>忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他</em></p>
+<h2 id="获取警告标识"><a href="#获取警告标识" class="headerlink" title="获取警告标识"></a>获取警告标识</h2><p>可以说警告是分类型的， <strong>Issue navigator</strong> 中可以通过文件或是类型查看警告<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogchooseType.png" alt="按类型查看警告"></p>
+<a id="more"></a>
+<p><strong>单击右键</strong> ，选择了 <strong>View by Type</strong> 后，警告会通过类型来区分<br><em>下面是我项目中的警告，我只有几个警告是选择忽略的，其它根据警告做处理</em><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogwarnTypes.png" alt="按类型查看警告"></p>
+<p>同一类警告下面会有多个警告，警告标识大部分是相同的<br>可以打开一类警告看描述，相同的就不用重复获取了，相对来说还是会方便一些的<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogissue.png" alt="警告类型"></p>
+<p>如下图，在某一个警告行上单击右键，获取警告标识<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogissue1.png" alt="获取警告标识"></p>
+<p>如下图，下图中红色框中的就是我们本文要用的警告标识了<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogissue2.png" alt="具体警告标识"></p>
+<h2 id="忽略源文件中单个警告"><a href="#忽略源文件中单个警告" class="headerlink" title="忽略源文件中单个警告"></a>忽略源文件中单个警告</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> clang diagnostic push</span></div><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> clang diagnostic ignored <span class="meta-string">"警告标识符"</span></span></div><div class="line">报警告的代码</div><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> clang diagnostic pop</span></div></pre></td></tr></table></figure>
+<p>一般我会将下面代码存成一个代码片断，以便重复使用<br>设置代码片断参考<a href="http://irenachou.github.io/2017/08/03/17-08-03-set-code-snippet-library/">创建代码片断</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> clang diagnostic push</span></div><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> clang diagnostic ignored <span class="meta-string">"&lt;#-Wunused-variable#&gt;"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> clang diagnostic pop</span></div></pre></td></tr></table></figure>
+<h2 id="在-Build-Settings-中项目全局忽略警告"><a href="#在-Build-Settings-中项目全局忽略警告" class="headerlink" title="在 Build Settings 中项目全局忽略警告"></a>在 Build Settings 中项目全局忽略警告</h2><p>在项目的 <strong>Build Settings</strong> 中也可以设置忽略某种或多种类型的警告，不过在这设置的影响范围就是整个项目的了，要三思而后行。</p>
+<p>如下图，在 <strong>Build Settings</strong> 中找到 <strong>Custom Compiler Flags</strong>，双击 <strong>Other Warning Flags</strong>（可以配置 Debug 和 Release 环境），填入 <strong>-Wno-unused-variable</strong> ，完成后，编译项目，项目中所有的此类型警告都没有了。</p>
+<p>下图我是采用搜索的方式查找的，就是在右上角的搜索框中输入相应的搜索关键字，回车就ok<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogissue3.png" alt="忽略全局警告"></p>
+<p>这里所填写的内容规则，在警告标识中的 <strong>W</strong> 字母后面加上  <strong>no-</strong> 就可以了。<br>例如：警告标识是 <strong>-Wunused-variable</strong><br>     这里要填写的就是 <strong>-Wno-unused-variable</strong></p>
+<h2 id="忽略CocoaPods导入第三方库的警告"><a href="#忽略CocoaPods导入第三方库的警告" class="headerlink" title="忽略CocoaPods导入第三方库的警告"></a>忽略CocoaPods导入第三方库的警告</h2><p>通过 CocoaPods 给项目导入了一些第三方库，这些库里面或多或少会有些警告，想消除这些警告，很简单，只需在 Podfile 中加上这一句 <strong>inhibit_all_warnings!</strong>，所有通过 CocoaPods 安装的第三库的警告就没有了。</p>
+<p>原文<a href="http://www.jianshu.com/p/327078fda8dc" target="_blank" rel="external">参考自</a></p>
 
       
     </div>
@@ -580,7 +601,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#忽略源文件中单个警告"><span class="nav-number">1.</span> <span class="nav-text">忽略源文件中单个警告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忽略整个项目中的相关警告"><span class="nav-number">2.</span> <span class="nav-text">忽略整个项目中的相关警告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忽略CocoaPods导入第三方库的警告"><span class="nav-number">3.</span> <span class="nav-text">忽略CocoaPods导入第三方库的警告</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取警告标识"><span class="nav-number">1.</span> <span class="nav-text">获取警告标识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忽略源文件中单个警告"><span class="nav-number">2.</span> <span class="nav-text">忽略源文件中单个警告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在-Build-Settings-中项目全局忽略警告"><span class="nav-number">3.</span> <span class="nav-text">在 Build Settings 中项目全局忽略警告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忽略CocoaPods导入第三方库的警告"><span class="nav-number">4.</span> <span class="nav-text">忽略CocoaPods导入第三方库的警告</span></a></li></ol></div>
             
 
           </div>
@@ -732,7 +753,7 @@
         var disqus_config = function () {
           this.page.url = 'http://irenachou.github.io/irena/2017/08/03/17-08-03-ignored-warn/';
           this.page.identifier = '2017/08/03/17-08-03-ignored-warn/';
-          this.page.title = 'Xcode忽略警告';
+          this.page.title = 'Xcode忽略Bulidtime警告';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://irena.disqus.com/embed.js';

@@ -374,8 +374,8 @@
       
         
           <p><em>前几天领导让我把一个项目中代码总行数统计一下，并发给我了参考原文的文章，我要统计的文章中使用了cocoapods，所以有些可见的原码并没有被统计到，暂未解决</em></p>
-<p>打开终端，用cd命令 定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来：<br><figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo <span class="built_in">find</span> . <span class="string">"("</span> -<span class="built_in">name</span> <span class="string">"*.m"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.mm"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.cpp"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.h"</span>  <span class="string">")"</span> -print | xargs wc -l</div></pre></td></tr></table></figure></p>
-<p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogcode_lines_1.png" alt="效果如图"><br>
+<p>打开终端，用cd命令 定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来：<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogcode_lines_1.png" alt="效果如图"></p>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo <span class="built_in">find</span> . <span class="string">"("</span> -<span class="built_in">name</span> <span class="string">"*.m"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.mm"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.cpp"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.h"</span>  <span class="string">")"</span> -print | xargs wc -l</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/25/17-08-25-statistics-code-lines/#more" rel="contents">

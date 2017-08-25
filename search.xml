@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[iOS项目统计总代码行数]]></title>
+    <url>%2F2017%2F08%2F25%2F17-08-25-statistics-code-lines%2F</url>
+    <content type="text"><![CDATA[前几天领导让我把一个项目中代码总行数统计一下，并发给我了参考原文的文章，我要统计的文章中使用了cocoapods，所以有些可见的原码并没有被统计到，暂未解决 打开终端，用cd命令 定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来：1sudo find . "(" -name "*.m" -or -name "*.mm" -or -name "*.cpp" -or -name "*.h" ")" -print | xargs wc -l 具体查看哪些文件，根据你自己的项目所含文件后缀名修改 其中 -name 就表示扩展名为.m的文件。同时要统计java文件和xml文件的命令分别是：123```find . &quot;(&quot; -name &quot;*.java&quot; &quot;)&quot; -print | xargs wc -lfind . &quot;(&quot; -name &quot;*.xml&quot; &quot;)&quot; -print | xargs wc -l 我把storyboard和xib等其它文件也统计了，统计的代码如下1find . "(" -name "*.m" -or -name "*.mm" -or -name "*.cpp" -or -name "*.h" -or -name "*.xib" -or -name "*.storyboard" -or -name "*.py" ")" -print | xargs wc -l 就像文章开头我说的，他有一些文件是不能被统计到的，就像下图红框圈起来的 参考原文]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[设置代码片断]]></title>
     <url>%2F2017%2F08%2F03%2F17-08-03-set-code-snippet-library%2F</url>
     <content type="text"><![CDATA[本文就要是记录下设置代码片段设置代码片段，就是通过一个标识去将一段代码整合越来吧，方便多次使用代码重复输入的问题Xcode也给我们提供了很多代码片段，就像enum定义enumdefenumdef12345typedef enum : NSUInteger &#123; &lt;#MyEnumValueA#&gt;, &lt;#MyEnumValueB#&gt;, &lt;#MyEnumValueC#&gt;,&#125; &lt;#MyEnum#&gt;; 自己创建的代码片段图标上是有 User标识的 ，可以进行修改和删除Xcode帮我们创建的代码片段是没有标识的，不可以修改和删除 这里我们就拿创建 创建属性 来说一下，这个也是非常常用的了 创建 步骤： 将要设置代码块的代码 选中—-&gt; 拖拽 到右下角的 Show the Code Snippet libary【一对大括号的图标】 当出现蓝色框松开鼠标 为设置的代码片段设置标题描述，completion scopes 等，需要在使用时设置的参数，需要用 &lt;#参数#&gt; 标识，其中 completion shortcut 参数比较重要，使用的时候通过此参数调用。 例如：1@property (nonatomic, copy) NSString* &lt;#name#&gt;; 使用直接在相应 completion scopes 的位置输入设置的 completion shortcut 即可 编辑【修改】如果发现标题或是其他觉得不舒服或弄错了，直接在 Show the Code Snippet libary【一对大括号的图标】 位置，在下面的 Filter 中输入你要修改代码片段的 completion shortcut找到后 双击鼠标左键 点击左下角的 Edit 修改完点击 Done 就可以了 删除删除直接在 Show the Code Snippet libary【一对大括号的图标】 位置，点击键盘的 Delete 按键，在弹出的框中选择 Delete 就ok了]]></content>

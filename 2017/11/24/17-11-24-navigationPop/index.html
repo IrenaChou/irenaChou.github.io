@@ -90,24 +90,19 @@
 
 
 
-<meta name="description" content="本文主要是忽略Xcode警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他 获取警告标识可以说警告是分类型的， Issue navigator 中可以通过文件或是类型查看警告">
+<meta name="description" content="效果： 关键代码：12345678-(void)viewWillAppear:(BOOL)animated&amp;#123;    [super viewWillAppear:animated];    [self.navigationController setNavigationBarHidden:YES animated:animated];&amp;#125;-(void)viewWillDisappe">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xcode忽略Bulidtime警告">
-<meta property="og:url" content="http://irenachou.github.io/irena/2017/08/03/17-08-03-ignored-warn/index.html">
+<meta property="og:title" content="navigationPop效果">
+<meta property="og:url" content="http://irenachou.github.io/irena/2017/11/24/17-11-24-navigationPop/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="本文主要是忽略Xcode警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他 获取警告标识可以说警告是分类型的， Issue navigator 中可以通过文件或是类型查看警告">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogchooseType.png">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogwarnTypes.png">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogissue.png">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogissue1.png">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogissue2.png">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogissue3.png">
-<meta property="og:updated_time" content="2017-08-17T02:21:22.000Z">
+<meta property="og:description" content="效果： 关键代码：12345678-(void)viewWillAppear:(BOOL)animated&amp;#123;    [super viewWillAppear:animated];    [self.navigationController setNavigationBarHidden:YES animated:animated];&amp;#125;-(void)viewWillDisappe">
+<meta property="og:image" content="http://irenachou.github.io/irena/2017/11/24/17-11-24-navigationPop/7xrirn.com1.z0.glb.clouddn.com/blogpopNaigationBar.gif">
+<meta property="og:updated_time" content="2017-11-24T05:11:57.647Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xcode忽略Bulidtime警告">
-<meta name="twitter:description" content="本文主要是忽略Xcode警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他 获取警告标识可以说警告是分类型的， Issue navigator 中可以通过文件或是类型查看警告">
-<meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogchooseType.png">
+<meta name="twitter:title" content="navigationPop效果">
+<meta name="twitter:description" content="效果： 关键代码：12345678-(void)viewWillAppear:(BOOL)animated&amp;#123;    [super viewWillAppear:animated];    [self.navigationController setNavigationBarHidden:YES animated:animated];&amp;#125;-(void)viewWillDisappe">
+<meta name="twitter:image" content="http://irenachou.github.io/irena/2017/11/24/17-11-24-navigationPop/7xrirn.com1.z0.glb.clouddn.com/blogpopNaigationBar.gif">
 
 
 
@@ -135,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://irenachou.github.io/irena/2017/08/03/17-08-03-ignored-warn/"/>
+  <link rel="canonical" href="http://irenachou.github.io/irena/2017/11/24/17-11-24-navigationPop/"/>
 
 
 
 
 
-  <title>Xcode忽略Bulidtime警告 | My First</title>
+  <title>navigationPop效果 | My First</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -294,7 +289,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2017/08/03/17-08-03-ignored-warn/">
+    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2017/11/24/17-11-24-navigationPop/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Irena">
@@ -315,7 +310,7 @@
             
             
               
-                Xcode忽略Bulidtime警告
+                navigationPop效果
               
             
           </h1>
@@ -330,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-03T13:23:31+08:00">
-                2017-08-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-24T13:07:11+08:00">
+                2017-11-24
               </time>
             
 
@@ -349,9 +344,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/08/03/17-08-03-ignored-warn/#comments" itemprop="discussionUrl">
+                <a href="/2017/11/24/17-11-24-navigationPop/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/03/17-08-03-ignored-warn/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/11/24/17-11-24-navigationPop/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -376,22 +371,9 @@
       
 
       
-        <p><em>本文主要是忽略Xcode警告，让Xcode不提示，参考原文已经写的很好了，这里自己记录一下</em><br><em>忽略前，要先看清是否是关键的警告在决定是要忽略—还是修复他</em></p>
-<h2 id="获取警告标识"><a href="#获取警告标识" class="headerlink" title="获取警告标识"></a>获取警告标识</h2><p>可以说警告是分类型的， <strong>Issue navigator</strong> 中可以通过文件或是类型查看警告<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogchooseType.png" alt="按类型查看警告"></p>
-<a id="more"></a>
-<p><strong>单击右键</strong> ，选择了 <strong>View by Type</strong> 后，警告会通过类型来区分<br><em>下面是我项目中的警告，我只有几个警告是选择忽略的，其它根据警告做处理</em><br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogwarnTypes.png" alt="按类型查看警告"></p>
-<p>同一类警告下面会有多个警告，警告标识大部分是相同的<br>可以打开一类警告看描述，相同的就不用重复获取了，相对来说还是会方便一些的<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogissue.png" alt="警告类型"></p>
-<p>如下图，在某一个警告行上单击右键，获取警告标识<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogissue1.png" alt="获取警告标识"></p>
-<p>如下图，下图中红色框中的就是我们本文要用的警告标识了<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogissue2.png" alt="具体警告标识"></p>
-<h2 id="忽略源文件中单个警告"><a href="#忽略源文件中单个警告" class="headerlink" title="忽略源文件中单个警告"></a>忽略源文件中单个警告</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> clang diagnostic push</span></div><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> clang diagnostic ignored <span class="meta-string">"警告标识符"</span></span></div><div class="line">报警告的代码</div><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> clang diagnostic pop</span></div></pre></td></tr></table></figure>
-<p>一般我会将下面代码存成一个代码片断，以便重复使用<br>设置代码片断参考<a href="http://irenachou.github.io/2017/08/03/17-08-03-set-code-snippet-library/">创建代码片断</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> clang diagnostic push</span></div><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> clang diagnostic ignored <span class="meta-string">"&lt;#-Wunused-variable#&gt;"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> clang diagnostic pop</span></div></pre></td></tr></table></figure>
-<h2 id="在-Build-Settings-中项目全局忽略警告"><a href="#在-Build-Settings-中项目全局忽略警告" class="headerlink" title="在 Build Settings 中项目全局忽略警告"></a>在 Build Settings 中项目全局忽略警告</h2><p>在项目的 <strong>Build Settings</strong> 中也可以设置忽略某种或多种类型的警告，不过在这设置的影响范围就是整个项目的了，要三思而后行。</p>
-<p>如下图，在 <strong>Build Settings</strong> 中找到 <strong>Custom Compiler Flags</strong>，双击 <strong>Other Warning Flags</strong>（可以配置 Debug 和 Release 环境），填入 <strong>-Wno-unused-variable</strong> ，完成后，编译项目，项目中所有的此类型警告都没有了。</p>
-<p>下图我是采用搜索的方式查找的，就是在右上角的搜索框中输入相应的搜索关键字，回车就ok<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogissue3.png" alt="忽略全局警告"></p>
-<p>这里所填写的内容规则，在警告标识中的 <strong>W</strong> 字母后面加上  <strong>no-</strong> 就可以了。<br>例如：警告标识是 <strong>-Wunused-variable</strong><br>     这里要填写的就是 <strong>-Wno-unused-variable</strong></p>
-<h2 id="忽略CocoaPods导入第三方库的警告"><a href="#忽略CocoaPods导入第三方库的警告" class="headerlink" title="忽略CocoaPods导入第三方库的警告"></a>忽略CocoaPods导入第三方库的警告</h2><p>通过 CocoaPods 给项目导入了一些第三方库，这些库里面或多或少会有些警告，想消除这些警告，很简单，只需在 Podfile 中加上这一句 <strong>inhibit_all_warnings!</strong>，所有通过 CocoaPods 安装的第三库的警告就没有了。</p>
-<p>原文<a href="http://www.jianshu.com/p/327078fda8dc" target="_blank" rel="external">参考自</a></p>
+        <h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="7xrirn.com1.z0.glb.clouddn.com/blogpopNaigationBar.gif" alt="效果"></p>
+<h2 id="关键代码："><a href="#关键代码：" class="headerlink" title="关键代码："></a>关键代码：</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">-(<span class="keyword">void</span>)<span class="string">viewWillAppear:</span>(BOOL)animated&#123;</div><div class="line">    [<span class="keyword">super</span> <span class="string">viewWillAppear:</span>animated];</div><div class="line">    [self.navigationController <span class="string">setNavigationBarHidden:</span>YES <span class="string">animated:</span>animated];</div><div class="line">&#125;</div><div class="line">-(<span class="keyword">void</span>)<span class="string">viewWillDisappear:</span>(BOOL)animated&#123;</div><div class="line">    [<span class="keyword">super</span> <span class="string">viewWillDisappear:</span>animated];</div><div class="line">    [self.navigationController <span class="string">setNavigationBarHidden:</span>NO <span class="string">animated:</span>animated];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Demo下载"><a href="#Demo下载" class="headerlink" title="  Demo下载"></a>  Demo下载</h2><p>  <a href="7xrirn.com1.z0.glb.clouddn.com/blogNavigationPushDemo.zip">Demo下载</a></p>
 
       
     </div>
@@ -428,18 +410,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/03/17-08-03-set-code-snippet-library/" rel="next" title="设置代码片断">
-                <i class="fa fa-chevron-left"></i> 设置代码片断
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/17/17-07-11-ohmyzsh-anothername/" rel="prev" title="别名永久生效与ohmyzsh下别名配制">
-                别名永久生效与ohmyzsh下别名配制 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/02/17-11-02-wkwebview/" rel="prev" title="WKWebView弹窗提示和打电话">
+                WKWebView弹窗提示和打电话 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -601,7 +579,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取警告标识"><span class="nav-number">1.</span> <span class="nav-text">获取警告标识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忽略源文件中单个警告"><span class="nav-number">2.</span> <span class="nav-text">忽略源文件中单个警告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在-Build-Settings-中项目全局忽略警告"><span class="nav-number">3.</span> <span class="nav-text">在 Build Settings 中项目全局忽略警告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忽略CocoaPods导入第三方库的警告"><span class="nav-number">4.</span> <span class="nav-text">忽略CocoaPods导入第三方库的警告</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#效果："><span class="nav-number">1.</span> <span class="nav-text">效果：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键代码："><span class="nav-number">2.</span> <span class="nav-text">关键代码：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Demo下载"><span class="nav-number">3.</span> <span class="nav-text">  Demo下载</span></a></li></ol></div>
             
 
           </div>
@@ -751,9 +729,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://irenachou.github.io/irena/2017/08/03/17-08-03-ignored-warn/';
-          this.page.identifier = '2017/08/03/17-08-03-ignored-warn/';
-          this.page.title = 'Xcode忽略Bulidtime警告';
+          this.page.url = 'http://irenachou.github.io/irena/2017/11/24/17-11-24-navigationPop/';
+          this.page.identifier = '2017/11/24/17-11-24-navigationPop/';
+          this.page.title = 'navigationPop效果';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://irena.disqus.com/embed.js';

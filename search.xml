@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[适配iPhone X Push过程中TabBar位置上移]]></title>
+    <url>%2F2017%2F11%2F28%2F17-11-28-bug1%2F</url>
+    <content type="text"><![CDATA[本文只做记录，就方便寻找 图片出自 主要解决问题： 解决方法:重写 UINavigationController 类的 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated 方法 具体代码如下：12345678910111213- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated&#123; [super pushViewController:viewController animated:animated]; // 修正push控制器tabbar上移问题 if (@available(iOS 11.0, *))&#123; // 修改tabBra的frame CGRect frame = self.tabBarController.tabBar.frame; frame.origin.y = [UIScreen mainScreen].bounds.size.height - frame.size.height; self.tabBarController.tabBar.frame = frame; &#125;&#125;]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[navigationPop效果]]></title>
     <url>%2F2017%2F11%2F24%2F17-11-24-navigationPop%2F</url>
-    <content type="text"><![CDATA[效果： 关键代码：12345678-(void)viewWillAppear:(BOOL)animated&#123; [super viewWillAppear:animated]; [self.navigationController setNavigationBarHidden:YES animated:animated];&#125;-(void)viewWillDisappear:(BOOL)animated&#123; [super viewWillDisappear:animated]; [self.navigationController setNavigationBarHidden:NO animated:animated];&#125; Demo下载 Demo下载]]></content>
+    <content type="text"><![CDATA[效果： 关键代码：12345678-(void)viewWillAppear:(BOOL)animated&#123; [super viewWillAppear:animated]; [self.navigationController setNavigationBarHidden:YES animated:animated];&#125;-(void)viewWillDisappear:(BOOL)animated&#123; [super viewWillDisappear:animated]; [self.navigationController setNavigationBarHidden:NO animated:animated];&#125; Demo下载 Demo下载 参考:]]></content>
   </entry>
   <entry>
     <title><![CDATA[WKWebView弹窗提示和打电话]]></title>

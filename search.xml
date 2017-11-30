@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[基本的屏幕尺寸]]></title>
+    <url>%2F2017%2F11%2F30%2F17-11-30-screen-size%2F</url>
+    <content type="text"><![CDATA[突然发现看到 5.5英寸，4.7英寸时想不起来具体的像素是多少的，俗话说得好，好记性不如烂笔头，这里方便查找记录一下 这里只记录一下竖屏的尺寸，横屏将宽高交换一下就好了 iPhone XScale: 1x = 375px × 812px 3x = 1125px × 2436px Retina HD 5.5Scale: 1x = 414px × 736px 3x = 1242px × 2208px Retina HD 4.7 Scale: 1x = 375px × 667px 2x = 750px × 1334px Retina HD 4【iphone5系列】 Scale: 1x = 320px × 568px 2x = 640px × 1136px 参考 developer.apple 连接 原图连接：https://developer.apple.com/ios/human-interface-guidelines/overview/iphone-x/]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[适配iPhone X Push过程中TabBar位置上移]]></title>
     <url>%2F2017%2F11%2F28%2F17-11-28-bug1%2F</url>
     <content type="text"><![CDATA[本文只做记录，就方便寻找 图片出自臭码农 主要解决问题： 解决方法:重写 UINavigationController 类的 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated 方法 具体代码如下：12345678910111213- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated&#123; [super pushViewController:viewController animated:animated]; // 修正push控制器tabbar上移问题 if (@available(iOS 11.0, *))&#123; // 修改tabBra的frame CGRect frame = self.tabBarController.tabBar.frame; frame.origin.y = [UIScreen mainScreen].bounds.size.height - frame.size.height; self.tabBarController.tabBar.frame = frame; &#125;&#125;]]></content>

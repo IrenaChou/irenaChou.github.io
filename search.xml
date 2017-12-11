@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[property follows cocoa naming convention for returning 'owned' objects]]></title>
+    <url>%2F2017%2F12%2F11%2F17-12-11-bug1%2F</url>
+    <content type="text"><![CDATA[解决参考：https://stackoverflow.com/questions/6327448/semantic-issue-propertys-synthesized-getter-follows-cocoa-naming-convention-fo]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[基本的屏幕尺寸]]></title>
     <url>%2F2017%2F11%2F30%2F17-11-30-screen-size%2F</url>
     <content type="text"><![CDATA[突然发现看到 5.5英寸，4.7英寸时想不起来具体的像素是多少的，俗话说得好，好记性不如烂笔头，这里方便查找记录一下 这里只记录一下竖屏的尺寸，横屏将宽高交换一下就好了 iPhone XScale: 1x = 375px × 812px 3x = 1125px × 2436px Retina HD 5.5Scale: 1x = 414px × 736px 3x = 1242px × 2208px Retina HD 4.7 Scale: 1x = 375px × 667px 2x = 750px × 1334px Retina HD 4【iphone5系列】 Scale: 1x = 320px × 568px 2x = 640px × 1136px 参考 developer.apple 连接 原图连接：https://developer.apple.com/ios/human-interface-guidelines/overview/iphone-x/]]></content>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[解决UIWebView自动缓存导致页面不可刷新问题]]></title>
+    <url>%2F2017%2F12%2F11%2F17-12-11-webview-cache%2F</url>
+    <content type="text"><![CDATA[问题描述用UIWebView加载h5页面，后台h5页面更改后，APP端并没有刷新/加载显示成最新页面 UIWebview会自动缓存之前的CSS样式，这就导致了更改过webview的页面样式之后，我们APP端再打开这个webView页面，发现页面的样式没有加载最新的。 12//清除webView的缓存[[NSURLCache sharedURLCache] removeAllCachedResponses]; 我把上面的方法写到了页面将要消失的时候，清除UIWebview缓存的东西，然后让H5开发更改了页面样式，重新打开页面并没有变化，关闭APP然后重启，变了，不过也是不行啊这样的效果，然后我找到了下面的方法： 12//清除请求[[NSURLCache sharedURLCache] removeCachedResponseForRequest:self.request]; 123456//清除cookiesNSHTTPCookie *cookie;NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];for (cookie in [storage cookies]) &#123; [storage deleteCookie:cookie];&#125; 上面的方法写过之后也是没有任何的改进了，还是需要重启才有效果；（也就是上面所有的方法都没有解决问题） 具体描述和问题解决我在加载URL的时候，用的方法是：1self.request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:htmlString]]; 就是这个问题所在，导致了自动缓存，更改无效。将创建NSURLRequest替换成如下方法即可： 12//加载请求的时候忽略缓存self.request = [NSURLRequest requestWithURL:[NSURL URLWithString:htmlString] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:5.0]; 作者：First灬DKS链接：http://www.jianshu.com/p/f3019d511f36來源：简书]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[property follows cocoa naming convention for returning 'owned' objects]]></title>
     <url>%2F2017%2F12%2F11%2F17-12-11-bug1%2F</url>
     <content type="text"><![CDATA[解决参考：https://stackoverflow.com/questions/6327448/semantic-issue-propertys-synthesized-getter-follows-cocoa-naming-convention-fo]]></content>

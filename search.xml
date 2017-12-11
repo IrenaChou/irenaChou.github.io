@@ -446,7 +446,7 @@
   <entry>
     <title><![CDATA[标签]]></title>
     <url>%2F2016%2F03%2F30%2FtagView%2F</url>
-    <content type="text"><![CDATA[原码下载 OC原码中用了两种方法实现标签功能: 一种是使用collectionView实现 另一种是用draw实现 显示如下图：]]></content>
+    <content type="text"><![CDATA[原码下载 draw实现原码下载 OC原码中用了两种方法实现标签功能: 一种是使用collectionView实现 另一种是用draw实现 显示如下图：]]></content>
   </entry>
   <entry>
     <title><![CDATA[显示隐藏tabbar]]></title>

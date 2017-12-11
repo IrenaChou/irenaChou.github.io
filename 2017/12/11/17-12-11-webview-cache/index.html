@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://irenachou.github.io/irena/2017/12/11/17-12-11-webview-cache/index.html">
 <meta property="og:site_name" content="My First">
 <meta property="og:description" content="问题描述用UIWebView加载h5页面，后台h5页面更改后，APP端并没有刷新/加载显示成最新页面 UIWebview会自动缓存之前的CSS样式，这就导致了更改过webview的页面样式之后，我们APP端再打开这个webView页面，发现页面的样式没有加载最新的。 12//清除webView的缓存[[NSURLCache sharedURLCache] removeAllCachedRespon">
-<meta property="og:updated_time" content="2017-12-11T05:44:58.591Z">
+<meta property="og:updated_time" content="2017-12-11T05:46:55.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决UIWebView自动缓存导致页面不可刷新问题">
 <meta name="twitter:description" content="问题描述用UIWebView加载h5页面，后台h5页面更改后，APP端并没有刷新/加载显示成最新页面 UIWebview会自动缓存之前的CSS样式，这就导致了更改过webview的页面样式之后，我们APP端再打开这个webView页面，发现页面的样式没有加载最新的。 12//清除webView的缓存[[NSURLCache sharedURLCache] removeAllCachedRespon">
@@ -380,7 +380,7 @@
 <h2 id="具体描述和问题解决"><a href="#具体描述和问题解决" class="headerlink" title="具体描述和问题解决"></a>具体描述和问题解决</h2><p><strong>我在加载URL的时候，用的方法是：</strong><br><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">self.request = <span class="string">[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:htmlString]]</span>;</div></pre></td></tr></table></figure></p>
 <p><strong>就是这个问题所在，导致了自动缓存，更改无效。</strong><br><strong>将创建NSURLRequest替换成如下方法即可：</strong></p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//加载请求的时候忽略缓存</span></div><div class="line">self.request = [NSURLRequest <span class="string">requestWithURL:</span>[NSURL <span class="string">URLWithString:</span>htmlString] <span class="string">cachePolicy:</span>NSURLRequestReloadIgnoringLocalCacheData <span class="string">timeoutInterval:</span><span class="number">5.0</span>];</div></pre></td></tr></table></figure>
-<p>作者：First灬DKS<br>链接：<a href="http://www.jianshu.com/p/f3019d511f36" target="_blank" rel="external">http://www.jianshu.com/p/f3019d511f36</a><br>來源：简书</p>
+<h2 id="参考原文"><a href="#参考原文" class="headerlink" title="参考原文"></a>参考原文</h2><p>作者：First灬DKS<br>链接：<a href="http://www.jianshu.com/p/f3019d511f36" target="_blank" rel="external">http://www.jianshu.com/p/f3019d511f36</a><br>來源：简书</p>
 
       
     </div>
@@ -586,7 +586,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体描述和问题解决"><span class="nav-number">2.</span> <span class="nav-text">具体描述和问题解决</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体描述和问题解决"><span class="nav-number">2.</span> <span class="nav-text">具体描述和问题解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考原文"><span class="nav-number">3.</span> <span class="nav-text">参考原文</span></a></li></ol></div>
             
 
           </div>

@@ -90,23 +90,23 @@
 
 
 
-<meta name="description" content="原文连接：https://www.ianisme.com/ios/2533.html 一、适用场景我们在iOS开发的过程中，往往后端和前端都是并行的，后端一般都先给出接口文档，后续在进行实现维护，前端等到后台的数据是一个漫长的过程，当接口比较多的情况下，将测试全部放到后期是相对紧张的。">
+<meta name="description" content="原文连接：https://www.ianisme.com/ios/2533.html 适用场景我们在iOS开发的过程中，往往后端和前端都是并行的，后端一般都先给出接口文档，后续在进行实现维护，前端等到后台的数据是一个漫长的过程，当接口比较多的情况下，将测试全部放到后期是相对紧张的。">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS开发之模拟接口返回数据[转]">
 <meta property="og:url" content="http://irenachou.github.io/irena/2017/12/27/17-12-27-interface/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="原文连接：https://www.ianisme.com/ios/2533.html 一、适用场景我们在iOS开发的过程中，往往后端和前端都是并行的，后端一般都先给出接口文档，后续在进行实现维护，前端等到后台的数据是一个漫长的过程，当接口比较多的情况下，将测试全部放到后期是相对紧张的。">
+<meta property="og:description" content="原文连接：https://www.ianisme.com/ios/2533.html 适用场景我们在iOS开发的过程中，往往后端和前端都是并行的，后端一般都先给出接口文档，后续在进行实现维护，前端等到后台的数据是一个漫长的过程，当接口比较多的情况下，将测试全部放到后期是相对紧张的。">
 <meta property="og:image" content="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception1.png">
 <meta property="og:image" content="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception2.png">
 <meta property="og:image" content="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception4.png">
 <meta property="og:image" content="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception5.png">
 <meta property="og:image" content="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception6.png">
 <meta property="og:image" content="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception7.png">
-<meta property="og:updated_time" content="2017-12-28T07:30:37.918Z">
+<meta property="og:updated_time" content="2017-12-28T07:42:03.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS开发之模拟接口返回数据[转]">
-<meta name="twitter:description" content="原文连接：https://www.ianisme.com/ios/2533.html 一、适用场景我们在iOS开发的过程中，往往后端和前端都是并行的，后端一般都先给出接口文档，后续在进行实现维护，前端等到后台的数据是一个漫长的过程，当接口比较多的情况下，将测试全部放到后期是相对紧张的。">
+<meta name="twitter:description" content="原文连接：https://www.ianisme.com/ios/2533.html 适用场景我们在iOS开发的过程中，往往后端和前端都是并行的，后端一般都先给出接口文档，后续在进行实现维护，前端等到后台的数据是一个漫长的过程，当接口比较多的情况下，将测试全部放到后期是相对紧张的。">
 <meta name="twitter:image" content="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception1.png">
 
 
@@ -377,14 +377,15 @@
 
       
         <p>原文连接：<a href="https://www.ianisme.com/ios/2533.html" target="_blank" rel="external">https://www.ianisme.com/ios/2533.html</a></p>
-<h2 id="一、适用场景"><a href="#一、适用场景" class="headerlink" title="一、适用场景"></a>一、适用场景</h2><p>我们在iOS开发的过程中，往往后端和前端都是并行的，后端一般都先给出接口文档，后续在进行实现维护，前端等到后台的数据是一个漫长的过程，当接口比较多的情况下，将测试全部放到后期是相对紧张的。</p>
+<h2 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h2><p>我们在iOS开发的过程中，往往后端和前端都是并行的，后端一般都先给出接口文档，后续在进行实现维护，前端等到后台的数据是一个漫长的过程，当接口比较多的情况下，将测试全部放到后期是相对紧张的。</p>
 <a id="more"></a>
-<h2 id="二、方法"><a href="#二、方法" class="headerlink" title="二、方法"></a>二、方法</h2><p>下面我们以如下的JSON字段进行一下说明<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"code"</span>: <span class="number">0</span>,</div><div class="line">  <span class="attr">"message"</span>: <span class="string">"成功"</span>,</div><div class="line">  <span class="attr">"data"</span>: &#123;</div><div class="line">    <span class="attr">"website"</span>:<span class="string">"https://www.ianisme.com"</span>,</div><div class="line">    <span class="attr">"list"</span>: [</div><div class="line">      &#123;</div><div class="line">        <span class="attr">"day"</span>: <span class="string">"30"</span>,</div><div class="line">        <span class="attr">"month"</span>: <span class="string">"10"</span>,</div><div class="line">        <span class="attr">"year"</span>: <span class="string">"2017"</span></div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="2-1-搭建后台假数据"><a href="#2-1-搭建后台假数据" class="headerlink" title="2.1 搭建后台假数据"></a>2.1 搭建后台假数据</h2><p>我们可以本地用搭建一个网站环境或者使用远程服务器去请求。<br>我会保存一个json文件，然后用一个php文件去调用。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line">header(<span class="string">"Content-type: text/html; charset=utf-8"</span>);</div><div class="line">$test = $_POST[<span class="string">"s"</span>];</div><div class="line">$json_string = file_get_contents($test . <span class="string">'.json'</span>);</div><div class="line"><span class="keyword">echo</span> $json_string;</div></pre></td></tr></table></figure></p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>下面我们以如下的JSON字段进行一下说明<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"code"</span>: <span class="number">0</span>,</div><div class="line">  <span class="attr">"message"</span>: <span class="string">"成功"</span>,</div><div class="line">  <span class="attr">"data"</span>: &#123;</div><div class="line">    <span class="attr">"website"</span>:<span class="string">"https://www.ianisme.com"</span>,</div><div class="line">    <span class="attr">"list"</span>: [</div><div class="line">      &#123;</div><div class="line">        <span class="attr">"day"</span>: <span class="string">"30"</span>,</div><div class="line">        <span class="attr">"month"</span>: <span class="string">"10"</span>,</div><div class="line">        <span class="attr">"year"</span>: <span class="string">"2017"</span></div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="搭建后台假数据"><a href="#搭建后台假数据" class="headerlink" title="搭建后台假数据"></a>搭建后台假数据</h2><p>我们可以本地用搭建一个网站环境或者使用远程服务器去请求。<br>我会保存一个json文件，然后用一个php文件去调用。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line">header(<span class="string">"Content-type: text/html; charset=utf-8"</span>);</div><div class="line">$test = $_POST[<span class="string">"s"</span>];</div><div class="line">$json_string = file_get_contents($test . <span class="string">'.json'</span>);</div><div class="line"><span class="keyword">echo</span> $json_string;</div></pre></td></tr></table></figure></p>
 <p><img src="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception1.png" alt="图片说明"><br><img src="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception2.png" alt="图片说明1"></p>
 <p>这种情况下，我们可以直接把app端的网络请求代码全部写好，就相当于模仿后台的接口一样，到时候切换后台接口我们只需要更换下接口地址就行了。</p>
-<h2 id="2-2-代理拦截网络请求"><a href="#2-2-代理拦截网络请求" class="headerlink" title="2.2 代理拦截网络请求"></a>2.2 代理拦截网络请求</h2><p>这个是比较推荐的方案，不需要修改app端代码。一切无损对接后台。<br>这就是利用代理软件的 Map Local 功能，将请求转换为请求电脑本地的静态json文件。<br>我们以Charles为例，我们把本地的接口写好之后，我们使用Charles抓一下这个接口的请求，此时肯定是失败的。<br>如图：<br><img src="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception4.png" alt="图片说明2"></p>
+<h2 id="代理拦截网络请求"><a href="#代理拦截网络请求" class="headerlink" title="代理拦截网络请求"></a>代理拦截网络请求</h2><p>这个是比较推荐的方案，不需要修改app端代码。一切无损对接后台。<br>这就是利用代理软件的 Map Local 功能，将请求转换为请求电脑本地的静态json文件。<br>我们以Charles为例，我们把本地的接口写好之后，我们使用Charles抓一下这个接口的请求，此时肯定是失败的。<br>如图：<br><img src="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception4.png" alt="图片说明2"></p>
 <p>我们去 Map Local 指向电脑中的一个json文件。<br><img src="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception5.png" alt="图片说明3"><br><img src="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception6.png" alt="图片说明4"><br><img src="https://www.ianisme.com/wp-content/uploads/2017/11/networkInterception7.png" alt="图片说明5"><br>这样我们就将此接口指向了电脑本地的一个json文件，我们可以用此方法，将所有的接口都分别指向本地的各自的 json 文件，当后台接口完毕后，我们就可以关闭 Map Local 无缝衔接到真正的后台。</p>
+<h2 id="根据接口文档Mock数据"><a href="#根据接口文档Mock数据" class="headerlink" title="根据接口文档Mock数据"></a>根据接口文档Mock数据</h2><p>可以根据接口文档进行mock数据，相对来说还是方便些的<br><a href="http://rap.taobao.org/" target="_blank" rel="external">http://rap.taobao.org/</a></p>
 
       
     </div>
@@ -590,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、适用场景"><span class="nav-number">1.</span> <span class="nav-text">一、适用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、方法"><span class="nav-number">2.</span> <span class="nav-text">二、方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-搭建后台假数据"><span class="nav-number">3.</span> <span class="nav-text">2.1 搭建后台假数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-代理拦截网络请求"><span class="nav-number">4.</span> <span class="nav-text">2.2 代理拦截网络请求</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#适用场景"><span class="nav-number">1.</span> <span class="nav-text">适用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">2.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建后台假数据"><span class="nav-number">3.</span> <span class="nav-text">搭建后台假数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代理拦截网络请求"><span class="nav-number">4.</span> <span class="nav-text">代理拦截网络请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根据接口文档Mock数据"><span class="nav-number">5.</span> <span class="nav-text">根据接口文档Mock数据</span></a></li></ol></div>
             
 
           </div>

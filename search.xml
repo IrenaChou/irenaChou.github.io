@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[iOS调用系统打电话]]></title>
+    <url>%2F2018%2F01%2F12%2F17-01-12-callphone%2F</url>
+    <content type="text"><![CDATA[iOS调用系统打电话的方式有多种，此文主要说一下在iOS10以上弹出框变慢的问题 这是以前笔者习惯使用的方法，笔者并不经常使用调起系统打电话功能，前一阵发现在iOS11上弹出框变的很慢，找到解决方法后记录一下1234UIWebView *callWebview = [[UIWebView alloc] init];NSMutableString *urlStr = [[NSMutableString alloc] initWithFormat:@"tel:%@",@"10010"];[callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];[self.view addSubview:callWebview]; 解决办法【换成如下的代码】：12NSString *callPhone = [NSString stringWithFormat:@"telprompt://%@", @"10010"];[[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone] options:@&#123;&#125; completionHandler:nil];]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[【转】iOS 短信验证码倒计时按钮的实现]]></title>
     <url>%2F2018%2F01%2F09%2F18-01-09-vercode%2F</url>
     <content type="text"><![CDATA[实现思路: 创建按钮, 添加点击方法; 用NSTimer定时器, 每秒执行一次, 定时改变Button的title,改变Button的样式, 设置Button不可点击; 若倒计时结束, 定时器关闭, 并改变Button的样式, 可以点击; 代码如下:在按钮的点击事件里调用该方法. 1234567891011121314151617181920212223242526272829303132333435363738// 开启倒计时效果-(void)openCountdown:(UIButton*)sender&#123; __block NSInteger time = 59; //倒计时时间 dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0); dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue); dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行 dispatch_source_set_event_handler(_timer, ^&#123; if(time &lt;= 0)&#123; //倒计时结束，关闭 dispatch_source_cancel(_timer); dispatch_async(dispatch_get_main_queue(), ^&#123; //设置按钮的样式 [sender setTitle:@"重新发送" forState:UIControlStateNormal]; [sender setTitleColor:[UIColor colorFromHexCode:@"FB8557"] forState:UIControlStateNormal]; sender.userInteractionEnabled = YES; &#125;); &#125;else&#123; int seconds = time % 60; dispatch_async(dispatch_get_main_queue(), ^&#123; //设置按钮显示读秒效果 [sender setTitle:[NSString stringWithFormat:@"重新发送(%.2d)", seconds] forState:UIControlStateNormal]; [sender setTitleColor:[UIColor colorFromHexCode:@"979797"] forState:UIControlStateNormal]; sender.userInteractionEnabled = NO; &#125;); time--; &#125; &#125;); dispatch_resume(_timer);&#125; 作者：Li_Cheng链接：https://www.jianshu.com/p/2104865e7dba來源：简书]]></content>

@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[url百分号转义]]></title>
+    <url>%2F2018%2F01%2F17%2F18-01-17-urlPercentEncoding%2F</url>
+    <content type="text"><![CDATA[百分号转义就是将一些特殊字符以 %25 类似这种的形式标识 转义在iOS中，笔者一般在进行加载url显示之前，会以如下代码进行转义一下12// urlString 为原始的url字符串，需要通过一个字符串来接受转义后的url字符串NSString *requestURL = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] 恢复近期笔者突然发现，后台传给我的url有转义过的情况，如果我在将这串url进行转义，那拿去加载的字符串就会有问题了，所以笔者先将后台传给我的url移除转义，在进行转义【因为后台穿过来的链接是有的转义了，有的没转义】 12// urlString是后台传过来的url，去除转义后需要接收urlString = [urlString stringByRemovingPercentEncoding];]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[WKWebView加载h5调用原生相册相机问题]]></title>
+    <url>%2F2018%2F01%2F16%2F18-01-16-wkwebview-01%2F</url>
+    <content type="text"><![CDATA[需求说明tabbar上面有一个按钮，点击跳转html5页面【这种在第一级页面上笔者选择了modal presentViewController 的方式弹出】,笔者使用WKWebView加载h5 问题正常加载是没有问题的，当h5发起调原生的相册【选择相片】、相机，modal出来的h5显示控制器就会被关掉，控制台会打印如下日志1Warning: Attempt to present &lt;UIImagePickerController: 0x102112400&gt; on &lt;WebViewController: 0x100ec5840&gt; whose view is not in the window hierarchy! 如果h5调起的原生相册选择相片，用户点击取消时，会出现白屏现象 但是自己在modal出来的controller中添加一个按钮，点击按钮去modal一个controller是没问题的 问题分析忘记了是从哪里看到的问题剖析，还是自己脑子突然开窍了，也是猜测，问题是解决了 因为h5页面是modal出来的，所以当h5调用原生相机时，先将h5页面dismiss了，所以在去present的时候是找不到WebViewController的，控制台就会报出如下错误 问题解决我的解决方法是改变了h5控制器的打开方式一： 将h5控制器变成rootViewController二： 使用Push的方法打开h5控制器]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[iOS调用系统打电话]]></title>
     <url>%2F2018%2F01%2F12%2F17-01-12-callphone%2F</url>
     <content type="text"><![CDATA[iOS调用系统打电话的方式有多种，此文主要说一下在iOS10以上弹出框变慢的问题 这是以前笔者习惯使用的方法，笔者并不经常使用调起系统打电话功能，前一阵发现在iOS11上弹出框变的很慢，找到解决方法后记录一下1234UIWebView *callWebview = [[UIWebView alloc] init];NSMutableString *urlStr = [[NSMutableString alloc] initWithFormat:@"tel:%@",@"10010"];[callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];[self.view addSubview:callWebview]; 解决办法【换成如下的代码】：12NSString *callPhone = [NSString stringWithFormat:@"telprompt://%@", @"10010"];[[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone] options:@&#123;&#125; completionHandler:nil];]]></content>

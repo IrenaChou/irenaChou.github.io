@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ReactNative," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -90,21 +90,19 @@
 
 
 
-<meta name="description" content="node1问题描述： 在终端执行如下命令时npm install –save react-redux/npm install –save redux-thunk 报如下错误：UNMET PEER DEPENDENCY redux@^2.0.0 || ^3.0.0 问题解决：这只是缺少依懒模块12npm install --save redux-loggernpm install --save re">
-<meta name="keywords" content="ReactNative">
+<meta name="description" content="效果：">
+<meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ReactNativeNode">
-<meta property="og:url" content="http://irenachou.github.io/irena/2017/04/21/17-04-21-reactNative-node-1/index.html">
+<meta property="og:title" content="UIPopoverPresentationController实现多级跳转">
+<meta property="og:url" content="http://irenachou.github.io/irena/2018/01/31/2018-01-31-popNavigation/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="node1问题描述： 在终端执行如下命令时npm install –save react-redux/npm install –save redux-thunk 报如下错误：UNMET PEER DEPENDENCY redux@^2.0.0 || ^3.0.0 问题解决：这只是缺少依懒模块12npm install --save redux-loggernpm install --save re">
-<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com
-/reactnativenode3.png">
-<meta property="og:updated_time" content="2017-04-21T09:15:44.000Z">
+<meta property="og:description" content="效果：">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogUIPopoverPresentationController.gif">
+<meta property="og:updated_time" content="2018-01-31T05:08:19.529Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ReactNativeNode">
-<meta name="twitter:description" content="node1问题描述： 在终端执行如下命令时npm install –save react-redux/npm install –save redux-thunk 报如下错误：UNMET PEER DEPENDENCY redux@^2.0.0 || ^3.0.0 问题解决：这只是缺少依懒模块12npm install --save redux-loggernpm install --save re">
-<meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com
-/reactnativenode3.png">
+<meta name="twitter:title" content="UIPopoverPresentationController实现多级跳转">
+<meta name="twitter:description" content="效果：">
+<meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogUIPopoverPresentationController.gif">
 
 
 
@@ -132,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://irenachou.github.io/irena/2017/04/21/17-04-21-reactNative-node-1/"/>
+  <link rel="canonical" href="http://irenachou.github.io/irena/2018/01/31/2018-01-31-popNavigation/"/>
 
 
 
 
 
-  <title>ReactNativeNode | My First</title>
+  <title>UIPopoverPresentationController实现多级跳转 | My First</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -291,7 +289,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2017/04/21/17-04-21-reactNative-node-1/">
+    <link itemprop="mainEntityOfPage" href="http://irenachou.github.io/irena/2018/01/31/2018-01-31-popNavigation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Irena">
@@ -312,7 +310,7 @@
             
             
               
-                ReactNativeNode
+                UIPopoverPresentationController实现多级跳转
               
             
           </h1>
@@ -327,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-21T17:09:14+08:00">
-                2017-04-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-31T10:46:54+08:00">
+                2018-01-31
               </time>
             
 
@@ -346,9 +344,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/04/21/17-04-21-reactNative-node-1/#comments" itemprop="discussionUrl">
+                <a href="/2018/01/31/2018-01-31-popNavigation/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/21/17-04-21-reactNative-node-1/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/01/31/2018-01-31-popNavigation/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -373,20 +371,13 @@
       
 
       
-        <h2 id="node1"><a href="#node1" class="headerlink" title="node1"></a>node1</h2><p><strong>问题描述：</strong></p>
-<p>在终端执行如下命令时<br><em>npm install –save react-redux/npm install –save redux-thunk</em></p>
-<p>报如下错误：<br><strong>UNMET PEER DEPENDENCY redux@^2.0.0 || ^3.0.0</strong></p>
-<h2 id="问题解决："><a href="#问题解决：" class="headerlink" title="问题解决："></a><strong>问题解决：</strong></h2><p><em>这只是缺少依懒模块</em><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> <span class="comment">--save redux-logger</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save redux-thunk</span></div></pre></td></tr></table></figure></p>
+        <h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogUIPopoverPresentationController.gif" alt="效果"></p>
 <a id="more"></a>
-<p><strong>问题参考链接：</strong><br><a href="http://stackoverflow.com/questions/41505664/getting-error-on-implementing-react-native-with-react-redux" target="_blank" rel="external">http://stackoverflow.com/questions/41505664/getting-error-on-implementing-react-native-with-react-redux</a></p>
-<h2 id="node2"><a href="#node2" class="headerlink" title="node2"></a>node2</h2><p><strong>问题描述：</strong><br>执行 <strong>npm install –save redux-logger</strong><br> <em>└── UNMET PEER DEPENDENCY react@^0.13.0 || ^0.14.0 || ^15.0.0</em>  </p>
-<p><strong>问题解决：</strong><br><em>版本过底，使用如下信不信</em><br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> install <span class="built_in">npm</span> -g</div></pre></td></tr></table></figure></p>
-<p><strong>问题参考链接：</strong><br><a href="http://stackoverflow.com/questions/32985495/react-router-peerdependencies-error" target="_blank" rel="external">http://stackoverflow.com/questions/32985495/react-router-peerdependencies-error</a></p>
-<h2 id="node3"><a href="#node3" class="headerlink" title="node3"></a>node3</h2><p><strong>问题描述：</strong><br>在通过react-native run-ios运行reactnative运行项目的时候报如下错误<br><img src="http://7xrirn.com1.z0.glb.clouddn.com
-/reactnativenode3.png" alt="问题详情"></p>
-<p><strong>No bundle URL present<br>Make sure you’re running a packager server or have included a .jsbundle file in your application bundle</strong></p>
-<p><strong>问题解决：</strong><br><em>关掉翻墙软件</em><br>我是使用shadowocks，将全局代理必成自动代理。<br>我是可以的，如果还是不行关掉shadowocks</p>
-<p><strong>问题参考链接：</strong><br><a href="http://www.crifan.com/react_native_ios_run_again_error_no_bundle_url_present/" target="_blank" rel="external">http://www.crifan.com/react_native_ios_run_again_error_no_bundle_url_present/</a></p>
+<h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p>Demo的效果如上图，由于是一个效果展示的Demo其中有一些部分写的比较随意，数据部分是写的一个本地的json文件，需要修改地方根据自身项目修改</p>
+<p><strong>用UIPopoverPresentationController的好处在于，可以根据返回数据层级进行任意层级的处理</strong></p>
+<h2 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h2><p><em>此处只有一点比较关键的代码，具体代码看Demo</em></p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">UIPopoverPresentationController</span> *<span class="keyword">popController </span>= [navCtrl <span class="keyword">popoverPresentationController];</span></div><div class="line"> <span class="keyword">popController.delegate </span>  = <span class="keyword">self;</span></div><div class="line"> <span class="keyword">popController.sourceView </span>= <span class="keyword">self.popButton;</span></div><div class="line"></div><div class="line"> CGRect <span class="keyword">btnFrame </span>= <span class="keyword">self.popButton.frame;</span></div><div class="line"></div><div class="line"> /// sourceRect的起点是从sourceView左上角</div><div class="line"> <span class="keyword">popController.sourceRect </span>= CGRectMake(<span class="number">0</span>, <span class="keyword">btnFrame.size.height, </span><span class="keyword">btnFrame.size.width, </span><span class="number">1</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p><a href="http://7xrirn.com1.z0.glb.clouddn.com/blogIRPopNavigationDemo.zip" target="_blank" rel="external">Demo</a></p>
 
       
     </div>
@@ -414,12 +405,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/ReactNative/" rel="tag"># ReactNative</a>
-          
-        </div>
-      
 
       
         
@@ -429,18 +414,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/24/17-04-24-irmenuPopover/" rel="next" title="IRMenuPopover">
-                <i class="fa fa-chevron-left"></i> IRMenuPopover
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/21/17-04-21-git/" rel="prev" title="git使用">
-                git使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/29/2018-01-29-jsOpenApp/" rel="prev" title="js跳转原生iOSAPP与iOSAPP应用间跳转">
+                js跳转原生iOSAPP与iOSAPP应用间跳转 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -602,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#node1"><span class="nav-number">1.</span> <span class="nav-text">node1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题解决："><span class="nav-number">2.</span> <span class="nav-text">问题解决：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node2"><span class="nav-number">3.</span> <span class="nav-text">node2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node3"><span class="nav-number">4.</span> <span class="nav-text">node3</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#效果："><span class="nav-number">1.</span> <span class="nav-text">效果：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单介绍"><span class="nav-number">2.</span> <span class="nav-text">简单介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键代码"><span class="nav-number">3.</span> <span class="nav-text">关键代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Demo"><span class="nav-number">4.</span> <span class="nav-text">Demo</span></a></li></ol></div>
             
 
           </div>
@@ -752,9 +733,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://irenachou.github.io/irena/2017/04/21/17-04-21-reactNative-node-1/';
-          this.page.identifier = '2017/04/21/17-04-21-reactNative-node-1/';
-          this.page.title = 'ReactNativeNode';
+          this.page.url = 'http://irenachou.github.io/irena/2018/01/31/2018-01-31-popNavigation/';
+          this.page.identifier = '2018/01/31/2018-01-31-popNavigation/';
+          this.page.title = 'UIPopoverPresentationController实现多级跳转';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://irena.disqus.com/embed.js';

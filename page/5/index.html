@@ -992,7 +992,7 @@
               
                 
                 <a class="post-title-link" href="/2016/09/20/16-09-20-synthesize/" itemprop="url">
-                  oc-synthesize
+                  oc-synthesize和dynamic
                 </a>
               
             
@@ -1055,17 +1055,20 @@
 
       
         
-          <p>在Xcode4版本之前@property和@synthesize的功能是独立开来的：</p>
-<p>.h中的代码</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//@property的作用是：自动的生成成员变量setter/getter方法的声明：</span></div><div class="line">  <span class="meta">@property</span> <span class="keyword">int</span> carName;  <span class="comment">//它的作用和下面两行代码的作用相同</span></div><div class="line">  - (<span class="keyword">void</span>)<span class="string">setCarName:</span>(<span class="keyword">int</span>)carName;</div><div class="line">  - (<span class="keyword">int</span>)carName;</div></pre></td></tr></table></figure>
-<p><strong>注意：属性名称不要加前缀_ 否则生成的setter/getter方法中也会有下划线</strong><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/09/20/16-09-20-synthesize/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <p>@property有两个对应的词，一个是 @synthesize，一个是 @dynamic。如果@synthesize和@dynamic都没写，那么默认的就是@syntheszie var = <em>_var</em>;</p>
+<h2 id="synthesize"><a href="#synthesize" class="headerlink" title="@synthesize"></a>@synthesize</h2><ul>
+<li>@synthesize语法来指定实例变量的名字，@synthesize 声明的属性=实例变量【一般以下划线开头后面跟属性名，eg: <em>@synthesize 属性名 = _属性名</em>】</li>
+<li>@synthesize表示如果属性没有手动实现setter和getter方法，那么编译器会自动加上这两个方法。</li>
+<li>如果@synthesize和 @dynamic都没写，那么默认的就是 <em>@syntheszie var = _var</em>;</li>
+</ul>
+<h2 id="dynamic"><a href="#dynamic" class="headerlink" title="@dynamic"></a>@dynamic</h2><ul>
+<li>@dynamic告诉编译器：属性的 setter 与 getter 方法由用户自己实现，不自动生成。</li>
+<li>当然对于 readonly 的属性只需提供 getter 即可</li>
+<li>假如一个属性被声明为@dynamic var，而且你没有提供@setter方法和@getter 方法，编译的时候没问题，运行中如果发现有使用到setter或getter方法，就会导致崩溃</li>
+</ul>
+
+          
         
       
     </div>

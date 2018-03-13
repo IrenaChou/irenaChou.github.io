@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[验证http(s)url链接的合法性]]></title>
+    <url>%2F2018%2F03%2F13%2F18-03-13-verifyUrlAddress%2F</url>
+    <content type="text"><![CDATA[通过正则来验证http(s)url的合法性，下面代码放在NSString的category中 方法定义1-(BOOL)isUrlAddress; 方法实现12345-(BOOL)isUrlAddress&#123; NSString *reg = @"^http(s)?:\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- ./?%&amp;=]*)?$"; NSPredicate *urlPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", reg]; return [urlPredicate evaluateWithObject:self];&#125; 此文档只做记录使用]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[collectionView]]></title>
     <url>%2F2018%2F03%2F06%2F18-03-06-collectionDemo%2F</url>
     <content type="text"><![CDATA[其实写这个Demo的原因很简单，就是前一阵在某群里看到有人问这个页面怎么写，并且也有一段时间没有碰过collectionView了，加上这个页面的设计也还ok 本篇只是一个页面的Demo，如有兴趣，具体代码看Demo 效果 DemoDemo]]></content>

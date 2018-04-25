@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="@property有两个对应的词，一个是 @synthesize，一个是 @dynamic。如果@synthesize和@dynamic都没写，那么默认的就是@syntheszie var = _var; @synthesize @synthesize语法来指定实例变量的名字，@synthesize 声明的属性=实例变量【一般以下划线开头后面跟属性名，eg: @synthesize 属性名 = _">
+<meta name="description" content="@property@property=ivar+getter+setter当我们属性定义完成后,编译器会自动生成该属性的getter和setter方法,并且还会自动向类中添加有下划线的实例变量,即 _实例变量 @synthesize的作用就是如果你没有手动实现getter与setter方法,那么编译器就会自动为你加上这两个方法 @dynamic @dynamic告诉编译器：属性的 setter 与">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="oc-synthesize和dynamic">
 <meta property="og:url" content="http://irenachou.github.io/irena/2016/09/20/16-09-20-synthesize/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="@property有两个对应的词，一个是 @synthesize，一个是 @dynamic。如果@synthesize和@dynamic都没写，那么默认的就是@syntheszie var = _var; @synthesize @synthesize语法来指定实例变量的名字，@synthesize 声明的属性=实例变量【一般以下划线开头后面跟属性名，eg: @synthesize 属性名 = _">
-<meta property="og:updated_time" content="2018-02-26T05:28:19.654Z">
+<meta property="og:description" content="@property@property=ivar+getter+setter当我们属性定义完成后,编译器会自动生成该属性的getter和setter方法,并且还会自动向类中添加有下划线的实例变量,即 _实例变量 @synthesize的作用就是如果你没有手动实现getter与setter方法,那么编译器就会自动为你加上这两个方法 @dynamic @dynamic告诉编译器：属性的 setter 与">
+<meta property="og:updated_time" content="2018-04-25T02:11:33.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="oc-synthesize和dynamic">
-<meta name="twitter:description" content="@property有两个对应的词，一个是 @synthesize，一个是 @dynamic。如果@synthesize和@dynamic都没写，那么默认的就是@syntheszie var = _var; @synthesize @synthesize语法来指定实例变量的名字，@synthesize 声明的属性=实例变量【一般以下划线开头后面跟属性名，eg: @synthesize 属性名 = _">
+<meta name="twitter:description" content="@property@property=ivar+getter+setter当我们属性定义完成后,编译器会自动生成该属性的getter和setter方法,并且还会自动向类中添加有下划线的实例变量,即 _实例变量 @synthesize的作用就是如果你没有手动实现getter与setter方法,那么编译器就会自动为你加上这两个方法 @dynamic @dynamic告诉编译器：属性的 setter 与">
 
 
 
@@ -369,12 +369,8 @@
       
 
       
-        <p>@property有两个对应的词，一个是 @synthesize，一个是 @dynamic。如果@synthesize和@dynamic都没写，那么默认的就是@syntheszie var = <em>_var</em>;</p>
-<h2 id="synthesize"><a href="#synthesize" class="headerlink" title="@synthesize"></a>@synthesize</h2><ul>
-<li>@synthesize语法来指定实例变量的名字，@synthesize 声明的属性=实例变量【一般以下划线开头后面跟属性名，eg: <em>@synthesize 属性名 = _属性名</em>】</li>
-<li>@synthesize表示如果属性没有手动实现setter和getter方法，那么编译器会自动加上这两个方法。</li>
-<li>如果@synthesize和 @dynamic都没写，那么默认的就是 <em>@syntheszie var = _var</em>;</li>
-</ul>
+        <h2 id="property"><a href="#property" class="headerlink" title="@property"></a>@property</h2><p><strong>@property=ivar+getter+setter</strong><br>当我们属性定义完成后,编译器会自动生成该属性的getter和setter方法,并且还会自动向类中添加有下划线的实例变量,即 <em>_实例变量</em></p>
+<h2 id="synthesize"><a href="#synthesize" class="headerlink" title="@synthesize"></a>@synthesize</h2><p>的作用就是如果你没有手动实现getter与setter方法,那么编译器就会自动为你加上这两个方法</p>
 <h2 id="dynamic"><a href="#dynamic" class="headerlink" title="@dynamic"></a>@dynamic</h2><ul>
 <li>@dynamic告诉编译器：属性的 setter 与 getter 方法由用户自己实现，不自动生成。</li>
 <li>当然对于 readonly 的属性只需提供 getter 即可</li>
@@ -589,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#synthesize"><span class="nav-number">1.</span> <span class="nav-text">@synthesize</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dynamic"><span class="nav-number">2.</span> <span class="nav-text">@dynamic</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#property"><span class="nav-number">1.</span> <span class="nav-text">@property</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synthesize"><span class="nav-number">2.</span> <span class="nav-text">@synthesize</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dynamic"><span class="nav-number">3.</span> <span class="nav-text">@dynamic</span></a></li></ol></div>
             
 
           </div>

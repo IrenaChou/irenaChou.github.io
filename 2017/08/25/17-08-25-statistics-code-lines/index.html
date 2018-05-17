@@ -90,19 +90,19 @@
 
 
 
-<meta name="description" content="前几天领导让我把一个项目中代码总行数统计一下，并发给我了参考原文的文章，我要统计的文章中使用了cocoapods，所以有些可见的原码并没有被统计到，暂未解决 打开终端，用cd命令 定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来： 1sudo find . &quot;(&quot; -name &quot;*.m&quot; -or -name &quot;*.mm&quot; -or -name &quot;*.cpp&quot; -or -n">
+<meta name="description" content="前几天领导让我把一个项目中代码总行数统计一下，并发给我了参考原文的文章，我要统计的文章中使用了cocoapods，所以有些可见的原码并没有被统计到，暂未解决 打开终端，用cd命令 定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来： 总归就是一句话，你想统计哪些类型的文件行数，就在括号中添加一个 -or -name “*.文件类型” 就对了1find . &quot;(&quot; -nam">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS项目统计总代码行数">
 <meta property="og:url" content="http://irenachou.github.io/irena/2017/08/25/17-08-25-statistics-code-lines/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="前几天领导让我把一个项目中代码总行数统计一下，并发给我了参考原文的文章，我要统计的文章中使用了cocoapods，所以有些可见的原码并没有被统计到，暂未解决 打开终端，用cd命令 定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来： 1sudo find . &quot;(&quot; -name &quot;*.m&quot; -or -name &quot;*.mm&quot; -or -name &quot;*.cpp&quot; -or -n">
+<meta property="og:description" content="前几天领导让我把一个项目中代码总行数统计一下，并发给我了参考原文的文章，我要统计的文章中使用了cocoapods，所以有些可见的原码并没有被统计到，暂未解决 打开终端，用cd命令 定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来： 总归就是一句话，你想统计哪些类型的文件行数，就在括号中添加一个 -or -name “*.文件类型” 就对了1find . &quot;(&quot; -nam">
 <meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogcode_lines_1.png">
 <meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogcode_lines_2.png">
-<meta property="og:updated_time" content="2017-08-25T05:50:15.000Z">
+<meta property="og:updated_time" content="2018-05-17T10:11:16.306Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS项目统计总代码行数">
-<meta name="twitter:description" content="前几天领导让我把一个项目中代码总行数统计一下，并发给我了参考原文的文章，我要统计的文章中使用了cocoapods，所以有些可见的原码并没有被统计到，暂未解决 打开终端，用cd命令 定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来： 1sudo find . &quot;(&quot; -name &quot;*.m&quot; -or -name &quot;*.mm&quot; -or -name &quot;*.cpp&quot; -or -n">
+<meta name="twitter:description" content="前几天领导让我把一个项目中代码总行数统计一下，并发给我了参考原文的文章，我要统计的文章中使用了cocoapods，所以有些可见的原码并没有被统计到，暂未解决 打开终端，用cd命令 定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来： 总归就是一句话，你想统计哪些类型的文件行数，就在括号中添加一个 -or -name “*.文件类型” 就对了1find . &quot;(&quot; -nam">
 <meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blogcode_lines_1.png">
 
 
@@ -374,6 +374,7 @@
       
         <p><em>前几天领导让我把一个项目中代码总行数统计一下，并发给我了参考原文的文章，我要统计的文章中使用了cocoapods，所以有些可见的原码并没有被统计到，暂未解决</em></p>
 <p>打开终端，用cd命令 定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来：<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blogcode_lines_1.png" alt="效果如图"></p>
+<p>总归就是一句话，你想统计哪些类型的文件行数，就在括号中添加一个 <strong>-or -name “*.文件类型”</strong> 就对了<br><figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">find</span> . <span class="string">"("</span> -<span class="built_in">name</span> <span class="string">"*.m"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.mm"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.cpp"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.xib"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.storyboard"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.strings"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.pch"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.h"</span>  <span class="string">")"</span> -print | xargs wc -l</div></pre></td></tr></table></figure></p>
 <figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo <span class="built_in">find</span> . <span class="string">"("</span> -<span class="built_in">name</span> <span class="string">"*.m"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.mm"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.cpp"</span> -<span class="built_in">or</span> -<span class="built_in">name</span> <span class="string">"*.h"</span>  <span class="string">")"</span> -print | xargs wc -l</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <p><strong>具体查看哪些文件，根据你自己的项目所含文件后缀名修改</strong></p>
@@ -501,7 +502,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">110</span>
+                <span class="site-state-item-count">111</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

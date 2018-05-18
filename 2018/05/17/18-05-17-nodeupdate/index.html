@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="原文链接">
-<meta name="keywords">
+<meta name="description" content="原文链接是在windows下的，笔者未在windows下进行如下操作本文是使用macOS High Sierra 10.13.4 运行 n stable 的时候会报一个错误，本文直接使用正确的命令进行描述原文链接：windows下">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="升级nodejs版本">
 <meta property="og:url" content="http://irenachou.github.io/irena/2018/05/17/18-05-17-nodeupdate/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="原文链接">
-<meta property="og:updated_time" content="2018-05-17T09:59:58.651Z">
+<meta property="og:description" content="原文链接是在windows下的，笔者未在windows下进行如下操作本文是使用macOS High Sierra 10.13.4 运行 n stable 的时候会报一个错误，本文直接使用正确的命令进行描述原文链接：windows下">
+<meta property="og:updated_time" content="2018-05-18T02:49:20.254Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="升级nodejs版本">
-<meta name="twitter:description" content="原文链接">
+<meta name="twitter:description" content="原文链接是在windows下的，笔者未在windows下进行如下操作本文是使用macOS High Sierra 10.13.4 运行 n stable 的时候会报一个错误，本文直接使用正确的命令进行描述原文链接：windows下">
 
 
 
@@ -369,7 +369,12 @@
       
 
       
-        <p><a href="https://jingyan.baidu.com/article/574c52197e42b96c8d9dc115.html" target="_blank" rel="external">原文链接</a></p>
+        <p><em>原文链接是在windows下的，笔者未在windows下进行如下操作</em><br><strong>本文是使用macOS High Sierra 10.13.4</strong></p>
+<p><em>运行</em> <strong>n stable</strong> <em>的时候会报一个错误，本文直接使用正确的命令进行描述</em><br><a href="https://jingyan.baidu.com/article/574c52197e42b96c8d9dc115.html" target="_blank" rel="external">原文链接：windows下</a></p>
+<a id="more"></a>
+<h2 id="查看当前nodejs的版本"><a href="#查看当前nodejs的版本" class="headerlink" title="查看当前nodejs的版本"></a>查看当前nodejs的版本</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">─irena@irena-Pro ~ ‹ruby-<span class="number">2.4</span>.<span class="number">1</span>›</div><div class="line">╰─$ <span class="keyword">node</span> <span class="title">-v</span></div><div class="line">v6.<span class="number">7.0</span></div></pre></td></tr></table></figure>
+<h2 id="升级之前还需要安装n模块，n模块是专门用来管理nodejs的版本"><a href="#升级之前还需要安装n模块，n模块是专门用来管理nodejs的版本" class="headerlink" title="升级之前还需要安装n模块，n模块是专门用来管理nodejs的版本"></a>升级之前还需要安装n模块，n模块是专门用来管理nodejs的版本</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">╭─irena<span class="meta">@irena</span>-Pro ~ ‹ruby<span class="number">-2.4</span><span class="number">.1</span>›</div><div class="line">╰─$ npm install -g n                                                        <span class="number">1</span> ↵</div><div class="line"><span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>n -&gt; <span class="regexp">/usr/</span>local<span class="regexp">/lib/</span>node_modules<span class="regexp">/n/</span>bin/n</div><div class="line">+ n@<span class="number">2.1</span><span class="number">.10</span></div><div class="line">added <span class="number">1</span> <span class="keyword">package</span> <span class="keyword">in</span> <span class="number">1.687</span>s</div></pre></td></tr></table></figure>
+<h2 id="还可以直接输入n-stable，升级到nodejs最新稳定的版本"><a href="#还可以直接输入n-stable，升级到nodejs最新稳定的版本" class="headerlink" title="还可以直接输入n stable，升级到nodejs最新稳定的版本"></a>还可以直接输入n stable，升级到nodejs最新稳定的版本</h2><p>描述打印中已经明确说明了 <strong>installed : v10.0.0</strong><br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">╭─irena@irena-Pro ~ ‹ruby<span class="number">-2.4</span><span class="number">.1</span>›</div><div class="line">╰─$ sudo n stable                                                           <span class="number">1</span> ↵</div><div class="line">Password:</div><div class="line">     install : node-v10<span class="number">.0</span><span class="number">.0</span></div><div class="line">       mkdir : /usr/local/n/versions/node/<span class="number">10.0</span><span class="number">.0</span></div><div class="line">       fetch : https:<span class="comment">//nodejs.org/dist/v10.0.0/node-v10.0.0-darwin-x64.tar.gz</span></div><div class="line">######################################################################## <span class="number">100.0</span>%</div><div class="line">   installed : v10<span class="number">.0</span><span class="number">.0</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -396,6 +401,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
       
 
       
@@ -468,8 +479,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://7xrirn.com1.z0.glb.clouddn.com/blogblog_icon.png"
@@ -556,6 +576,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看当前nodejs的版本"><span class="nav-number">1.</span> <span class="nav-text">查看当前nodejs的版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#升级之前还需要安装n模块，n模块是专门用来管理nodejs的版本"><span class="nav-number">2.</span> <span class="nav-text">升级之前还需要安装n模块，n模块是专门用来管理nodejs的版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#还可以直接输入n-stable，升级到nodejs最新稳定的版本"><span class="nav-number">3.</span> <span class="nav-text">还可以直接输入n stable，升级到nodejs最新稳定的版本</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

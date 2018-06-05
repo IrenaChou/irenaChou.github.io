@@ -90,17 +90,19 @@
 
 
 
-<meta name="description" content="123456789101112UUID: [[UIDevice currentDevice] identifierForVendor]Bundle identifier:   NSDictionary *dic = [[NSBundle mainBundle] infoDictionary];  //获取info－plistCFBundleName  NSString *appIdentifier">
+<meta name="description" content="UUID:1[[UIDevice currentDevice] identifierForVendor] 获取info.plist中的key下面获取的几个如 Bundle identifier、 App Name、 Bundle Version 这几个除了key不同，其它的都是一样的，所以我们先来说一下key的获取上图操作的是 info.plist 文件，其中鼠标操作后弹出选择框，点击的是 鼠标右">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Bundle中常用">
 <meta property="og:url" content="http://irenachou.github.io/irena/2016/08/08/16-08-08-bundle/index.html">
 <meta property="og:site_name" content="My First">
-<meta property="og:description" content="123456789101112UUID: [[UIDevice currentDevice] identifierForVendor]Bundle identifier:   NSDictionary *dic = [[NSBundle mainBundle] infoDictionary];  //获取info－plistCFBundleName  NSString *appIdentifier">
-<meta property="og:updated_time" content="2017-04-21T07:09:44.000Z">
+<meta property="og:description" content="UUID:1[[UIDevice currentDevice] identifierForVendor] 获取info.plist中的key下面获取的几个如 Bundle identifier、 App Name、 Bundle Version 这几个除了key不同，其它的都是一样的，所以我们先来说一下key的获取上图操作的是 info.plist 文件，其中鼠标操作后弹出选择框，点击的是 鼠标右">
+<meta property="og:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blog2018-06-05_info.gif">
+<meta property="og:updated_time" content="2018-06-05T05:39:57.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bundle中常用">
-<meta name="twitter:description" content="123456789101112UUID: [[UIDevice currentDevice] identifierForVendor]Bundle identifier:   NSDictionary *dic = [[NSBundle mainBundle] infoDictionary];  //获取info－plistCFBundleName  NSString *appIdentifier">
+<meta name="twitter:description" content="UUID:1[[UIDevice currentDevice] identifierForVendor] 获取info.plist中的key下面获取的几个如 Bundle identifier、 App Name、 Bundle Version 这几个除了key不同，其它的都是一样的，所以我们先来说一下key的获取上图操作的是 info.plist 文件，其中鼠标操作后弹出选择框，点击的是 鼠标右">
+<meta name="twitter:image" content="http://7xrirn.com1.z0.glb.clouddn.com/blog2018-06-05_info.gif">
 
 
 
@@ -369,7 +371,12 @@
       
 
       
-        <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="string">UUID:</span> [[UIDevice currentDevice] identifierForVendor]</div><div class="line">Bundle <span class="string">identifier:</span>   </div><div class="line">NSDictionary *dic = [[NSBundle mainBundle] infoDictionary];</div><div class="line">  <span class="comment">//获取info－plistCFBundleName</span></div><div class="line">  NSString *appIdentifier =</div><div class="line">      [dic <span class="string">objectForKey:</span>@<span class="string">"CFBundleIdentifier"</span>];  <span class="comment">//获取Bundle identifier</span></div><div class="line">App <span class="string">Name:</span> </div><div class="line">  NSString *appName =</div><div class="line">      [dic <span class="string">objectForKey:</span>@<span class="string">"CFBundleName"</span>];  <span class="comment">//获取Bundle name</span></div><div class="line">Bundle <span class="string">Version:</span> </div><div class="line">  NSString *appVersion =</div><div class="line">      [dic <span class="string">valueForKey:</span>@<span class="string">"CFBundleVersion"</span>];  <span class="comment">//获取Bundle Version</span></div></pre></td></tr></table></figure>
+        <h2 id="UUID"><a href="#UUID" class="headerlink" title="UUID:"></a>UUID:</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[[UIDevice currentDevice] identifierForVendor]</div></pre></td></tr></table></figure>
+<h2 id="获取info-plist中的key"><a href="#获取info-plist中的key" class="headerlink" title="获取info.plist中的key"></a>获取info.plist中的key</h2><p>下面获取的几个如 <strong>Bundle identifier</strong>、 <strong>App Name</strong>、 <strong>Bundle Version</strong> 这几个除了key不同，其它的都是一样的，所以我们先来说一下key的获取<br><img src="http://7xrirn.com1.z0.glb.clouddn.com/blog2018-06-05_info.gif" alt="获取key"><br>上图操作的是 <strong>info.plist</strong> 文件，其中鼠标操作后弹出选择框，点击的是 <strong>鼠标右键</strong></p>
+<h2 id="Bundle-identifier"><a href="#Bundle-identifier" class="headerlink" title="Bundle identifier:   "></a>Bundle identifier:   </h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">NSDictionary *<span class="keyword">dic </span>= [[NSBundle mainBundle] infoDictionary]<span class="comment">;</span></div><div class="line">NSString *appIdentifier =</div><div class="line">      [<span class="keyword">dic </span>objectForKey:@<span class="string">"CFBundleIdentifier"</span>]<span class="comment">;  //获取Bundle identifier</span></div></pre></td></tr></table></figure>
+<h2 id="App-Name"><a href="#App-Name" class="headerlink" title="App Name:"></a>App Name:</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">NSDictionary *<span class="keyword">dic </span>= [[NSBundle mainBundle] infoDictionary]<span class="comment">;</span></div><div class="line">NSString *appName =</div><div class="line">      [<span class="keyword">dic </span>objectForKey:@<span class="string">"CFBundleName"</span>]<span class="comment">;  //获取Bundle name</span></div></pre></td></tr></table></figure>
+<h2 id="Bundle-Version"><a href="#Bundle-Version" class="headerlink" title="Bundle Version:"></a>Bundle Version:</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">NSDictionary *<span class="keyword">dic </span>= [[NSBundle mainBundle] infoDictionary]<span class="comment">;</span></div><div class="line">NSString *appVersion =</div><div class="line">      [<span class="keyword">dic </span>valueForKey:@<span class="string">"CFBundleVersion"</span>]<span class="comment">;  //获取Bundle Version</span></div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -471,8 +478,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://7xrirn.com1.z0.glb.clouddn.com/blogblog_icon.png"
@@ -559,6 +575,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#UUID"><span class="nav-number">1.</span> <span class="nav-text">UUID:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取info-plist中的key"><span class="nav-number">2.</span> <span class="nav-text">获取info.plist中的key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bundle-identifier"><span class="nav-number">3.</span> <span class="nav-text">Bundle identifier:   </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#App-Name"><span class="nav-number">4.</span> <span class="nav-text">App Name:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bundle-Version"><span class="nav-number">5.</span> <span class="nav-text">Bundle Version:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
